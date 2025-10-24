@@ -10,19 +10,14 @@ using System.Windows.Forms;
 
 namespace SisFisio.Fornularios
 {
-    public partial class FrmEmpleado : Form
+    public partial class FrmCatEjercicios : Form
     {
-        public FrmEmpleado()
+        public FrmCatEjercicios()
         {
             InitializeComponent();
         }
 
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void toolStripButton1_Click(object sender, EventArgs e)
+        private void FrmCatEjercicios_Load(object sender, EventArgs e)
         {
 
         }

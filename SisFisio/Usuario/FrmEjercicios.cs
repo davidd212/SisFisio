@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace SisFisio.Fornularios
 {
-    public partial class Pacientes : Form
+    public partial class FrmEjercicios: Form
     {
-        public Pacientes()
+        public FrmEjercicios()
         {
             InitializeComponent();
-        }
-
-        private void Pacientes_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

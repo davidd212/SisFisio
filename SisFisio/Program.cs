@@ -1,3 +1,5 @@
+using SisFisio.Fornularios;
+
 namespace SisFisio
 {
     internal static class Program
@@ -11,7 +13,7 @@ namespace SisFisio
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new Usuarios());
+            Application.Run(new FrmPacientes());
         }
     }
 }

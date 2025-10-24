@@ -10,24 +10,14 @@ using System.Windows.Forms;
 
 namespace SisFisio.Fornularios
 {
-    public partial class CitasMedicas : Form
+    public partial class FrmMenu : Form
     {
-        public CitasMedicas()
+        public FrmMenu()
         {
             InitializeComponent();
         }
 
-        private void CitasMedicas_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label9_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
