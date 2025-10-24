@@ -8,16 +8,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace SisFisio.Fornularios
+namespace SisFisio.Usuario
 {
-    public partial class FrmEjercicios : Form
+    public partial class FrmLesiones : Form
     {
-        public FrmEjercicios()
+        public FrmLesiones()
         {
             InitializeComponent();
         }
 
-        private void FrmEjercicios_Load(object sender, EventArgs e)
+        private void FrmLesiones_Load(object sender, EventArgs e)
         {
 
         }

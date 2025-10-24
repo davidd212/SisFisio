@@ -8,16 +8,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace SisFisio.Fornularios
+namespace SisFisio.Usuario
 {
-    public partial class FrmEjercicios : Form
+    public partial class FrmCitas : Form
     {
-        public FrmEjercicios()
+        public FrmCitas()
         {
             InitializeComponent();
         }
 
-        private void FrmEjercicios_Load(object sender, EventArgs e)
+        private void radioButton2_CheckedChanged(object sender, EventArgs e)
         {
 
         }

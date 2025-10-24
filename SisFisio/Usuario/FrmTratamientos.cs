@@ -8,18 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace SisFisio.Fornularios
+namespace SisFisio.Usuario
 {
-    public partial class FrmEjercicios : Form
+    public partial class FrmTratamientos: Form
     {
-        public FrmEjercicios()
+        public FrmTratamientos()
         {
             InitializeComponent();
-        }
-
-        private void FrmEjercicios_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }
