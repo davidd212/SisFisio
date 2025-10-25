@@ -29,316 +29,333 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPacientes));
-            panel1 = new Panel();
-            pictureBox5 = new PictureBox();
-            pictureBox4 = new PictureBox();
-            pictureBox3 = new PictureBox();
-            pictureBox2 = new PictureBox();
+            Pacientespanel = new Panel();
+            EliminarpictureBox = new PictureBox();
+            LimpiarpictureBox = new PictureBox();
+            GuardarpictureBox = new PictureBox();
+            BuscarpictureBox = new PictureBox();
             label1 = new Label();
-            textBox1 = new TextBox();
+            NombretextBox1 = new TextBox();
             Nombre = new Label();
-            label2 = new Label();
-            textBox2 = new TextBox();
-            label3 = new Label();
-            textBox3 = new TextBox();
-            label4 = new Label();
-            textBox4 = new TextBox();
-            label5 = new Label();
-            label6 = new Label();
-            radioButton1 = new RadioButton();
-            radioButton2 = new RadioButton();
-            dateTimePicker1 = new DateTimePicker();
-            dataGridView1 = new DataGridView();
-            button1 = new Button();
-            textBox5 = new TextBox();
-            pictureBox1 = new PictureBox();
-            panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ApellidoPaternolabel = new Label();
+            NombretextBox2 = new TextBox();
+            Telefonolabel = new Label();
+            NombretextBox3 = new TextBox();
+            ApellidoMaternolabel = new Label();
+            NombretextBox4 = new TextBox();
+            FechaDeNacimientolabel = new Label();
+            Generolabel = new Label();
+            MasculinoradioButton = new RadioButton();
+            FemeninoradioButton = new RadioButton();
+            FechaNacimientodateTimePicker = new DateTimePicker();
+            PacientesdataGridView = new DataGridView();
+            Editarbutton = new Button();
+            NombretextBox = new TextBox();
+            BusquedapictureBox = new PictureBox();
+            Pacientespanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)EliminarpictureBox).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)LimpiarpictureBox).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)GuardarpictureBox).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)BuscarpictureBox).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)PacientesdataGridView).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)BusquedapictureBox).BeginInit();
             SuspendLayout();
             // 
-            // panel1
+            // Pacientespanel
             // 
-            panel1.BackColor = Color.Navy;
-            panel1.Controls.Add(pictureBox5);
-            panel1.Controls.Add(pictureBox4);
-            panel1.Controls.Add(pictureBox3);
-            panel1.Controls.Add(pictureBox2);
-            panel1.Controls.Add(label1);
-            panel1.Location = new Point(3, 1);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(1180, 79);
-            panel1.TabIndex = 0;
+            Pacientespanel.BackColor = Color.Navy;
+            Pacientespanel.Controls.Add(EliminarpictureBox);
+            Pacientespanel.Controls.Add(LimpiarpictureBox);
+            Pacientespanel.Controls.Add(GuardarpictureBox);
+            Pacientespanel.Controls.Add(BuscarpictureBox);
+            Pacientespanel.Controls.Add(label1);
+            Pacientespanel.Location = new Point(3, 1);
+            Pacientespanel.Margin = new Padding(3, 2, 3, 2);
+            Pacientespanel.Name = "Pacientespanel";
+            Pacientespanel.Size = new Size(1032, 59);
+            Pacientespanel.TabIndex = 0;
             // 
-            // pictureBox5
+            // EliminarpictureBox
             // 
-            pictureBox5.Image = (Image)resources.GetObject("pictureBox5.Image");
-            pictureBox5.Location = new Point(952, 23);
-            pictureBox5.Name = "pictureBox5";
-            pictureBox5.Size = new Size(48, 42);
-            pictureBox5.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox5.TabIndex = 4;
-            pictureBox5.TabStop = false;
+            EliminarpictureBox.Image = (Image)resources.GetObject("EliminarpictureBox.Image");
+            EliminarpictureBox.Location = new Point(833, 17);
+            EliminarpictureBox.Margin = new Padding(3, 2, 3, 2);
+            EliminarpictureBox.Name = "EliminarpictureBox";
+            EliminarpictureBox.Size = new Size(42, 32);
+            EliminarpictureBox.SizeMode = PictureBoxSizeMode.Zoom;
+            EliminarpictureBox.TabIndex = 4;
+            EliminarpictureBox.TabStop = false;
             // 
-            // pictureBox4
+            // LimpiarpictureBox
             // 
-            pictureBox4.Image = (Image)resources.GetObject("pictureBox4.Image");
-            pictureBox4.Location = new Point(1015, 23);
-            pictureBox4.Name = "pictureBox4";
-            pictureBox4.Size = new Size(48, 42);
-            pictureBox4.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox4.TabIndex = 3;
-            pictureBox4.TabStop = false;
+            LimpiarpictureBox.Image = (Image)resources.GetObject("LimpiarpictureBox.Image");
+            LimpiarpictureBox.Location = new Point(888, 17);
+            LimpiarpictureBox.Margin = new Padding(3, 2, 3, 2);
+            LimpiarpictureBox.Name = "LimpiarpictureBox";
+            LimpiarpictureBox.Size = new Size(42, 32);
+            LimpiarpictureBox.SizeMode = PictureBoxSizeMode.Zoom;
+            LimpiarpictureBox.TabIndex = 3;
+            LimpiarpictureBox.TabStop = false;
             // 
-            // pictureBox3
+            // GuardarpictureBox
             // 
-            pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
-            pictureBox3.Location = new Point(898, 27);
-            pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(48, 38);
-            pictureBox3.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox3.TabIndex = 2;
-            pictureBox3.TabStop = false;
+            GuardarpictureBox.Image = (Image)resources.GetObject("GuardarpictureBox.Image");
+            GuardarpictureBox.Location = new Point(786, 20);
+            GuardarpictureBox.Margin = new Padding(3, 2, 3, 2);
+            GuardarpictureBox.Name = "GuardarpictureBox";
+            GuardarpictureBox.Size = new Size(42, 28);
+            GuardarpictureBox.SizeMode = PictureBoxSizeMode.Zoom;
+            GuardarpictureBox.TabIndex = 2;
+            GuardarpictureBox.TabStop = false;
             // 
-            // pictureBox2
+            // BuscarpictureBox
             // 
-            pictureBox2.Image = Properties.Resources.buscar;
-            pictureBox2.Location = new Point(1069, 19);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(48, 46);
-            pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox2.TabIndex = 1;
-            pictureBox2.TabStop = false;
+            BuscarpictureBox.Image = Properties.Resources.buscar;
+            BuscarpictureBox.Location = new Point(935, 14);
+            BuscarpictureBox.Margin = new Padding(3, 2, 3, 2);
+            BuscarpictureBox.Name = "BuscarpictureBox";
+            BuscarpictureBox.Size = new Size(42, 34);
+            BuscarpictureBox.SizeMode = PictureBoxSizeMode.Zoom;
+            BuscarpictureBox.TabIndex = 1;
+            BuscarpictureBox.TabStop = false;
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Franklin Gothic Medium Cond", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.Transparent;
-            label1.Location = new Point(34, 23);
+            label1.Location = new Point(30, 17);
             label1.Name = "label1";
-            label1.Size = new Size(141, 38);
+            label1.Size = new Size(112, 30);
             label1.TabIndex = 0;
             label1.Text = "PACIENTES";
             // 
-            // textBox1
+            // NombretextBox1
             // 
-            textBox1.Location = new Point(86, 161);
-            textBox1.Multiline = true;
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(212, 34);
-            textBox1.TabIndex = 1;
+            NombretextBox1.Location = new Point(75, 121);
+            NombretextBox1.Margin = new Padding(3, 2, 3, 2);
+            NombretextBox1.Multiline = true;
+            NombretextBox1.Name = "NombretextBox1";
+            NombretextBox1.Size = new Size(186, 26);
+            NombretextBox1.TabIndex = 1;
             // 
             // Nombre
             // 
             Nombre.BackColor = SystemColors.ActiveCaption;
-            Nombre.Location = new Point(86, 133);
+            Nombre.Location = new Point(75, 100);
             Nombre.Name = "Nombre";
-            Nombre.Size = new Size(212, 25);
+            Nombre.Size = new Size(186, 19);
             Nombre.TabIndex = 2;
             Nombre.Text = "Nombre";
             // 
-            // label2
+            // ApellidoPaternolabel
             // 
-            label2.BackColor = SystemColors.ActiveCaption;
-            label2.Location = new Point(86, 225);
-            label2.Name = "label2";
-            label2.Size = new Size(212, 25);
-            label2.TabIndex = 4;
-            label2.Text = "Apellido Paterno";
+            ApellidoPaternolabel.BackColor = SystemColors.ActiveCaption;
+            ApellidoPaternolabel.Location = new Point(75, 169);
+            ApellidoPaternolabel.Name = "ApellidoPaternolabel";
+            ApellidoPaternolabel.Size = new Size(186, 19);
+            ApellidoPaternolabel.TabIndex = 4;
+            ApellidoPaternolabel.Text = "Apellido Paterno";
             // 
-            // textBox2
+            // NombretextBox2
             // 
-            textBox2.Location = new Point(86, 253);
-            textBox2.Multiline = true;
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(212, 34);
-            textBox2.TabIndex = 3;
+            NombretextBox2.Location = new Point(75, 190);
+            NombretextBox2.Margin = new Padding(3, 2, 3, 2);
+            NombretextBox2.Multiline = true;
+            NombretextBox2.Name = "NombretextBox2";
+            NombretextBox2.Size = new Size(186, 26);
+            NombretextBox2.TabIndex = 3;
             // 
-            // label3
+            // Telefonolabel
             // 
-            label3.BackColor = SystemColors.ActiveCaption;
-            label3.Location = new Point(86, 314);
-            label3.Name = "label3";
-            label3.Size = new Size(212, 25);
-            label3.TabIndex = 6;
-            label3.Text = "Telefono";
+            Telefonolabel.BackColor = SystemColors.ActiveCaption;
+            Telefonolabel.Location = new Point(75, 236);
+            Telefonolabel.Name = "Telefonolabel";
+            Telefonolabel.Size = new Size(186, 19);
+            Telefonolabel.TabIndex = 6;
+            Telefonolabel.Text = "Telefono";
             // 
-            // textBox3
+            // NombretextBox3
             // 
-            textBox3.Location = new Point(86, 342);
-            textBox3.Multiline = true;
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(212, 34);
-            textBox3.TabIndex = 5;
+            NombretextBox3.Location = new Point(75, 256);
+            NombretextBox3.Margin = new Padding(3, 2, 3, 2);
+            NombretextBox3.Multiline = true;
+            NombretextBox3.Name = "NombretextBox3";
+            NombretextBox3.Size = new Size(186, 26);
+            NombretextBox3.TabIndex = 5;
             // 
-            // label4
+            // ApellidoMaternolabel
             // 
-            label4.BackColor = SystemColors.ActiveCaption;
-            label4.Location = new Point(319, 225);
-            label4.Name = "label4";
-            label4.Size = new Size(212, 25);
-            label4.TabIndex = 8;
-            label4.Text = "Apellido Materno";
+            ApellidoMaternolabel.BackColor = SystemColors.ActiveCaption;
+            ApellidoMaternolabel.Location = new Point(279, 169);
+            ApellidoMaternolabel.Name = "ApellidoMaternolabel";
+            ApellidoMaternolabel.Size = new Size(186, 19);
+            ApellidoMaternolabel.TabIndex = 8;
+            ApellidoMaternolabel.Text = "Apellido Materno";
             // 
-            // textBox4
+            // NombretextBox4
             // 
-            textBox4.Location = new Point(319, 253);
-            textBox4.Multiline = true;
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(212, 34);
-            textBox4.TabIndex = 7;
+            NombretextBox4.Location = new Point(279, 190);
+            NombretextBox4.Margin = new Padding(3, 2, 3, 2);
+            NombretextBox4.Multiline = true;
+            NombretextBox4.Name = "NombretextBox4";
+            NombretextBox4.Size = new Size(186, 26);
+            NombretextBox4.TabIndex = 7;
             // 
-            // label5
+            // FechaDeNacimientolabel
             // 
-            label5.BackColor = SystemColors.ActiveCaption;
-            label5.Location = new Point(319, 314);
-            label5.Name = "label5";
-            label5.Size = new Size(212, 25);
-            label5.TabIndex = 10;
-            label5.Text = "Fecha de nacimiento";
+            FechaDeNacimientolabel.BackColor = SystemColors.ActiveCaption;
+            FechaDeNacimientolabel.Location = new Point(279, 236);
+            FechaDeNacimientolabel.Name = "FechaDeNacimientolabel";
+            FechaDeNacimientolabel.Size = new Size(186, 19);
+            FechaDeNacimientolabel.TabIndex = 10;
+            FechaDeNacimientolabel.Text = "Fecha de nacimiento";
             // 
-            // label6
+            // Generolabel
             // 
-            label6.BackColor = SystemColors.ActiveCaption;
-            label6.Location = new Point(86, 403);
-            label6.Name = "label6";
-            label6.Size = new Size(212, 25);
-            label6.TabIndex = 11;
-            label6.Text = "Genero";
+            Generolabel.BackColor = SystemColors.ActiveCaption;
+            Generolabel.Location = new Point(75, 302);
+            Generolabel.Name = "Generolabel";
+            Generolabel.Size = new Size(186, 19);
+            Generolabel.TabIndex = 11;
+            Generolabel.Text = "Genero";
             // 
-            // radioButton1
+            // MasculinoradioButton
             // 
-            radioButton1.AutoSize = true;
-            radioButton1.Location = new Point(121, 440);
-            radioButton1.Name = "radioButton1";
-            radioButton1.Size = new Size(97, 24);
-            radioButton1.TabIndex = 12;
-            radioButton1.TabStop = true;
-            radioButton1.Text = "Masculino";
-            radioButton1.UseVisualStyleBackColor = true;
+            MasculinoradioButton.AutoSize = true;
+            MasculinoradioButton.Location = new Point(106, 330);
+            MasculinoradioButton.Margin = new Padding(3, 2, 3, 2);
+            MasculinoradioButton.Name = "MasculinoradioButton";
+            MasculinoradioButton.Size = new Size(80, 19);
+            MasculinoradioButton.TabIndex = 12;
+            MasculinoradioButton.TabStop = true;
+            MasculinoradioButton.Text = "Masculino";
+            MasculinoradioButton.UseVisualStyleBackColor = true;
             // 
-            // radioButton2
+            // FemeninoradioButton
             // 
-            radioButton2.AutoSize = true;
-            radioButton2.Location = new Point(121, 470);
-            radioButton2.Name = "radioButton2";
-            radioButton2.Size = new Size(95, 24);
-            radioButton2.TabIndex = 13;
-            radioButton2.TabStop = true;
-            radioButton2.Text = "Femenino";
-            radioButton2.UseVisualStyleBackColor = true;
+            FemeninoradioButton.AutoSize = true;
+            FemeninoradioButton.Location = new Point(106, 352);
+            FemeninoradioButton.Margin = new Padding(3, 2, 3, 2);
+            FemeninoradioButton.Name = "FemeninoradioButton";
+            FemeninoradioButton.Size = new Size(78, 19);
+            FemeninoradioButton.TabIndex = 13;
+            FemeninoradioButton.TabStop = true;
+            FemeninoradioButton.Text = "Femenino";
+            FemeninoradioButton.UseVisualStyleBackColor = true;
             // 
-            // dateTimePicker1
+            // FechaNacimientodateTimePicker
             // 
-            dateTimePicker1.Location = new Point(314, 340);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(217, 27);
-            dateTimePicker1.TabIndex = 14;
+            FechaNacimientodateTimePicker.Location = new Point(275, 255);
+            FechaNacimientodateTimePicker.Margin = new Padding(3, 2, 3, 2);
+            FechaNacimientodateTimePicker.Name = "FechaNacimientodateTimePicker";
+            FechaNacimientodateTimePicker.Size = new Size(190, 23);
+            FechaNacimientodateTimePicker.TabIndex = 14;
             // 
-            // dataGridView1
+            // PacientesdataGridView
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(653, 176);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(467, 188);
-            dataGridView1.TabIndex = 15;
+            PacientesdataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            PacientesdataGridView.Location = new Point(571, 132);
+            PacientesdataGridView.Margin = new Padding(3, 2, 3, 2);
+            PacientesdataGridView.Name = "PacientesdataGridView";
+            PacientesdataGridView.RowHeadersWidth = 51;
+            PacientesdataGridView.Size = new Size(409, 141);
+            PacientesdataGridView.TabIndex = 15;
             // 
-            // button1
+            // Editarbutton
             // 
-            button1.BackColor = SystemColors.ActiveCaption;
-            button1.Location = new Point(653, 396);
-            button1.Name = "button1";
-            button1.Size = new Size(94, 29);
-            button1.TabIndex = 16;
-            button1.Text = "Editar";
-            button1.UseVisualStyleBackColor = false;
+            Editarbutton.BackColor = SystemColors.ActiveCaption;
+            Editarbutton.Location = new Point(571, 297);
+            Editarbutton.Margin = new Padding(3, 2, 3, 2);
+            Editarbutton.Name = "Editarbutton";
+            Editarbutton.Size = new Size(82, 22);
+            Editarbutton.TabIndex = 16;
+            Editarbutton.Text = "Editar";
+            Editarbutton.UseVisualStyleBackColor = false;
             // 
-            // textBox5
+            // NombretextBox
             // 
-            textBox5.Location = new Point(789, 130);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(211, 27);
-            textBox5.TabIndex = 17;
+            NombretextBox.Location = new Point(690, 98);
+            NombretextBox.Margin = new Padding(3, 2, 3, 2);
+            NombretextBox.Name = "NombretextBox";
+            NombretextBox.Size = new Size(185, 23);
+            NombretextBox.TabIndex = 17;
             // 
-            // pictureBox1
+            // BusquedapictureBox
             // 
-            pictureBox1.BackColor = Color.FromArgb(0, 192, 192);
-            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(997, 130);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(53, 27);
-            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox1.TabIndex = 18;
-            pictureBox1.TabStop = false;
-            pictureBox1.Click += pictureBox1_Click;
+            BusquedapictureBox.BackColor = Color.FromArgb(0, 192, 192);
+            BusquedapictureBox.Image = (Image)resources.GetObject("BusquedapictureBox.Image");
+            BusquedapictureBox.Location = new Point(872, 98);
+            BusquedapictureBox.Margin = new Padding(3, 2, 3, 2);
+            BusquedapictureBox.Name = "BusquedapictureBox";
+            BusquedapictureBox.Size = new Size(46, 20);
+            BusquedapictureBox.SizeMode = PictureBoxSizeMode.Zoom;
+            BusquedapictureBox.TabIndex = 18;
+            BusquedapictureBox.TabStop = false;
+            BusquedapictureBox.Click += pictureBox1_Click;
             // 
             // FrmPacientes
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1182, 653);
-            Controls.Add(pictureBox1);
-            Controls.Add(textBox5);
-            Controls.Add(button1);
-            Controls.Add(dataGridView1);
-            Controls.Add(dateTimePicker1);
-            Controls.Add(radioButton2);
-            Controls.Add(radioButton1);
-            Controls.Add(label6);
-            Controls.Add(label5);
-            Controls.Add(label4);
-            Controls.Add(textBox4);
-            Controls.Add(label3);
-            Controls.Add(textBox3);
-            Controls.Add(label2);
-            Controls.Add(textBox2);
+            ClientSize = new Size(1034, 490);
+            Controls.Add(BusquedapictureBox);
+            Controls.Add(NombretextBox);
+            Controls.Add(Editarbutton);
+            Controls.Add(PacientesdataGridView);
+            Controls.Add(FechaNacimientodateTimePicker);
+            Controls.Add(FemeninoradioButton);
+            Controls.Add(MasculinoradioButton);
+            Controls.Add(Generolabel);
+            Controls.Add(FechaDeNacimientolabel);
+            Controls.Add(ApellidoMaternolabel);
+            Controls.Add(NombretextBox4);
+            Controls.Add(Telefonolabel);
+            Controls.Add(NombretextBox3);
+            Controls.Add(ApellidoPaternolabel);
+            Controls.Add(NombretextBox2);
             Controls.Add(Nombre);
-            Controls.Add(textBox1);
-            Controls.Add(panel1);
+            Controls.Add(NombretextBox1);
+            Controls.Add(Pacientespanel);
+            Margin = new Padding(3, 2, 3, 2);
             Name = "FrmPacientes";
             Load += FrmPacientes_Load;
-            panel1.ResumeLayout(false);
-            panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            Pacientespanel.ResumeLayout(false);
+            Pacientespanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)EliminarpictureBox).EndInit();
+            ((System.ComponentModel.ISupportInitialize)LimpiarpictureBox).EndInit();
+            ((System.ComponentModel.ISupportInitialize)GuardarpictureBox).EndInit();
+            ((System.ComponentModel.ISupportInitialize)BuscarpictureBox).EndInit();
+            ((System.ComponentModel.ISupportInitialize)PacientesdataGridView).EndInit();
+            ((System.ComponentModel.ISupportInitialize)BusquedapictureBox).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private Panel panel1;
+        private Panel Pacientespanel;
         private Label label1;
-        private TextBox textBox1;
+        private TextBox NombretextBox1;
         private Label Nombre;
-        private Label label2;
-        private TextBox textBox2;
-        private Label label3;
-        private TextBox textBox3;
-        private Label label4;
-        private TextBox textBox4;
-        private Label label5;
-        private Label label6;
-        private RadioButton radioButton1;
-        private RadioButton radioButton2;
-        private DateTimePicker dateTimePicker1;
-        private DataGridView dataGridView1;
-        private Button button1;
-        private TextBox textBox5;
-        private PictureBox pictureBox1;
-        private PictureBox pictureBox2;
-        private PictureBox pictureBox3;
-        private PictureBox pictureBox5;
-        private PictureBox pictureBox4;
+        private Label ApellidoPaternolabel;
+        private TextBox NombretextBox2;
+        private Label Telefonolabel;
+        private TextBox NombretextBox3;
+        private Label ApellidoMaternolabel;
+        private TextBox NombretextBox4;
+        private Label FechaDeNacimientolabel;
+        private Label Generolabel;
+        private RadioButton MasculinoradioButton;
+        private RadioButton FemeninoradioButton;
+        private DateTimePicker FechaNacimientodateTimePicker;
+        private DataGridView PacientesdataGridView;
+        private Button Editarbutton;
+        private TextBox NombretextBox;
+        private PictureBox BusquedapictureBox;
+        private PictureBox BuscarpictureBox;
+        private PictureBox GuardarpictureBox;
+        private PictureBox EliminarpictureBox;
+        private PictureBox LimpiarpictureBox;
     }
 }

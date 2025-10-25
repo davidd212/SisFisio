@@ -29,186 +29,198 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCatEjercicios));
-            textBox1 = new TextBox();
-            pictureBox1 = new PictureBox();
-            textBox5 = new TextBox();
-            button1 = new Button();
-            dataGridView1 = new DataGridView();
-            Nombre = new Label();
-            panel1 = new Panel();
-            pictureBox5 = new PictureBox();
-            pictureBox4 = new PictureBox();
-            pictureBox3 = new PictureBox();
-            pictureBox2 = new PictureBox();
+            NombretextBox = new TextBox();
+            BusquedapictureBox = new PictureBox();
+            NombretextBox5 = new TextBox();
+            Editarbutton = new Button();
+            ConsultoriodataGridView = new DataGridView();
+            NombreDeLaNuevaCategoriaLabel = new Label();
+            Consultoriopanel = new Panel();
+            EliminarpictureBox = new PictureBox();
+            LimpiarpictureBox = new PictureBox();
+            GuardarpictureBox = new PictureBox();
+            BuscarpictureBox = new PictureBox();
             label1 = new Label();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
-            panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)BusquedapictureBox).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)ConsultoriodataGridView).BeginInit();
+            Consultoriopanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)EliminarpictureBox).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)LimpiarpictureBox).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)GuardarpictureBox).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)BuscarpictureBox).BeginInit();
             SuspendLayout();
             // 
-            // textBox1
+            // NombretextBox
             // 
-            textBox1.Location = new Point(192, 255);
-            textBox1.Multiline = true;
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(287, 42);
-            textBox1.TabIndex = 48;
+            NombretextBox.Location = new Point(168, 191);
+            NombretextBox.Margin = new Padding(3, 2, 3, 2);
+            NombretextBox.Multiline = true;
+            NombretextBox.Name = "NombretextBox";
+            NombretextBox.Size = new Size(252, 32);
+            NombretextBox.TabIndex = 48;
             // 
-            // pictureBox1
+            // BusquedapictureBox
             // 
-            pictureBox1.BackColor = Color.FromArgb(0, 192, 192);
-            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(956, 131);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(53, 27);
-            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox1.TabIndex = 47;
-            pictureBox1.TabStop = false;
+            BusquedapictureBox.BackColor = Color.FromArgb(0, 192, 192);
+            BusquedapictureBox.Image = (Image)resources.GetObject("BusquedapictureBox.Image");
+            BusquedapictureBox.Location = new Point(836, 98);
+            BusquedapictureBox.Margin = new Padding(3, 2, 3, 2);
+            BusquedapictureBox.Name = "BusquedapictureBox";
+            BusquedapictureBox.Size = new Size(46, 20);
+            BusquedapictureBox.SizeMode = PictureBoxSizeMode.Zoom;
+            BusquedapictureBox.TabIndex = 47;
+            BusquedapictureBox.TabStop = false;
             // 
-            // textBox5
+            // NombretextBox5
             // 
-            textBox5.Location = new Point(748, 131);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(211, 27);
-            textBox5.TabIndex = 46;
+            NombretextBox5.Location = new Point(654, 98);
+            NombretextBox5.Margin = new Padding(3, 2, 3, 2);
+            NombretextBox5.Name = "NombretextBox5";
+            NombretextBox5.Size = new Size(185, 23);
+            NombretextBox5.TabIndex = 46;
+            NombretextBox5.TextChanged += NombretextBox5_TextChanged;
             // 
-            // button1
+            // Editarbutton
             // 
-            button1.BackColor = SystemColors.ActiveCaption;
-            button1.Location = new Point(612, 397);
-            button1.Name = "button1";
-            button1.Size = new Size(94, 29);
-            button1.TabIndex = 45;
-            button1.Text = "Editar";
-            button1.UseVisualStyleBackColor = false;
+            Editarbutton.BackColor = SystemColors.ActiveCaption;
+            Editarbutton.Location = new Point(536, 298);
+            Editarbutton.Margin = new Padding(3, 2, 3, 2);
+            Editarbutton.Name = "Editarbutton";
+            Editarbutton.Size = new Size(82, 22);
+            Editarbutton.TabIndex = 45;
+            Editarbutton.Text = "Editar";
+            Editarbutton.UseVisualStyleBackColor = false;
             // 
-            // dataGridView1
+            // ConsultoriodataGridView
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(612, 177);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(467, 188);
-            dataGridView1.TabIndex = 44;
+            ConsultoriodataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            ConsultoriodataGridView.Location = new Point(536, 133);
+            ConsultoriodataGridView.Margin = new Padding(3, 2, 3, 2);
+            ConsultoriodataGridView.Name = "ConsultoriodataGridView";
+            ConsultoriodataGridView.RowHeadersWidth = 51;
+            ConsultoriodataGridView.Size = new Size(409, 141);
+            ConsultoriodataGridView.TabIndex = 44;
             // 
-            // Nombre
+            // NombreDeLaNuevaCategoriaLabel
             // 
-            Nombre.BackColor = SystemColors.ActiveCaption;
-            Nombre.Location = new Point(192, 220);
-            Nombre.Name = "Nombre";
-            Nombre.Size = new Size(287, 32);
-            Nombre.TabIndex = 41;
-            Nombre.Text = "Nombre de la nueva categoria";
-            Nombre.TextAlign = ContentAlignment.TopCenter;
+            NombreDeLaNuevaCategoriaLabel.BackColor = SystemColors.ActiveCaption;
+            NombreDeLaNuevaCategoriaLabel.Location = new Point(168, 165);
+            NombreDeLaNuevaCategoriaLabel.Name = "NombreDeLaNuevaCategoriaLabel";
+            NombreDeLaNuevaCategoriaLabel.Size = new Size(251, 24);
+            NombreDeLaNuevaCategoriaLabel.TabIndex = 41;
+            NombreDeLaNuevaCategoriaLabel.Text = "Nombre de la nueva categoria";
+            NombreDeLaNuevaCategoriaLabel.TextAlign = ContentAlignment.TopCenter;
             // 
-            // panel1
+            // Consultoriopanel
             // 
-            panel1.BackColor = Color.Navy;
-            panel1.Controls.Add(pictureBox5);
-            panel1.Controls.Add(pictureBox4);
-            panel1.Controls.Add(pictureBox3);
-            panel1.Controls.Add(pictureBox2);
-            panel1.Controls.Add(label1);
-            panel1.Location = new Point(1, 1);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(1180, 79);
-            panel1.TabIndex = 40;
+            Consultoriopanel.BackColor = Color.Navy;
+            Consultoriopanel.Controls.Add(EliminarpictureBox);
+            Consultoriopanel.Controls.Add(LimpiarpictureBox);
+            Consultoriopanel.Controls.Add(GuardarpictureBox);
+            Consultoriopanel.Controls.Add(BuscarpictureBox);
+            Consultoriopanel.Controls.Add(label1);
+            Consultoriopanel.Location = new Point(1, 1);
+            Consultoriopanel.Margin = new Padding(3, 2, 3, 2);
+            Consultoriopanel.Name = "Consultoriopanel";
+            Consultoriopanel.Size = new Size(1032, 59);
+            Consultoriopanel.TabIndex = 40;
             // 
-            // pictureBox5
+            // EliminarpictureBox
             // 
-            pictureBox5.Image = (Image)resources.GetObject("pictureBox5.Image");
-            pictureBox5.Location = new Point(910, 23);
-            pictureBox5.Name = "pictureBox5";
-            pictureBox5.Size = new Size(48, 42);
-            pictureBox5.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox5.TabIndex = 4;
-            pictureBox5.TabStop = false;
+            EliminarpictureBox.Image = (Image)resources.GetObject("EliminarpictureBox.Image");
+            EliminarpictureBox.Location = new Point(796, 17);
+            EliminarpictureBox.Margin = new Padding(3, 2, 3, 2);
+            EliminarpictureBox.Name = "EliminarpictureBox";
+            EliminarpictureBox.Size = new Size(42, 32);
+            EliminarpictureBox.SizeMode = PictureBoxSizeMode.Zoom;
+            EliminarpictureBox.TabIndex = 4;
+            EliminarpictureBox.TabStop = false;
             // 
-            // pictureBox4
+            // LimpiarpictureBox
             // 
-            pictureBox4.Image = (Image)resources.GetObject("pictureBox4.Image");
-            pictureBox4.Location = new Point(988, 23);
-            pictureBox4.Name = "pictureBox4";
-            pictureBox4.Size = new Size(48, 42);
-            pictureBox4.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox4.TabIndex = 3;
-            pictureBox4.TabStop = false;
+            LimpiarpictureBox.Image = (Image)resources.GetObject("LimpiarpictureBox.Image");
+            LimpiarpictureBox.Location = new Point(864, 17);
+            LimpiarpictureBox.Margin = new Padding(3, 2, 3, 2);
+            LimpiarpictureBox.Name = "LimpiarpictureBox";
+            LimpiarpictureBox.Size = new Size(42, 32);
+            LimpiarpictureBox.SizeMode = PictureBoxSizeMode.Zoom;
+            LimpiarpictureBox.TabIndex = 3;
+            LimpiarpictureBox.TabStop = false;
             // 
-            // pictureBox3
+            // GuardarpictureBox
             // 
-            pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
-            pictureBox3.Location = new Point(839, 23);
-            pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(48, 38);
-            pictureBox3.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox3.TabIndex = 2;
-            pictureBox3.TabStop = false;
+            GuardarpictureBox.Image = (Image)resources.GetObject("GuardarpictureBox.Image");
+            GuardarpictureBox.Location = new Point(734, 17);
+            GuardarpictureBox.Margin = new Padding(3, 2, 3, 2);
+            GuardarpictureBox.Name = "GuardarpictureBox";
+            GuardarpictureBox.Size = new Size(42, 28);
+            GuardarpictureBox.SizeMode = PictureBoxSizeMode.Zoom;
+            GuardarpictureBox.TabIndex = 2;
+            GuardarpictureBox.TabStop = false;
             // 
-            // pictureBox2
+            // BuscarpictureBox
             // 
-            pictureBox2.Image = Properties.Resources.buscar;
-            pictureBox2.Location = new Point(1068, 23);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(48, 46);
-            pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox2.TabIndex = 1;
-            pictureBox2.TabStop = false;
+            BuscarpictureBox.Image = Properties.Resources.buscar;
+            BuscarpictureBox.Location = new Point(934, 17);
+            BuscarpictureBox.Margin = new Padding(3, 2, 3, 2);
+            BuscarpictureBox.Name = "BuscarpictureBox";
+            BuscarpictureBox.Size = new Size(42, 34);
+            BuscarpictureBox.SizeMode = PictureBoxSizeMode.Zoom;
+            BuscarpictureBox.TabIndex = 1;
+            BuscarpictureBox.TabStop = false;
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Franklin Gothic Medium Cond", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.Transparent;
-            label1.Location = new Point(34, 23);
+            label1.Location = new Point(30, 17);
             label1.Name = "label1";
-            label1.Size = new Size(178, 38);
+            label1.Size = new Size(144, 30);
             label1.TabIndex = 0;
             label1.Text = "CONSULTORIO";
             // 
             // FrmCatEjercicios
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1182, 653);
-            Controls.Add(textBox1);
-            Controls.Add(pictureBox1);
-            Controls.Add(textBox5);
-            Controls.Add(button1);
-            Controls.Add(dataGridView1);
-            Controls.Add(Nombre);
-            Controls.Add(panel1);
+            ClientSize = new Size(1034, 490);
+            Controls.Add(NombretextBox);
+            Controls.Add(BusquedapictureBox);
+            Controls.Add(NombretextBox5);
+            Controls.Add(Editarbutton);
+            Controls.Add(ConsultoriodataGridView);
+            Controls.Add(NombreDeLaNuevaCategoriaLabel);
+            Controls.Add(Consultoriopanel);
+            Margin = new Padding(3, 2, 3, 2);
             Name = "FrmCatEjercicios";
             Text = "FrmCatEjercicios";
             Load += FrmCatEjercicios_Load;
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
-            panel1.ResumeLayout(false);
-            panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)BusquedapictureBox).EndInit();
+            ((System.ComponentModel.ISupportInitialize)ConsultoriodataGridView).EndInit();
+            Consultoriopanel.ResumeLayout(false);
+            Consultoriopanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)EliminarpictureBox).EndInit();
+            ((System.ComponentModel.ISupportInitialize)LimpiarpictureBox).EndInit();
+            ((System.ComponentModel.ISupportInitialize)GuardarpictureBox).EndInit();
+            ((System.ComponentModel.ISupportInitialize)BuscarpictureBox).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private TextBox textBox1;
-        private PictureBox pictureBox1;
-        private TextBox textBox5;
-        private Button button1;
-        private DataGridView dataGridView1;
-        private Label Nombre;
-        private Panel panel1;
-        private PictureBox pictureBox5;
-        private PictureBox pictureBox4;
-        private PictureBox pictureBox3;
-        private PictureBox pictureBox2;
+        private TextBox NombretextBox;
+        private PictureBox BusquedapictureBox;
+        private TextBox NombretextBox5;
+        private Button Editarbutton;
+        private DataGridView ConsultoriodataGridView;
+        private Label NombreDeLaNuevaCategoriaLabel;
+        private Panel Consultoriopanel;
+        private PictureBox EliminarpictureBox;
+        private PictureBox LimpiarpictureBox;
+        private PictureBox GuardarpictureBox;
+        private PictureBox BuscarpictureBox;
         private Label label1;
     }
 }

@@ -21,5 +21,10 @@ namespace SisFisio.Fornularios
         {
 
         }
+
+        private void NombretextBox5_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

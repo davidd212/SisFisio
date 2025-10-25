@@ -29,271 +29,286 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCH));
-            button3 = new Button();
-            pictureBox1 = new PictureBox();
-            textBox5 = new TextBox();
-            button1 = new Button();
-            dataGridView1 = new DataGridView();
-            label3 = new Label();
-            textBox3 = new TextBox();
-            label2 = new Label();
-            textBox2 = new TextBox();
-            panel1 = new Panel();
-            pictureBox5 = new PictureBox();
-            pictureBox4 = new PictureBox();
-            pictureBox3 = new PictureBox();
-            pictureBox2 = new PictureBox();
+            Agregarbutton = new Button();
+            BusquedapictureBox = new PictureBox();
+            textBoxNombre5 = new TextBox();
+            Editarbutton = new Button();
+            CuerpoHumanodataGridView = new DataGridView();
+            ImagenDelMusculolabel = new Label();
+            textBoxNombre3 = new TextBox();
+            NombreDelEjerciciolabel = new Label();
+            textBoxNombre2 = new TextBox();
+            ConsultorioHumanopanel = new Panel();
+            EliminarpictureBox = new PictureBox();
+            LimpiarpictureBox = new PictureBox();
+            GuardarpictureBox = new PictureBox();
+            BuscarpictureBox = new PictureBox();
             label1 = new Label();
-            label4 = new Label();
-            comboBox1 = new ComboBox();
-            label5 = new Label();
-            textBox1 = new TextBox();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
-            panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            NmEjerciciolabel = new Label();
+            NomEjerciciocomboBox = new ComboBox();
+            DescripciónDeLaObservaciónlabel = new Label();
+            textBoxNombre1 = new TextBox();
+            ((System.ComponentModel.ISupportInitialize)BusquedapictureBox).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)CuerpoHumanodataGridView).BeginInit();
+            ConsultorioHumanopanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)EliminarpictureBox).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)LimpiarpictureBox).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)GuardarpictureBox).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)BuscarpictureBox).BeginInit();
             SuspendLayout();
             // 
-            // button3
+            // Agregarbutton
             // 
-            button3.BackColor = Color.Green;
-            button3.ForeColor = SystemColors.ButtonHighlight;
-            button3.Location = new Point(470, 234);
-            button3.Name = "button3";
-            button3.Size = new Size(110, 29);
-            button3.TabIndex = 56;
-            button3.Text = "AGREGAR";
-            button3.UseVisualStyleBackColor = false;
+            Agregarbutton.BackColor = Color.Green;
+            Agregarbutton.ForeColor = SystemColors.ButtonHighlight;
+            Agregarbutton.Location = new Point(411, 176);
+            Agregarbutton.Margin = new Padding(3, 2, 3, 2);
+            Agregarbutton.Name = "Agregarbutton";
+            Agregarbutton.Size = new Size(96, 22);
+            Agregarbutton.TabIndex = 56;
+            Agregarbutton.Text = "AGREGAR";
+            Agregarbutton.UseVisualStyleBackColor = false;
             // 
-            // pictureBox1
+            // BusquedapictureBox
             // 
-            pictureBox1.BackColor = Color.FromArgb(0, 192, 192);
-            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(988, 131);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(53, 27);
-            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox1.TabIndex = 52;
-            pictureBox1.TabStop = false;
+            BusquedapictureBox.BackColor = Color.FromArgb(0, 192, 192);
+            BusquedapictureBox.Image = (Image)resources.GetObject("BusquedapictureBox.Image");
+            BusquedapictureBox.Location = new Point(864, 98);
+            BusquedapictureBox.Margin = new Padding(3, 2, 3, 2);
+            BusquedapictureBox.Name = "BusquedapictureBox";
+            BusquedapictureBox.Size = new Size(46, 20);
+            BusquedapictureBox.SizeMode = PictureBoxSizeMode.Zoom;
+            BusquedapictureBox.TabIndex = 52;
+            BusquedapictureBox.TabStop = false;
             // 
-            // textBox5
+            // textBoxNombre5
             // 
-            textBox5.Location = new Point(780, 131);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(211, 27);
-            textBox5.TabIndex = 51;
+            textBoxNombre5.Location = new Point(682, 98);
+            textBoxNombre5.Margin = new Padding(3, 2, 3, 2);
+            textBoxNombre5.Name = "textBoxNombre5";
+            textBoxNombre5.Size = new Size(185, 23);
+            textBoxNombre5.TabIndex = 51;
             // 
-            // button1
+            // Editarbutton
             // 
-            button1.BackColor = SystemColors.ActiveCaption;
-            button1.Location = new Point(644, 397);
-            button1.Name = "button1";
-            button1.Size = new Size(94, 29);
-            button1.TabIndex = 50;
-            button1.Text = "Editar";
-            button1.UseVisualStyleBackColor = false;
+            Editarbutton.BackColor = SystemColors.ActiveCaption;
+            Editarbutton.Location = new Point(564, 298);
+            Editarbutton.Margin = new Padding(3, 2, 3, 2);
+            Editarbutton.Name = "Editarbutton";
+            Editarbutton.Size = new Size(82, 22);
+            Editarbutton.TabIndex = 50;
+            Editarbutton.Text = "Editar";
+            Editarbutton.UseVisualStyleBackColor = false;
             // 
-            // dataGridView1
+            // CuerpoHumanodataGridView
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(644, 177);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(467, 188);
-            dataGridView1.TabIndex = 49;
+            CuerpoHumanodataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            CuerpoHumanodataGridView.Location = new Point(564, 133);
+            CuerpoHumanodataGridView.Margin = new Padding(3, 2, 3, 2);
+            CuerpoHumanodataGridView.Name = "CuerpoHumanodataGridView";
+            CuerpoHumanodataGridView.RowHeadersWidth = 51;
+            CuerpoHumanodataGridView.Size = new Size(409, 141);
+            CuerpoHumanodataGridView.TabIndex = 49;
             // 
-            // label3
+            // ImagenDelMusculolabel
             // 
-            label3.BackColor = SystemColors.ActiveCaption;
-            label3.Location = new Point(34, 130);
-            label3.Name = "label3";
-            label3.Size = new Size(212, 25);
-            label3.TabIndex = 47;
-            label3.Text = "Imagen del Musculo";
-            label3.TextAlign = ContentAlignment.MiddleCenter;
+            ImagenDelMusculolabel.BackColor = SystemColors.ActiveCaption;
+            ImagenDelMusculolabel.Location = new Point(30, 98);
+            ImagenDelMusculolabel.Name = "ImagenDelMusculolabel";
+            ImagenDelMusculolabel.Size = new Size(186, 19);
+            ImagenDelMusculolabel.TabIndex = 47;
+            ImagenDelMusculolabel.Text = "Imagen del Musculo";
+            ImagenDelMusculolabel.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // textBox3
+            // textBoxNombre3
             // 
-            textBox3.Location = new Point(34, 158);
-            textBox3.Multiline = true;
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(212, 192);
-            textBox3.TabIndex = 46;
+            textBoxNombre3.Location = new Point(30, 118);
+            textBoxNombre3.Margin = new Padding(3, 2, 3, 2);
+            textBoxNombre3.Multiline = true;
+            textBoxNombre3.Name = "textBoxNombre3";
+            textBoxNombre3.Size = new Size(186, 145);
+            textBoxNombre3.TabIndex = 46;
             // 
-            // label2
+            // NombreDelEjerciciolabel
             // 
-            label2.BackColor = SystemColors.ActiveCaption;
-            label2.Location = new Point(262, 133);
-            label2.Name = "label2";
-            label2.Size = new Size(247, 25);
-            label2.TabIndex = 45;
-            label2.Text = "Nombre del ejercicio";
-            label2.Click += label2_Click;
+            NombreDelEjerciciolabel.BackColor = SystemColors.ActiveCaption;
+            NombreDelEjerciciolabel.Location = new Point(229, 100);
+            NombreDelEjerciciolabel.Name = "NombreDelEjerciciolabel";
+            NombreDelEjerciciolabel.Size = new Size(216, 19);
+            NombreDelEjerciciolabel.TabIndex = 45;
+            NombreDelEjerciciolabel.Text = "Nombre del ejercicio";
+            NombreDelEjerciciolabel.Click += label2_Click;
             // 
-            // textBox2
+            // textBoxNombre2
             // 
-            textBox2.Location = new Point(262, 161);
-            textBox2.Multiline = true;
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(247, 34);
-            textBox2.TabIndex = 44;
+            textBoxNombre2.Location = new Point(229, 121);
+            textBoxNombre2.Margin = new Padding(3, 2, 3, 2);
+            textBoxNombre2.Multiline = true;
+            textBoxNombre2.Name = "textBoxNombre2";
+            textBoxNombre2.Size = new Size(217, 26);
+            textBoxNombre2.TabIndex = 44;
             // 
-            // panel1
+            // ConsultorioHumanopanel
             // 
-            panel1.BackColor = Color.Navy;
-            panel1.Controls.Add(pictureBox5);
-            panel1.Controls.Add(pictureBox4);
-            panel1.Controls.Add(pictureBox3);
-            panel1.Controls.Add(pictureBox2);
-            panel1.Controls.Add(label1);
-            panel1.Location = new Point(0, 0);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(1180, 79);
-            panel1.TabIndex = 42;
+            ConsultorioHumanopanel.BackColor = Color.Navy;
+            ConsultorioHumanopanel.Controls.Add(EliminarpictureBox);
+            ConsultorioHumanopanel.Controls.Add(LimpiarpictureBox);
+            ConsultorioHumanopanel.Controls.Add(GuardarpictureBox);
+            ConsultorioHumanopanel.Controls.Add(BuscarpictureBox);
+            ConsultorioHumanopanel.Controls.Add(label1);
+            ConsultorioHumanopanel.Location = new Point(0, 0);
+            ConsultorioHumanopanel.Margin = new Padding(3, 2, 3, 2);
+            ConsultorioHumanopanel.Name = "ConsultorioHumanopanel";
+            ConsultorioHumanopanel.Size = new Size(1032, 59);
+            ConsultorioHumanopanel.TabIndex = 42;
             // 
-            // pictureBox5
+            // EliminarpictureBox
             // 
-            pictureBox5.Image = (Image)resources.GetObject("pictureBox5.Image");
-            pictureBox5.Location = new Point(952, 23);
-            pictureBox5.Name = "pictureBox5";
-            pictureBox5.Size = new Size(48, 42);
-            pictureBox5.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox5.TabIndex = 4;
-            pictureBox5.TabStop = false;
+            EliminarpictureBox.Image = (Image)resources.GetObject("EliminarpictureBox.Image");
+            EliminarpictureBox.Location = new Point(833, 17);
+            EliminarpictureBox.Margin = new Padding(3, 2, 3, 2);
+            EliminarpictureBox.Name = "EliminarpictureBox";
+            EliminarpictureBox.Size = new Size(42, 32);
+            EliminarpictureBox.SizeMode = PictureBoxSizeMode.Zoom;
+            EliminarpictureBox.TabIndex = 4;
+            EliminarpictureBox.TabStop = false;
             // 
-            // pictureBox4
+            // LimpiarpictureBox
             // 
-            pictureBox4.Image = (Image)resources.GetObject("pictureBox4.Image");
-            pictureBox4.Location = new Point(1015, 23);
-            pictureBox4.Name = "pictureBox4";
-            pictureBox4.Size = new Size(48, 42);
-            pictureBox4.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox4.TabIndex = 3;
-            pictureBox4.TabStop = false;
+            LimpiarpictureBox.Image = (Image)resources.GetObject("LimpiarpictureBox.Image");
+            LimpiarpictureBox.Location = new Point(888, 17);
+            LimpiarpictureBox.Margin = new Padding(3, 2, 3, 2);
+            LimpiarpictureBox.Name = "LimpiarpictureBox";
+            LimpiarpictureBox.Size = new Size(42, 32);
+            LimpiarpictureBox.SizeMode = PictureBoxSizeMode.Zoom;
+            LimpiarpictureBox.TabIndex = 3;
+            LimpiarpictureBox.TabStop = false;
             // 
-            // pictureBox3
+            // GuardarpictureBox
             // 
-            pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
-            pictureBox3.Location = new Point(898, 27);
-            pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(48, 38);
-            pictureBox3.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox3.TabIndex = 2;
-            pictureBox3.TabStop = false;
+            GuardarpictureBox.Image = (Image)resources.GetObject("GuardarpictureBox.Image");
+            GuardarpictureBox.Location = new Point(786, 20);
+            GuardarpictureBox.Margin = new Padding(3, 2, 3, 2);
+            GuardarpictureBox.Name = "GuardarpictureBox";
+            GuardarpictureBox.Size = new Size(42, 28);
+            GuardarpictureBox.SizeMode = PictureBoxSizeMode.Zoom;
+            GuardarpictureBox.TabIndex = 2;
+            GuardarpictureBox.TabStop = false;
             // 
-            // pictureBox2
+            // BuscarpictureBox
             // 
-            pictureBox2.Image = Properties.Resources.buscar;
-            pictureBox2.Location = new Point(1069, 19);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(48, 46);
-            pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox2.TabIndex = 1;
-            pictureBox2.TabStop = false;
+            BuscarpictureBox.Image = Properties.Resources.buscar;
+            BuscarpictureBox.Location = new Point(935, 14);
+            BuscarpictureBox.Margin = new Padding(3, 2, 3, 2);
+            BuscarpictureBox.Name = "BuscarpictureBox";
+            BuscarpictureBox.Size = new Size(42, 34);
+            BuscarpictureBox.SizeMode = PictureBoxSizeMode.Zoom;
+            BuscarpictureBox.TabIndex = 1;
+            BuscarpictureBox.TabStop = false;
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Franklin Gothic Medium Cond", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.Transparent;
-            label1.Location = new Point(34, 23);
+            label1.Location = new Point(30, 17);
             label1.Name = "label1";
-            label1.Size = new Size(219, 38);
+            label1.Size = new Size(175, 30);
             label1.TabIndex = 0;
             label1.Text = "CUERPO HUMANO";
             // 
-            // label4
+            // NmEjerciciolabel
             // 
-            label4.BackColor = SystemColors.ActiveCaption;
-            label4.Location = new Point(262, 219);
-            label4.Name = "label4";
-            label4.Size = new Size(190, 25);
-            label4.TabIndex = 57;
-            label4.Text = "Nombre del ejercicio";
+            NmEjerciciolabel.BackColor = SystemColors.ActiveCaption;
+            NmEjerciciolabel.Location = new Point(229, 164);
+            NmEjerciciolabel.Name = "NmEjerciciolabel";
+            NmEjerciciolabel.Size = new Size(166, 19);
+            NmEjerciciolabel.TabIndex = 57;
+            NmEjerciciolabel.Text = "Nombre del ejercicio";
             // 
-            // comboBox1
+            // NomEjerciciocomboBox
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(262, 247);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(190, 28);
-            comboBox1.TabIndex = 58;
+            NomEjerciciocomboBox.FormattingEnabled = true;
+            NomEjerciciocomboBox.Location = new Point(229, 185);
+            NomEjerciciocomboBox.Margin = new Padding(3, 2, 3, 2);
+            NomEjerciciocomboBox.Name = "NomEjerciciocomboBox";
+            NomEjerciciocomboBox.Size = new Size(167, 23);
+            NomEjerciciocomboBox.TabIndex = 58;
             // 
-            // label5
+            // DescripciónDeLaObservaciónlabel
             // 
-            label5.BackColor = SystemColors.ActiveCaption;
-            label5.Location = new Point(262, 292);
-            label5.Name = "label5";
-            label5.Size = new Size(318, 25);
-            label5.TabIndex = 60;
-            label5.Text = "Descripcion de la Observacion";
-            label5.TextAlign = ContentAlignment.MiddleCenter;
+            DescripciónDeLaObservaciónlabel.BackColor = SystemColors.ActiveCaption;
+            DescripciónDeLaObservaciónlabel.Location = new Point(229, 219);
+            DescripciónDeLaObservaciónlabel.Name = "DescripciónDeLaObservaciónlabel";
+            DescripciónDeLaObservaciónlabel.Size = new Size(278, 19);
+            DescripciónDeLaObservaciónlabel.TabIndex = 60;
+            DescripciónDeLaObservaciónlabel.Text = "Descripcion de la Observacion";
+            DescripciónDeLaObservaciónlabel.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // textBox1
+            // textBoxNombre1
             // 
-            textBox1.Location = new Point(262, 320);
-            textBox1.Multiline = true;
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(318, 85);
-            textBox1.TabIndex = 59;
+            textBoxNombre1.Location = new Point(229, 240);
+            textBoxNombre1.Margin = new Padding(3, 2, 3, 2);
+            textBoxNombre1.Multiline = true;
+            textBoxNombre1.Name = "textBoxNombre1";
+            textBoxNombre1.Size = new Size(279, 65);
+            textBoxNombre1.TabIndex = 59;
             // 
             // FrmCH
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1182, 653);
-            Controls.Add(label5);
-            Controls.Add(textBox1);
-            Controls.Add(comboBox1);
-            Controls.Add(label4);
-            Controls.Add(button3);
-            Controls.Add(pictureBox1);
-            Controls.Add(textBox5);
-            Controls.Add(button1);
-            Controls.Add(dataGridView1);
-            Controls.Add(label3);
-            Controls.Add(textBox3);
-            Controls.Add(label2);
-            Controls.Add(textBox2);
-            Controls.Add(panel1);
+            ClientSize = new Size(1034, 490);
+            Controls.Add(DescripciónDeLaObservaciónlabel);
+            Controls.Add(textBoxNombre1);
+            Controls.Add(NomEjerciciocomboBox);
+            Controls.Add(NmEjerciciolabel);
+            Controls.Add(Agregarbutton);
+            Controls.Add(BusquedapictureBox);
+            Controls.Add(textBoxNombre5);
+            Controls.Add(Editarbutton);
+            Controls.Add(CuerpoHumanodataGridView);
+            Controls.Add(ImagenDelMusculolabel);
+            Controls.Add(textBoxNombre3);
+            Controls.Add(NombreDelEjerciciolabel);
+            Controls.Add(textBoxNombre2);
+            Controls.Add(ConsultorioHumanopanel);
+            Margin = new Padding(3, 2, 3, 2);
             Name = "FrmCH";
             Text = "FrmCH";
             Load += FrmCH_Load;
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
-            panel1.ResumeLayout(false);
-            panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)BusquedapictureBox).EndInit();
+            ((System.ComponentModel.ISupportInitialize)CuerpoHumanodataGridView).EndInit();
+            ConsultorioHumanopanel.ResumeLayout(false);
+            ConsultorioHumanopanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)EliminarpictureBox).EndInit();
+            ((System.ComponentModel.ISupportInitialize)LimpiarpictureBox).EndInit();
+            ((System.ComponentModel.ISupportInitialize)GuardarpictureBox).EndInit();
+            ((System.ComponentModel.ISupportInitialize)BuscarpictureBox).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private Button button3;
-        private PictureBox pictureBox1;
-        private TextBox textBox5;
-        private Button button1;
-        private DataGridView dataGridView1;
-        private Label label3;
-        private TextBox textBox3;
-        private Label label2;
-        private TextBox textBox2;
-        private Panel panel1;
-        private PictureBox pictureBox5;
-        private PictureBox pictureBox4;
-        private PictureBox pictureBox3;
-        private PictureBox pictureBox2;
+        private Button Agregarbutton;
+        private PictureBox BusquedapictureBox;
+        private TextBox textBoxNombre5;
+        private Button Editarbutton;
+        private DataGridView CuerpoHumanodataGridView;
+        private Label ImagenDelMusculolabel;
+        private TextBox textBoxNombre3;
+        private Label NombreDelEjerciciolabel;
+        private TextBox textBoxNombre2;
+        private Panel ConsultorioHumanopanel;
+        private PictureBox EliminarpictureBox;
+        private PictureBox LimpiarpictureBox;
+        private PictureBox GuardarpictureBox;
+        private PictureBox BuscarpictureBox;
         private Label label1;
-        private Label label4;
-        private ComboBox comboBox1;
-        private Label label5;
-        private TextBox textBox1;
+        private Label NmEjerciciolabel;
+        private ComboBox NomEjerciciocomboBox;
+        private Label DescripciónDeLaObservaciónlabel;
+        private TextBox textBoxNombre1;
     }
 }
