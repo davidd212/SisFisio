@@ -30,11 +30,11 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmConsultorio));
             BusquedapictureBox = new PictureBox();
-            textBoxNombre5 = new TextBox();
+            BusquedatextBox5 = new TextBox();
             Editarbutton = new Button();
             ConsultoriodataGridView = new DataGridView();
             DireccionDelConsultoriolabel = new Label();
-            textBoxNombre3 = new TextBox();
+            DireccionDelConsultoriotextBox3 = new TextBox();
             NombreDelConsultorioLabel = new Label();
             Consultoriopanel = new Panel();
             EliminarpictureBox = new PictureBox();
@@ -42,9 +42,9 @@
             GuardarpictureBox = new PictureBox();
             BuscarpictureBox = new PictureBox();
             label1 = new Label();
-            textNombre = new TextBox();
+            NombreDelConsultoriotextbox = new TextBox();
             Telefonolabel = new Label();
-            textBoxNombre2 = new TextBox();
+            TelefonotextBox2 = new TextBox();
             ((System.ComponentModel.ISupportInitialize)BusquedapictureBox).BeginInit();
             ((System.ComponentModel.ISupportInitialize)ConsultoriodataGridView).BeginInit();
             Consultoriopanel.SuspendLayout();
@@ -66,13 +66,13 @@
             BusquedapictureBox.TabIndex = 36;
             BusquedapictureBox.TabStop = false;
             // 
-            // textBoxNombre5
+            // BusquedatextBox5
             // 
-            textBoxNombre5.Location = new Point(707, 85);
-            textBoxNombre5.Margin = new Padding(3, 2, 3, 2);
-            textBoxNombre5.Name = "textBoxNombre5";
-            textBoxNombre5.Size = new Size(185, 23);
-            textBoxNombre5.TabIndex = 35;
+            BusquedatextBox5.Location = new Point(707, 85);
+            BusquedatextBox5.Margin = new Padding(3, 2, 3, 2);
+            BusquedatextBox5.Name = "BusquedatextBox5";
+            BusquedatextBox5.Size = new Size(185, 23);
+            BusquedatextBox5.TabIndex = 35;
             // 
             // Editarbutton
             // 
@@ -105,14 +105,14 @@
             DireccionDelConsultoriolabel.Text = "Direccion del Consultorio";
             DireccionDelConsultoriolabel.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // textBoxNombre3
+            // DireccionDelConsultoriotextBox3
             // 
-            textBoxNombre3.Location = new Point(96, 235);
-            textBoxNombre3.Margin = new Padding(3, 2, 3, 2);
-            textBoxNombre3.Multiline = true;
-            textBoxNombre3.Name = "textBoxNombre3";
-            textBoxNombre3.Size = new Size(398, 72);
-            textBoxNombre3.TabIndex = 24;
+            DireccionDelConsultoriotextBox3.Location = new Point(96, 235);
+            DireccionDelConsultoriotextBox3.Margin = new Padding(3, 2, 3, 2);
+            DireccionDelConsultoriotextBox3.Multiline = true;
+            DireccionDelConsultoriotextBox3.Name = "DireccionDelConsultoriotextBox3";
+            DireccionDelConsultoriotextBox3.Size = new Size(398, 72);
+            DireccionDelConsultoriotextBox3.TabIndex = 24;
             // 
             // NombreDelConsultorioLabel
             // 
@@ -192,14 +192,14 @@
             label1.TabIndex = 0;
             label1.Text = "CONSULTORIO";
             // 
-            // textNombre
+            // NombreDelConsultoriotextbox
             // 
-            textNombre.Location = new Point(242, 117);
-            textNombre.Margin = new Padding(3, 2, 3, 2);
-            textNombre.Multiline = true;
-            textNombre.Name = "textNombre";
-            textNombre.Size = new Size(252, 29);
-            textNombre.TabIndex = 37;
+            NombreDelConsultoriotextbox.Location = new Point(242, 117);
+            NombreDelConsultoriotextbox.Margin = new Padding(3, 2, 3, 2);
+            NombreDelConsultoriotextbox.Multiline = true;
+            NombreDelConsultoriotextbox.Name = "NombreDelConsultoriotextbox";
+            NombreDelConsultoriotextbox.Size = new Size(252, 29);
+            NombreDelConsultoriotextbox.TabIndex = 37;
             // 
             // Telefonolabel
             // 
@@ -211,29 +211,29 @@
             Telefonolabel.Text = "Telefono";
             Telefonolabel.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // textBoxNombre2
+            // TelefonotextBox2
             // 
-            textBoxNombre2.Location = new Point(242, 164);
-            textBoxNombre2.Margin = new Padding(3, 2, 3, 2);
-            textBoxNombre2.Multiline = true;
-            textBoxNombre2.Name = "textBoxNombre2";
-            textBoxNombre2.Size = new Size(172, 29);
-            textBoxNombre2.TabIndex = 39;
+            TelefonotextBox2.Location = new Point(242, 164);
+            TelefonotextBox2.Margin = new Padding(3, 2, 3, 2);
+            TelefonotextBox2.Multiline = true;
+            TelefonotextBox2.Name = "TelefonotextBox2";
+            TelefonotextBox2.Size = new Size(172, 29);
+            TelefonotextBox2.TabIndex = 39;
             // 
             // FrmConsultorio
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1034, 490);
-            Controls.Add(textBoxNombre2);
+            Controls.Add(TelefonotextBox2);
             Controls.Add(Telefonolabel);
-            Controls.Add(textNombre);
+            Controls.Add(NombreDelConsultoriotextbox);
             Controls.Add(BusquedapictureBox);
-            Controls.Add(textBoxNombre5);
+            Controls.Add(BusquedatextBox5);
             Controls.Add(Editarbutton);
             Controls.Add(ConsultoriodataGridView);
             Controls.Add(DireccionDelConsultoriolabel);
-            Controls.Add(textBoxNombre3);
+            Controls.Add(DireccionDelConsultoriotextBox3);
             Controls.Add(NombreDelConsultorioLabel);
             Controls.Add(Consultoriopanel);
             Margin = new Padding(3, 2, 3, 2);
@@ -255,11 +255,11 @@
         #endregion
 
         private PictureBox BusquedapictureBox;
-        private TextBox textBoxNombre5;
+        private TextBox BusquedatextBox5;
         private Button Editarbutton;
         private DataGridView ConsultoriodataGridView;
         private Label DireccionDelConsultoriolabel;
-        private TextBox textBoxNombre3;
+        private TextBox DireccionDelConsultoriotextBox3;
         private Label NombreDelConsultorioLabel;
         private Panel Consultoriopanel;
         private PictureBox EliminarpictureBox;
@@ -267,8 +267,8 @@
         private PictureBox GuardarpictureBox;
         private PictureBox BuscarpictureBox;
         private Label label1;
-        private TextBox textNombre;
+        private TextBox NombreDelConsultoriotextbox;
         private Label Telefonolabel;
-        private TextBox textBoxNombre2;
+        private TextBox TelefonotextBox2;
     }
 }

@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCitas));
-            FechadateTimePicker = new DateTimePicker();
+            AsignaFechadateTimePicker = new DateTimePicker();
             FemeninoradioButton = new RadioButton();
             MasculinoradioButton = new RadioButton();
             Generolabel = new Label();
             Foliolabel = new Label();
             Pacientelabel = new Label();
             NombreCitaLabel = new Label();
-            textBoxNombre1 = new TextBox();
+            NombreDeCitatextBox1 = new TextBox();
             SolicitudDeCitaspanel = new Panel();
             EliminarpictureBox = new PictureBox();
             LimpiarpictureBox = new PictureBox();
@@ -47,11 +47,11 @@
             CanceloradioButton = new RadioButton();
             AsignaFechalabel = new Label();
             AsignaHoralabel = new Label();
-            HoradateTimePicker = new DateTimePicker();
+            AsignaHoradateTimePicker = new DateTimePicker();
             PacientecomboBox = new ComboBox();
             FisioterapiacomboBox = new ComboBox();
             Fisioterapialabel = new Label();
-            textBoxNombre4 = new TextBox();
+            FoliotextBox4 = new TextBox();
             SolicitudDeCitaspanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)EliminarpictureBox).BeginInit();
             ((System.ComponentModel.ISupportInitialize)LimpiarpictureBox).BeginInit();
@@ -59,13 +59,13 @@
             ((System.ComponentModel.ISupportInitialize)BuscarpictureBox).BeginInit();
             SuspendLayout();
             // 
-            // FechadateTimePicker
+            // AsignaFechadateTimePicker
             // 
-            FechadateTimePicker.Location = new Point(171, 169);
-            FechadateTimePicker.Margin = new Padding(3, 2, 3, 2);
-            FechadateTimePicker.Name = "FechadateTimePicker";
-            FechadateTimePicker.Size = new Size(238, 23);
-            FechadateTimePicker.TabIndex = 32;
+            AsignaFechadateTimePicker.Location = new Point(171, 169);
+            AsignaFechadateTimePicker.Margin = new Padding(3, 2, 3, 2);
+            AsignaFechadateTimePicker.Name = "AsignaFechadateTimePicker";
+            AsignaFechadateTimePicker.Size = new Size(238, 23);
+            AsignaFechadateTimePicker.TabIndex = 32;
             // 
             // FemeninoradioButton
             // 
@@ -130,14 +130,14 @@
             NombreCitaLabel.TabIndex = 21;
             NombreCitaLabel.Text = "Nombre de Cita";
             // 
-            // textBoxNombre1
+            // NombreDeCitatextBox1
             // 
-            textBoxNombre1.Location = new Point(171, 98);
-            textBoxNombre1.Margin = new Padding(3, 2, 3, 2);
-            textBoxNombre1.Multiline = true;
-            textBoxNombre1.Name = "textBoxNombre1";
-            textBoxNombre1.Size = new Size(186, 26);
-            textBoxNombre1.TabIndex = 20;
+            NombreDeCitatextBox1.Location = new Point(171, 98);
+            NombreDeCitatextBox1.Margin = new Padding(3, 2, 3, 2);
+            NombreDeCitatextBox1.Multiline = true;
+            NombreDeCitatextBox1.Name = "NombreDeCitatextBox1";
+            NombreDeCitatextBox1.Size = new Size(186, 26);
+            NombreDeCitatextBox1.TabIndex = 20;
             // 
             // SolicitudDeCitaspanel
             // 
@@ -250,14 +250,14 @@
             AsignaHoralabel.TabIndex = 36;
             AsignaHoralabel.Text = "Asigna una hora";
             // 
-            // HoradateTimePicker
+            // AsignaHoradateTimePicker
             // 
-            HoradateTimePicker.Format = DateTimePickerFormat.Time;
-            HoradateTimePicker.Location = new Point(548, 169);
-            HoradateTimePicker.Margin = new Padding(3, 2, 3, 2);
-            HoradateTimePicker.Name = "HoradateTimePicker";
-            HoradateTimePicker.Size = new Size(169, 23);
-            HoradateTimePicker.TabIndex = 37;
+            AsignaHoradateTimePicker.Format = DateTimePickerFormat.Time;
+            AsignaHoradateTimePicker.Location = new Point(548, 169);
+            AsignaHoradateTimePicker.Margin = new Padding(3, 2, 3, 2);
+            AsignaHoradateTimePicker.Name = "AsignaHoradateTimePicker";
+            AsignaHoradateTimePicker.Size = new Size(169, 23);
+            AsignaHoradateTimePicker.TabIndex = 37;
             // 
             // PacientecomboBox
             // 
@@ -287,14 +287,14 @@
             Fisioterapialabel.Text = "Fisiooterapia";
             Fisioterapialabel.TextAlign = ContentAlignment.TopCenter;
             // 
-            // textBoxNombre4
+            // FoliotextBox4
             // 
-            textBoxNombre4.Location = new Point(792, 93);
-            textBoxNombre4.Margin = new Padding(3, 2, 3, 2);
-            textBoxNombre4.Multiline = true;
-            textBoxNombre4.Name = "textBoxNombre4";
-            textBoxNombre4.Size = new Size(186, 26);
-            textBoxNombre4.TabIndex = 26;
+            FoliotextBox4.Location = new Point(792, 93);
+            FoliotextBox4.Margin = new Padding(3, 2, 3, 2);
+            FoliotextBox4.Multiline = true;
+            FoliotextBox4.Name = "FoliotextBox4";
+            FoliotextBox4.Size = new Size(186, 26);
+            FoliotextBox4.TabIndex = 26;
             // 
             // FrmCitas
             // 
@@ -304,20 +304,20 @@
             Controls.Add(FisioterapiacomboBox);
             Controls.Add(Fisioterapialabel);
             Controls.Add(PacientecomboBox);
-            Controls.Add(HoradateTimePicker);
+            Controls.Add(AsignaHoradateTimePicker);
             Controls.Add(AsignaHoralabel);
             Controls.Add(AsignaFechalabel);
             Controls.Add(CanceloradioButton);
             Controls.Add(NoAsistioradioButton);
-            Controls.Add(FechadateTimePicker);
+            Controls.Add(AsignaFechadateTimePicker);
             Controls.Add(FemeninoradioButton);
             Controls.Add(MasculinoradioButton);
             Controls.Add(Generolabel);
             Controls.Add(Foliolabel);
-            Controls.Add(textBoxNombre4);
+            Controls.Add(FoliotextBox4);
             Controls.Add(Pacientelabel);
             Controls.Add(NombreCitaLabel);
-            Controls.Add(textBoxNombre1);
+            Controls.Add(NombreDeCitatextBox1);
             Controls.Add(SolicitudDeCitaspanel);
             Margin = new Padding(3, 2, 3, 2);
             Name = "FrmCitas";
@@ -332,14 +332,14 @@
         }
 
         #endregion
-        private DateTimePicker FechadateTimePicker;
+        private DateTimePicker AsignaFechadateTimePicker;
         private RadioButton FemeninoradioButton;
         private RadioButton MasculinoradioButton;
         private Label Generolabel;
         private Label Foliolabel;
         private Label Pacientelabel;
         private Label NombreCitaLabel;
-        private TextBox textBoxNombre1;
+        private TextBox NombreDeCitatextBox1;
         private Panel SolicitudDeCitaspanel;
         private PictureBox EliminarpictureBox;
         private PictureBox LimpiarpictureBox;
@@ -350,10 +350,10 @@
         private RadioButton CanceloradioButton;
         private Label AsignaFechalabel;
         private Label AsignaHoralabel;
-        private DateTimePicker HoradateTimePicker;
+        private DateTimePicker AsignaHoradateTimePicker;
         private ComboBox PacientecomboBox;
         private ComboBox FisioterapiacomboBox;
         private Label Fisioterapialabel;
-        private TextBox textBoxNombre4;
+        private TextBox FoliotextBox4;
     }
 }

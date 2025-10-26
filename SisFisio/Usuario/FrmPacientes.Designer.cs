@@ -38,11 +38,11 @@
             NombretextBox1 = new TextBox();
             Nombre = new Label();
             ApellidoPaternolabel = new Label();
-            NombretextBox2 = new TextBox();
+            ApellidoPaternotextBox2 = new TextBox();
             Telefonolabel = new Label();
-            NombretextBox3 = new TextBox();
+            TelefonotextBox3 = new TextBox();
             ApellidoMaternolabel = new Label();
-            NombretextBox4 = new TextBox();
+            ApellidoMaternotextBox4 = new TextBox();
             FechaDeNacimientolabel = new Label();
             Generolabel = new Label();
             MasculinoradioButton = new RadioButton();
@@ -50,7 +50,7 @@
             FechaNacimientodateTimePicker = new DateTimePicker();
             PacientesdataGridView = new DataGridView();
             Editarbutton = new Button();
-            NombretextBox = new TextBox();
+            BusquedatextBox = new TextBox();
             BusquedapictureBox = new PictureBox();
             Pacientespanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)EliminarpictureBox).BeginInit();
@@ -157,14 +157,14 @@
             ApellidoPaternolabel.TabIndex = 4;
             ApellidoPaternolabel.Text = "Apellido Paterno";
             // 
-            // NombretextBox2
+            // ApellidoPaternotextBox2
             // 
-            NombretextBox2.Location = new Point(75, 190);
-            NombretextBox2.Margin = new Padding(3, 2, 3, 2);
-            NombretextBox2.Multiline = true;
-            NombretextBox2.Name = "NombretextBox2";
-            NombretextBox2.Size = new Size(186, 26);
-            NombretextBox2.TabIndex = 3;
+            ApellidoPaternotextBox2.Location = new Point(75, 190);
+            ApellidoPaternotextBox2.Margin = new Padding(3, 2, 3, 2);
+            ApellidoPaternotextBox2.Multiline = true;
+            ApellidoPaternotextBox2.Name = "ApellidoPaternotextBox2";
+            ApellidoPaternotextBox2.Size = new Size(186, 26);
+            ApellidoPaternotextBox2.TabIndex = 3;
             // 
             // Telefonolabel
             // 
@@ -175,14 +175,14 @@
             Telefonolabel.TabIndex = 6;
             Telefonolabel.Text = "Telefono";
             // 
-            // NombretextBox3
+            // TelefonotextBox3
             // 
-            NombretextBox3.Location = new Point(75, 256);
-            NombretextBox3.Margin = new Padding(3, 2, 3, 2);
-            NombretextBox3.Multiline = true;
-            NombretextBox3.Name = "NombretextBox3";
-            NombretextBox3.Size = new Size(186, 26);
-            NombretextBox3.TabIndex = 5;
+            TelefonotextBox3.Location = new Point(75, 256);
+            TelefonotextBox3.Margin = new Padding(3, 2, 3, 2);
+            TelefonotextBox3.Multiline = true;
+            TelefonotextBox3.Name = "TelefonotextBox3";
+            TelefonotextBox3.Size = new Size(186, 26);
+            TelefonotextBox3.TabIndex = 5;
             // 
             // ApellidoMaternolabel
             // 
@@ -193,14 +193,14 @@
             ApellidoMaternolabel.TabIndex = 8;
             ApellidoMaternolabel.Text = "Apellido Materno";
             // 
-            // NombretextBox4
+            // ApellidoMaternotextBox4
             // 
-            NombretextBox4.Location = new Point(279, 190);
-            NombretextBox4.Margin = new Padding(3, 2, 3, 2);
-            NombretextBox4.Multiline = true;
-            NombretextBox4.Name = "NombretextBox4";
-            NombretextBox4.Size = new Size(186, 26);
-            NombretextBox4.TabIndex = 7;
+            ApellidoMaternotextBox4.Location = new Point(279, 190);
+            ApellidoMaternotextBox4.Margin = new Padding(3, 2, 3, 2);
+            ApellidoMaternotextBox4.Multiline = true;
+            ApellidoMaternotextBox4.Name = "ApellidoMaternotextBox4";
+            ApellidoMaternotextBox4.Size = new Size(186, 26);
+            ApellidoMaternotextBox4.TabIndex = 7;
             // 
             // FechaDeNacimientolabel
             // 
@@ -273,13 +273,13 @@
             Editarbutton.Text = "Editar";
             Editarbutton.UseVisualStyleBackColor = false;
             // 
-            // NombretextBox
+            // BusquedatextBox
             // 
-            NombretextBox.Location = new Point(690, 98);
-            NombretextBox.Margin = new Padding(3, 2, 3, 2);
-            NombretextBox.Name = "NombretextBox";
-            NombretextBox.Size = new Size(185, 23);
-            NombretextBox.TabIndex = 17;
+            BusquedatextBox.Location = new Point(690, 98);
+            BusquedatextBox.Margin = new Padding(3, 2, 3, 2);
+            BusquedatextBox.Name = "BusquedatextBox";
+            BusquedatextBox.Size = new Size(185, 23);
+            BusquedatextBox.TabIndex = 17;
             // 
             // BusquedapictureBox
             // 
@@ -300,7 +300,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1034, 490);
             Controls.Add(BusquedapictureBox);
-            Controls.Add(NombretextBox);
+            Controls.Add(BusquedatextBox);
             Controls.Add(Editarbutton);
             Controls.Add(PacientesdataGridView);
             Controls.Add(FechaNacimientodateTimePicker);
@@ -309,11 +309,11 @@
             Controls.Add(Generolabel);
             Controls.Add(FechaDeNacimientolabel);
             Controls.Add(ApellidoMaternolabel);
-            Controls.Add(NombretextBox4);
+            Controls.Add(ApellidoMaternotextBox4);
             Controls.Add(Telefonolabel);
-            Controls.Add(NombretextBox3);
+            Controls.Add(TelefonotextBox3);
             Controls.Add(ApellidoPaternolabel);
-            Controls.Add(NombretextBox2);
+            Controls.Add(ApellidoPaternotextBox2);
             Controls.Add(Nombre);
             Controls.Add(NombretextBox1);
             Controls.Add(Pacientespanel);
@@ -339,11 +339,11 @@
         private TextBox NombretextBox1;
         private Label Nombre;
         private Label ApellidoPaternolabel;
-        private TextBox NombretextBox2;
+        private TextBox ApellidoPaternotextBox2;
         private Label Telefonolabel;
-        private TextBox NombretextBox3;
+        private TextBox TelefonotextBox3;
         private Label ApellidoMaternolabel;
-        private TextBox NombretextBox4;
+        private TextBox ApellidoMaternotextBox4;
         private Label FechaDeNacimientolabel;
         private Label Generolabel;
         private RadioButton MasculinoradioButton;
@@ -351,7 +351,7 @@
         private DateTimePicker FechaNacimientodateTimePicker;
         private DataGridView PacientesdataGridView;
         private Button Editarbutton;
-        private TextBox NombretextBox;
+        private TextBox BusquedatextBox;
         private PictureBox BusquedapictureBox;
         private PictureBox BuscarpictureBox;
         private PictureBox GuardarpictureBox;

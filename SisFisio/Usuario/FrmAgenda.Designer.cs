@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAgenda));
-            HoradateTimePicker = new DateTimePicker();
+            AsignaHoradateTimePicker = new DateTimePicker();
             AsignaUnaHoralabel = new Label();
             AsignaUnaFechalabel = new Label();
-            FechadateTimePicker = new DateTimePicker();
+            AsignaFechadateTimePicker = new DateTimePicker();
             EventoRegistrarLabel = new Label();
-            NombretextBox = new TextBox();
+            EventoRegistrartextBox = new TextBox();
             SolicitudDeCitasPanel = new Panel();
             EliminarpictureBox = new PictureBox();
             LimpiarpictureBox = new PictureBox();
@@ -48,14 +48,14 @@
             ((System.ComponentModel.ISupportInitialize)BuscarpictureBox).BeginInit();
             SuspendLayout();
             // 
-            // HoradateTimePicker
+            // AsignaHoradateTimePicker
             // 
-            HoradateTimePicker.Format = DateTimePickerFormat.Time;
-            HoradateTimePicker.Location = new Point(485, 248);
-            HoradateTimePicker.Margin = new Padding(3, 2, 3, 2);
-            HoradateTimePicker.Name = "HoradateTimePicker";
-            HoradateTimePicker.Size = new Size(169, 23);
-            HoradateTimePicker.TabIndex = 55;
+            AsignaHoradateTimePicker.Format = DateTimePickerFormat.Time;
+            AsignaHoradateTimePicker.Location = new Point(485, 248);
+            AsignaHoradateTimePicker.Margin = new Padding(3, 2, 3, 2);
+            AsignaHoradateTimePicker.Name = "AsignaHoradateTimePicker";
+            AsignaHoradateTimePicker.Size = new Size(169, 23);
+            AsignaHoradateTimePicker.TabIndex = 55;
             // 
             // AsignaUnaHoralabel
             // 
@@ -75,13 +75,13 @@
             AsignaUnaFechalabel.TabIndex = 53;
             AsignaUnaFechalabel.Text = "Asigna un Fecha";
             // 
-            // FechadateTimePicker
+            // AsignaFechadateTimePicker
             // 
-            FechadateTimePicker.Location = new Point(485, 206);
-            FechadateTimePicker.Margin = new Padding(3, 2, 3, 2);
-            FechadateTimePicker.Name = "FechadateTimePicker";
-            FechadateTimePicker.Size = new Size(238, 23);
-            FechadateTimePicker.TabIndex = 50;
+            AsignaFechadateTimePicker.Location = new Point(485, 206);
+            AsignaFechadateTimePicker.Margin = new Padding(3, 2, 3, 2);
+            AsignaFechadateTimePicker.Name = "AsignaFechadateTimePicker";
+            AsignaFechadateTimePicker.Size = new Size(238, 23);
+            AsignaFechadateTimePicker.TabIndex = 50;
             // 
             // EventoRegistrarLabel
             // 
@@ -93,14 +93,14 @@
             EventoRegistrarLabel.Text = "Evento  registrar";
             EventoRegistrarLabel.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // NombretextBox
+            // EventoRegistrartextBox
             // 
-            NombretextBox.Location = new Point(502, 158);
-            NombretextBox.Margin = new Padding(3, 2, 3, 2);
-            NombretextBox.Multiline = true;
-            NombretextBox.Name = "NombretextBox";
-            NombretextBox.Size = new Size(212, 26);
-            NombretextBox.TabIndex = 42;
+            EventoRegistrartextBox.Location = new Point(502, 158);
+            EventoRegistrartextBox.Margin = new Padding(3, 2, 3, 2);
+            EventoRegistrartextBox.Multiline = true;
+            EventoRegistrartextBox.Name = "EventoRegistrartextBox";
+            EventoRegistrartextBox.Size = new Size(212, 26);
+            EventoRegistrartextBox.TabIndex = 42;
             // 
             // SolicitudDeCitasPanel
             // 
@@ -176,12 +176,12 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1034, 490);
-            Controls.Add(HoradateTimePicker);
+            Controls.Add(AsignaHoradateTimePicker);
             Controls.Add(AsignaUnaHoralabel);
             Controls.Add(AsignaUnaFechalabel);
-            Controls.Add(FechadateTimePicker);
+            Controls.Add(AsignaFechadateTimePicker);
             Controls.Add(EventoRegistrarLabel);
-            Controls.Add(NombretextBox);
+            Controls.Add(EventoRegistrartextBox);
             Controls.Add(SolicitudDeCitasPanel);
             Margin = new Padding(3, 2, 3, 2);
             Name = "FrmAgenda";
@@ -198,12 +198,12 @@
 
         #endregion
 
-        private DateTimePicker HoradateTimePicker;
+        private DateTimePicker AsignaHoradateTimePicker;
         private Label AsignaUnaHoralabel;
         private Label AsignaUnaFechalabel;
-        private DateTimePicker FechadateTimePicker;
+        private DateTimePicker AsignaFechadateTimePicker;
         private Label EventoRegistrarLabel;
-        private TextBox NombretextBox;
+        private TextBox EventoRegistrartextBox;
         private Panel SolicitudDeCitasPanel;
         private PictureBox EliminarpictureBox;
         private PictureBox LimpiarpictureBox;

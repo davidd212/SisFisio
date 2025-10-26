@@ -29,16 +29,16 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmLesiones));
-            AdminCatebutton = new Button();
+            AdministrarCategoriasbutton = new Button();
             TipoLesioncomboTipoBox = new ComboBox();
             BusquedapictureBox = new PictureBox();
-            NombretextBox5 = new TextBox();
+            BusquedatextBox5 = new TextBox();
             Editarbutton = new Button();
             dataGridView1 = new DataGridView();
             DescripcionEjerciciolabel = new Label();
-            NombretextBox3 = new TextBox();
+            DescripcionDelEjerciciotextBox3 = new TextBox();
             Gradolabel = new Label();
-            NombretextBox2 = new TextBox();
+            GradotextBox2 = new TextBox();
             TipoLesionLabel = new Label();
             Lesionpanel = new Panel();
             EliminarpictureBox = new PictureBox();
@@ -47,7 +47,7 @@
             BuscarpictureBox = new PictureBox();
             label1 = new Label();
             NombreEjerciciolabel = new Label();
-            NombretextBox = new TextBox();
+            NombreDelEjerciciotextBox = new TextBox();
             TipoLesioncomboBox2 = new ComboBox();
             TipoLesionlabel4 = new Label();
             TipoLesioncomboBox3 = new ComboBox();
@@ -65,17 +65,17 @@
             ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
             SuspendLayout();
             // 
-            // AdminCatebutton
+            // AdministrarCategoriasbutton
             // 
-            AdminCatebutton.BackColor = Color.FromArgb(128, 128, 255);
-            AdminCatebutton.ForeColor = SystemColors.ButtonHighlight;
-            AdminCatebutton.Location = new Point(234, 91);
-            AdminCatebutton.Margin = new Padding(3, 2, 3, 2);
-            AdminCatebutton.Name = "AdminCatebutton";
-            AdminCatebutton.Size = new Size(155, 22);
-            AdminCatebutton.TabIndex = 56;
-            AdminCatebutton.Text = "Administrar Categorias";
-            AdminCatebutton.UseVisualStyleBackColor = false;
+            AdministrarCategoriasbutton.BackColor = Color.FromArgb(128, 128, 255);
+            AdministrarCategoriasbutton.ForeColor = SystemColors.ButtonHighlight;
+            AdministrarCategoriasbutton.Location = new Point(234, 91);
+            AdministrarCategoriasbutton.Margin = new Padding(3, 2, 3, 2);
+            AdministrarCategoriasbutton.Name = "AdministrarCategoriasbutton";
+            AdministrarCategoriasbutton.Size = new Size(155, 22);
+            AdministrarCategoriasbutton.TabIndex = 56;
+            AdministrarCategoriasbutton.Text = "Administrar Categorias";
+            AdministrarCategoriasbutton.UseVisualStyleBackColor = false;
             // 
             // TipoLesioncomboTipoBox
             // 
@@ -98,13 +98,13 @@
             BusquedapictureBox.TabIndex = 52;
             BusquedapictureBox.TabStop = false;
             // 
-            // NombretextBox5
+            // BusquedatextBox5
             // 
-            NombretextBox5.Location = new Point(734, 95);
-            NombretextBox5.Margin = new Padding(3, 2, 3, 2);
-            NombretextBox5.Name = "NombretextBox5";
-            NombretextBox5.Size = new Size(185, 23);
-            NombretextBox5.TabIndex = 51;
+            BusquedatextBox5.Location = new Point(734, 95);
+            BusquedatextBox5.Margin = new Padding(3, 2, 3, 2);
+            BusquedatextBox5.Name = "BusquedatextBox5";
+            BusquedatextBox5.Size = new Size(185, 23);
+            BusquedatextBox5.TabIndex = 51;
             // 
             // Editarbutton
             // 
@@ -136,14 +136,14 @@
             DescripcionEjerciciolabel.TabIndex = 47;
             DescripcionEjerciciolabel.Text = "Descripcion del Ejercicio";
             // 
-            // NombretextBox3
+            // DescripcionDelEjerciciotextBox3
             // 
-            NombretextBox3.Location = new Point(30, 230);
-            NombretextBox3.Margin = new Padding(3, 2, 3, 2);
-            NombretextBox3.Multiline = true;
-            NombretextBox3.Name = "NombretextBox3";
-            NombretextBox3.Size = new Size(556, 68);
-            NombretextBox3.TabIndex = 46;
+            DescripcionDelEjerciciotextBox3.Location = new Point(30, 230);
+            DescripcionDelEjerciciotextBox3.Margin = new Padding(3, 2, 3, 2);
+            DescripcionDelEjerciciotextBox3.Multiline = true;
+            DescripcionDelEjerciciotextBox3.Name = "DescripcionDelEjerciciotextBox3";
+            DescripcionDelEjerciciotextBox3.Size = new Size(556, 68);
+            DescripcionDelEjerciciotextBox3.TabIndex = 46;
             // 
             // Gradolabel
             // 
@@ -155,14 +155,14 @@
             Gradolabel.Text = "Grado";
             Gradolabel.TextAlign = ContentAlignment.TopCenter;
             // 
-            // NombretextBox2
+            // GradotextBox2
             // 
-            NombretextBox2.Location = new Point(220, 157);
-            NombretextBox2.Margin = new Padding(3, 2, 3, 2);
-            NombretextBox2.Multiline = true;
-            NombretextBox2.Name = "NombretextBox2";
-            NombretextBox2.Size = new Size(186, 26);
-            NombretextBox2.TabIndex = 44;
+            GradotextBox2.Location = new Point(220, 157);
+            GradotextBox2.Margin = new Padding(3, 2, 3, 2);
+            GradotextBox2.Multiline = true;
+            GradotextBox2.Name = "GradotextBox2";
+            GradotextBox2.Size = new Size(186, 26);
+            GradotextBox2.TabIndex = 44;
             // 
             // TipoLesionLabel
             // 
@@ -252,14 +252,14 @@
             NombreEjerciciolabel.TabIndex = 58;
             NombreEjerciciolabel.Text = "Nombre del ejercicio";
             // 
-            // NombretextBox
+            // NombreDelEjerciciotextBox
             // 
-            NombretextBox.Location = new Point(410, 112);
-            NombretextBox.Margin = new Padding(3, 2, 3, 2);
-            NombretextBox.Multiline = true;
-            NombretextBox.Name = "NombretextBox";
-            NombretextBox.Size = new Size(186, 26);
-            NombretextBox.TabIndex = 57;
+            NombreDelEjerciciotextBox.Location = new Point(410, 112);
+            NombreDelEjerciciotextBox.Margin = new Padding(3, 2, 3, 2);
+            NombreDelEjerciciotextBox.Multiline = true;
+            NombreDelEjerciciotextBox.Name = "NombreDelEjerciciotextBox";
+            NombreDelEjerciciotextBox.Size = new Size(186, 26);
+            NombreDelEjerciciotextBox.TabIndex = 57;
             // 
             // TipoLesioncomboBox2
             // 
@@ -343,17 +343,17 @@
             Controls.Add(TipoLesioncomboBox2);
             Controls.Add(TipoLesionlabel4);
             Controls.Add(NombreEjerciciolabel);
-            Controls.Add(NombretextBox);
-            Controls.Add(AdminCatebutton);
+            Controls.Add(NombreDelEjerciciotextBox);
+            Controls.Add(AdministrarCategoriasbutton);
             Controls.Add(TipoLesioncomboTipoBox);
             Controls.Add(BusquedapictureBox);
-            Controls.Add(NombretextBox5);
+            Controls.Add(BusquedatextBox5);
             Controls.Add(Editarbutton);
             Controls.Add(dataGridView1);
             Controls.Add(DescripcionEjerciciolabel);
-            Controls.Add(NombretextBox3);
+            Controls.Add(DescripcionDelEjerciciotextBox3);
             Controls.Add(Gradolabel);
-            Controls.Add(NombretextBox2);
+            Controls.Add(GradotextBox2);
             Controls.Add(TipoLesionLabel);
             Controls.Add(Lesionpanel);
             Margin = new Padding(3, 2, 3, 2);
@@ -375,16 +375,16 @@
 
         #endregion
 
-        private Button AdminCatebutton;
+        private Button AdministrarCategoriasbutton;
         private ComboBox TipoLesioncomboTipoBox;
         private PictureBox BusquedapictureBox;
-        private TextBox NombretextBox5;
+        private TextBox BusquedatextBox5;
         private Button Editarbutton;
         private DataGridView dataGridView1;
         private Label DescripcionEjerciciolabel;
-        private TextBox NombretextBox3;
+        private TextBox DescripcionDelEjerciciotextBox3;
         private Label Gradolabel;
-        private TextBox NombretextBox2;
+        private TextBox GradotextBox2;
         private Label TipoLesionLabel;
         private Panel Lesionpanel;
         private PictureBox EliminarpictureBox;
@@ -393,7 +393,7 @@
         private PictureBox BuscarpictureBox;
         private Label label1;
         private Label NombreEjerciciolabel;
-        private TextBox NombretextBox;
+        private TextBox NombreDelEjerciciotextBox;
         private ComboBox TipoLesioncomboBox2;
         private Label TipoLesionlabel4;
         private ComboBox TipoLesioncomboBox3;

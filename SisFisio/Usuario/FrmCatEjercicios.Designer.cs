@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCatEjercicios));
-            NombretextBox = new TextBox();
+            NombreDeLaNuevaCategoriatextBox = new TextBox();
             BusquedapictureBox = new PictureBox();
-            NombretextBox5 = new TextBox();
+            BuscartextBox5 = new TextBox();
             Editarbutton = new Button();
             ConsultoriodataGridView = new DataGridView();
             NombreDeLaNuevaCategoriaLabel = new Label();
@@ -50,14 +50,14 @@
             ((System.ComponentModel.ISupportInitialize)BuscarpictureBox).BeginInit();
             SuspendLayout();
             // 
-            // NombretextBox
+            // NombreDeLaNuevaCategoriatextBox
             // 
-            NombretextBox.Location = new Point(168, 191);
-            NombretextBox.Margin = new Padding(3, 2, 3, 2);
-            NombretextBox.Multiline = true;
-            NombretextBox.Name = "NombretextBox";
-            NombretextBox.Size = new Size(252, 32);
-            NombretextBox.TabIndex = 48;
+            NombreDeLaNuevaCategoriatextBox.Location = new Point(168, 191);
+            NombreDeLaNuevaCategoriatextBox.Margin = new Padding(3, 2, 3, 2);
+            NombreDeLaNuevaCategoriatextBox.Multiline = true;
+            NombreDeLaNuevaCategoriatextBox.Name = "NombreDeLaNuevaCategoriatextBox";
+            NombreDeLaNuevaCategoriatextBox.Size = new Size(252, 32);
+            NombreDeLaNuevaCategoriatextBox.TabIndex = 48;
             // 
             // BusquedapictureBox
             // 
@@ -71,14 +71,14 @@
             BusquedapictureBox.TabIndex = 47;
             BusquedapictureBox.TabStop = false;
             // 
-            // NombretextBox5
+            // BuscartextBox5
             // 
-            NombretextBox5.Location = new Point(654, 98);
-            NombretextBox5.Margin = new Padding(3, 2, 3, 2);
-            NombretextBox5.Name = "NombretextBox5";
-            NombretextBox5.Size = new Size(185, 23);
-            NombretextBox5.TabIndex = 46;
-            NombretextBox5.TextChanged += NombretextBox5_TextChanged;
+            BuscartextBox5.Location = new Point(654, 98);
+            BuscartextBox5.Margin = new Padding(3, 2, 3, 2);
+            BuscartextBox5.Name = "BuscartextBox5";
+            BuscartextBox5.Size = new Size(185, 23);
+            BuscartextBox5.TabIndex = 46;
+            BuscartextBox5.TextChanged += NombretextBox5_TextChanged;
             // 
             // Editarbutton
             // 
@@ -185,9 +185,9 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1034, 490);
-            Controls.Add(NombretextBox);
+            Controls.Add(NombreDeLaNuevaCategoriatextBox);
             Controls.Add(BusquedapictureBox);
-            Controls.Add(NombretextBox5);
+            Controls.Add(BuscartextBox5);
             Controls.Add(Editarbutton);
             Controls.Add(ConsultoriodataGridView);
             Controls.Add(NombreDeLaNuevaCategoriaLabel);
@@ -210,9 +210,9 @@
 
         #endregion
 
-        private TextBox NombretextBox;
+        private TextBox NombreDeLaNuevaCategoriatextBox;
         private PictureBox BusquedapictureBox;
-        private TextBox NombretextBox5;
+        private TextBox BuscartextBox5;
         private Button Editarbutton;
         private DataGridView ConsultoriodataGridView;
         private Label NombreDeLaNuevaCategoriaLabel;

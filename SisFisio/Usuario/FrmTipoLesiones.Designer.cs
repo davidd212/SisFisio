@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmTipoLesiones));
-            NombretextBox = new TextBox();
+            TipoLesiontextBox = new TextBox();
             BusquedapictureBox = new PictureBox();
-            NombretextBox5 = new TextBox();
+            BusquedatextBox5 = new TextBox();
             Editarbutton = new Button();
             ConsultoriodataGridView = new DataGridView();
             TipoLesionLabel = new Label();
@@ -50,14 +50,14 @@
             ((System.ComponentModel.ISupportInitialize)BuscarpictureBox).BeginInit();
             SuspendLayout();
             // 
-            // NombretextBox
+            // TipoLesiontextBox
             // 
-            NombretextBox.Location = new Point(147, 195);
-            NombretextBox.Margin = new Padding(3, 2, 3, 2);
-            NombretextBox.Multiline = true;
-            NombretextBox.Name = "NombretextBox";
-            NombretextBox.Size = new Size(252, 29);
-            NombretextBox.TabIndex = 48;
+            TipoLesiontextBox.Location = new Point(147, 195);
+            TipoLesiontextBox.Margin = new Padding(3, 2, 3, 2);
+            TipoLesiontextBox.Multiline = true;
+            TipoLesiontextBox.Name = "TipoLesiontextBox";
+            TipoLesiontextBox.Size = new Size(252, 29);
+            TipoLesiontextBox.TabIndex = 48;
             // 
             // BusquedapictureBox
             // 
@@ -71,13 +71,13 @@
             BusquedapictureBox.TabIndex = 47;
             BusquedapictureBox.TabStop = false;
             // 
-            // NombretextBox5
+            // BusquedatextBox5
             // 
-            NombretextBox5.Location = new Point(662, 86);
-            NombretextBox5.Margin = new Padding(3, 2, 3, 2);
-            NombretextBox5.Name = "NombretextBox5";
-            NombretextBox5.Size = new Size(185, 23);
-            NombretextBox5.TabIndex = 46;
+            BusquedatextBox5.Location = new Point(662, 86);
+            BusquedatextBox5.Margin = new Padding(3, 2, 3, 2);
+            BusquedatextBox5.Name = "BusquedatextBox5";
+            BusquedatextBox5.Size = new Size(185, 23);
+            BusquedatextBox5.TabIndex = 46;
             // 
             // Editarbutton
             // 
@@ -184,9 +184,9 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1034, 490);
-            Controls.Add(NombretextBox);
+            Controls.Add(TipoLesiontextBox);
             Controls.Add(BusquedapictureBox);
-            Controls.Add(NombretextBox5);
+            Controls.Add(BusquedatextBox5);
             Controls.Add(Editarbutton);
             Controls.Add(ConsultoriodataGridView);
             Controls.Add(TipoLesionLabel);
@@ -208,9 +208,9 @@
 
         #endregion
 
-        private TextBox NombretextBox;
+        private TextBox TipoLesiontextBox;
         private PictureBox BusquedapictureBox;
-        private TextBox NombretextBox5;
+        private TextBox BusquedatextBox5;
         private Button Editarbutton;
         private DataGridView ConsultoriodataGridView;
         private Label TipoLesionLabel;

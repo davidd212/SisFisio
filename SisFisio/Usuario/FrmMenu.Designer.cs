@@ -37,9 +37,9 @@
             DatosAgendapanel = new Panel();
             DatosAgendalabel = new Label();
             BuscarpictureBox = new PictureBox();
-            NombretextBox5 = new TextBox();
+            BuscartextBox5 = new TextBox();
             BuscarpictureBox2 = new PictureBox();
-            NombretextBox1 = new TextBox();
+            BuscartextBox1 = new TextBox();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
             ListadoSesionCita.SuspendLayout();
@@ -126,12 +126,12 @@
             BuscarpictureBox.TabIndex = 38;
             BuscarpictureBox.TabStop = false;
             // 
-            // NombretextBox5
+            // BuscartextBox5
             // 
-            NombretextBox5.Location = new Point(417, 135);
-            NombretextBox5.Name = "NombretextBox5";
-            NombretextBox5.Size = new Size(205, 24);
-            NombretextBox5.TabIndex = 37;
+            BuscartextBox5.Location = new Point(417, 135);
+            BuscartextBox5.Name = "BuscartextBox5";
+            BuscartextBox5.Size = new Size(205, 24);
+            BuscartextBox5.TabIndex = 37;
             // 
             // BuscarpictureBox2
             // 
@@ -144,12 +144,12 @@
             BuscarpictureBox2.TabIndex = 40;
             BuscarpictureBox2.TabStop = false;
             // 
-            // NombretextBox1
+            // BuscartextBox1
             // 
-            NombretextBox1.Location = new Point(884, 136);
-            NombretextBox1.Name = "NombretextBox1";
-            NombretextBox1.Size = new Size(205, 24);
-            NombretextBox1.TabIndex = 39;
+            BuscartextBox1.Location = new Point(884, 136);
+            BuscartextBox1.Name = "BuscartextBox1";
+            BuscartextBox1.Size = new Size(205, 24);
+            BuscartextBox1.TabIndex = 39;
             // 
             // FrmMenu
             // 
@@ -157,9 +157,9 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1200, 700);
             Controls.Add(BuscarpictureBox2);
-            Controls.Add(NombretextBox1);
+            Controls.Add(BuscartextBox1);
             Controls.Add(BuscarpictureBox);
-            Controls.Add(NombretextBox5);
+            Controls.Add(BuscartextBox5);
             Controls.Add(DatosAgendapanel);
             Controls.Add(ListadoSesionCita);
             Controls.Add(dataGridView2);
@@ -193,8 +193,8 @@
         private Panel DatosAgendapanel;
         private Label DatosAgendalabel;
         private PictureBox BuscarpictureBox;
-        private TextBox NombretextBox5;
+        private TextBox BuscartextBox5;
         private PictureBox BuscarpictureBox2;
-        private TextBox NombretextBox1;
+        private TextBox BuscartextBox1;
     }
 }

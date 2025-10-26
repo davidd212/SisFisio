@@ -31,13 +31,13 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCH));
             Agregarbutton = new Button();
             BusquedapictureBox = new PictureBox();
-            textBoxNombre5 = new TextBox();
+            BusquedatextBox5 = new TextBox();
             Editarbutton = new Button();
             CuerpoHumanodataGridView = new DataGridView();
             ImagenDelMusculolabel = new Label();
-            textBoxNombre3 = new TextBox();
+            ImagenDelMusculotextBox3 = new TextBox();
             NombreDelEjerciciolabel = new Label();
-            textBoxNombre2 = new TextBox();
+            NombreDelEjerciciotextBox2 = new TextBox();
             ConsultorioHumanopanel = new Panel();
             EliminarpictureBox = new PictureBox();
             LimpiarpictureBox = new PictureBox();
@@ -47,7 +47,7 @@
             NmEjerciciolabel = new Label();
             NomEjerciciocomboBox = new ComboBox();
             DescripciónDeLaObservaciónlabel = new Label();
-            textBoxNombre1 = new TextBox();
+            DescripciónDeLaObservacióntextBox1 = new TextBox();
             ((System.ComponentModel.ISupportInitialize)BusquedapictureBox).BeginInit();
             ((System.ComponentModel.ISupportInitialize)CuerpoHumanodataGridView).BeginInit();
             ConsultorioHumanopanel.SuspendLayout();
@@ -81,13 +81,13 @@
             BusquedapictureBox.TabIndex = 52;
             BusquedapictureBox.TabStop = false;
             // 
-            // textBoxNombre5
+            // BusquedatextBox5
             // 
-            textBoxNombre5.Location = new Point(682, 98);
-            textBoxNombre5.Margin = new Padding(3, 2, 3, 2);
-            textBoxNombre5.Name = "textBoxNombre5";
-            textBoxNombre5.Size = new Size(185, 23);
-            textBoxNombre5.TabIndex = 51;
+            BusquedatextBox5.Location = new Point(682, 98);
+            BusquedatextBox5.Margin = new Padding(3, 2, 3, 2);
+            BusquedatextBox5.Name = "BusquedatextBox5";
+            BusquedatextBox5.Size = new Size(185, 23);
+            BusquedatextBox5.TabIndex = 51;
             // 
             // Editarbutton
             // 
@@ -120,14 +120,14 @@
             ImagenDelMusculolabel.Text = "Imagen del Musculo";
             ImagenDelMusculolabel.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // textBoxNombre3
+            // ImagenDelMusculotextBox3
             // 
-            textBoxNombre3.Location = new Point(30, 118);
-            textBoxNombre3.Margin = new Padding(3, 2, 3, 2);
-            textBoxNombre3.Multiline = true;
-            textBoxNombre3.Name = "textBoxNombre3";
-            textBoxNombre3.Size = new Size(186, 145);
-            textBoxNombre3.TabIndex = 46;
+            ImagenDelMusculotextBox3.Location = new Point(30, 118);
+            ImagenDelMusculotextBox3.Margin = new Padding(3, 2, 3, 2);
+            ImagenDelMusculotextBox3.Multiline = true;
+            ImagenDelMusculotextBox3.Name = "ImagenDelMusculotextBox3";
+            ImagenDelMusculotextBox3.Size = new Size(186, 145);
+            ImagenDelMusculotextBox3.TabIndex = 46;
             // 
             // NombreDelEjerciciolabel
             // 
@@ -139,14 +139,14 @@
             NombreDelEjerciciolabel.Text = "Nombre del ejercicio";
             NombreDelEjerciciolabel.Click += label2_Click;
             // 
-            // textBoxNombre2
+            // NombreDelEjerciciotextBox2
             // 
-            textBoxNombre2.Location = new Point(229, 121);
-            textBoxNombre2.Margin = new Padding(3, 2, 3, 2);
-            textBoxNombre2.Multiline = true;
-            textBoxNombre2.Name = "textBoxNombre2";
-            textBoxNombre2.Size = new Size(217, 26);
-            textBoxNombre2.TabIndex = 44;
+            NombreDelEjerciciotextBox2.Location = new Point(229, 121);
+            NombreDelEjerciciotextBox2.Margin = new Padding(3, 2, 3, 2);
+            NombreDelEjerciciotextBox2.Multiline = true;
+            NombreDelEjerciciotextBox2.Name = "NombreDelEjerciciotextBox2";
+            NombreDelEjerciciotextBox2.Size = new Size(217, 26);
+            NombreDelEjerciciotextBox2.TabIndex = 44;
             // 
             // ConsultorioHumanopanel
             // 
@@ -245,14 +245,14 @@
             DescripciónDeLaObservaciónlabel.Text = "Descripcion de la Observacion";
             DescripciónDeLaObservaciónlabel.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // textBoxNombre1
+            // DescripciónDeLaObservacióntextBox1
             // 
-            textBoxNombre1.Location = new Point(229, 240);
-            textBoxNombre1.Margin = new Padding(3, 2, 3, 2);
-            textBoxNombre1.Multiline = true;
-            textBoxNombre1.Name = "textBoxNombre1";
-            textBoxNombre1.Size = new Size(279, 65);
-            textBoxNombre1.TabIndex = 59;
+            DescripciónDeLaObservacióntextBox1.Location = new Point(229, 240);
+            DescripciónDeLaObservacióntextBox1.Margin = new Padding(3, 2, 3, 2);
+            DescripciónDeLaObservacióntextBox1.Multiline = true;
+            DescripciónDeLaObservacióntextBox1.Name = "DescripciónDeLaObservacióntextBox1";
+            DescripciónDeLaObservacióntextBox1.Size = new Size(279, 65);
+            DescripciónDeLaObservacióntextBox1.TabIndex = 59;
             // 
             // FrmCH
             // 
@@ -260,18 +260,18 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1034, 490);
             Controls.Add(DescripciónDeLaObservaciónlabel);
-            Controls.Add(textBoxNombre1);
+            Controls.Add(DescripciónDeLaObservacióntextBox1);
             Controls.Add(NomEjerciciocomboBox);
             Controls.Add(NmEjerciciolabel);
             Controls.Add(Agregarbutton);
             Controls.Add(BusquedapictureBox);
-            Controls.Add(textBoxNombre5);
+            Controls.Add(BusquedatextBox5);
             Controls.Add(Editarbutton);
             Controls.Add(CuerpoHumanodataGridView);
             Controls.Add(ImagenDelMusculolabel);
-            Controls.Add(textBoxNombre3);
+            Controls.Add(ImagenDelMusculotextBox3);
             Controls.Add(NombreDelEjerciciolabel);
-            Controls.Add(textBoxNombre2);
+            Controls.Add(NombreDelEjerciciotextBox2);
             Controls.Add(ConsultorioHumanopanel);
             Margin = new Padding(3, 2, 3, 2);
             Name = "FrmCH";
@@ -293,13 +293,13 @@
 
         private Button Agregarbutton;
         private PictureBox BusquedapictureBox;
-        private TextBox textBoxNombre5;
+        private TextBox BusquedatextBox5;
         private Button Editarbutton;
         private DataGridView CuerpoHumanodataGridView;
         private Label ImagenDelMusculolabel;
-        private TextBox textBoxNombre3;
+        private TextBox ImagenDelMusculotextBox3;
         private Label NombreDelEjerciciolabel;
-        private TextBox textBoxNombre2;
+        private TextBox NombreDelEjerciciotextBox2;
         private Panel ConsultorioHumanopanel;
         private PictureBox EliminarpictureBox;
         private PictureBox LimpiarpictureBox;
@@ -309,6 +309,6 @@
         private Label NmEjerciciolabel;
         private ComboBox NomEjerciciocomboBox;
         private Label DescripciónDeLaObservaciónlabel;
-        private TextBox textBoxNombre1;
+        private TextBox DescripciónDeLaObservacióntextBox1;
     }
 }

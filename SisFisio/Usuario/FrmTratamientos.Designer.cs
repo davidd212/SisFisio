@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmTratamientos));
-            NombretextBox = new TextBox();
+            NombreDelTratamientotextBox = new TextBox();
             BusquedapictureBox = new PictureBox();
-            NombretextBox5 = new TextBox();
+            BusquedatextBox5 = new TextBox();
             Editarbutton = new Button();
             TratamientodataGridView = new DataGridView();
             DesDetaTratalabel = new Label();
-            NombretextBox3 = new TextBox();
+            DescripcionDetalladaDelTratamientotextBox3 = new TextBox();
             NombreTratamientoLabel = new Label();
             Tratamientospanel = new Panel();
             EliminarpictureBox = new PictureBox();
@@ -52,14 +52,14 @@
             ((System.ComponentModel.ISupportInitialize)BuscarpictureBox).BeginInit();
             SuspendLayout();
             // 
-            // NombretextBox
+            // NombreDelTratamientotextBox
             // 
-            NombretextBox.Location = new Point(244, 118);
-            NombretextBox.Margin = new Padding(3, 2, 3, 2);
-            NombretextBox.Multiline = true;
-            NombretextBox.Name = "NombretextBox";
-            NombretextBox.Size = new Size(252, 29);
-            NombretextBox.TabIndex = 48;
+            NombreDelTratamientotextBox.Location = new Point(244, 118);
+            NombreDelTratamientotextBox.Margin = new Padding(3, 2, 3, 2);
+            NombreDelTratamientotextBox.Multiline = true;
+            NombreDelTratamientotextBox.Name = "NombreDelTratamientotextBox";
+            NombreDelTratamientotextBox.Size = new Size(252, 29);
+            NombreDelTratamientotextBox.TabIndex = 48;
             // 
             // BusquedapictureBox
             // 
@@ -73,13 +73,13 @@
             BusquedapictureBox.TabIndex = 47;
             BusquedapictureBox.TabStop = false;
             // 
-            // NombretextBox5
+            // BusquedatextBox5
             // 
-            NombretextBox5.Location = new Point(709, 86);
-            NombretextBox5.Margin = new Padding(3, 2, 3, 2);
-            NombretextBox5.Name = "NombretextBox5";
-            NombretextBox5.Size = new Size(185, 23);
-            NombretextBox5.TabIndex = 46;
+            BusquedatextBox5.Location = new Point(709, 86);
+            BusquedatextBox5.Margin = new Padding(3, 2, 3, 2);
+            BusquedatextBox5.Name = "BusquedatextBox5";
+            BusquedatextBox5.Size = new Size(185, 23);
+            BusquedatextBox5.TabIndex = 46;
             // 
             // Editarbutton
             // 
@@ -112,14 +112,14 @@
             DesDetaTratalabel.Text = "Descripcion detallada del Tratamiento";
             DesDetaTratalabel.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // NombretextBox3
+            // DescripcionDetalladaDelTratamientotextBox3
             // 
-            NombretextBox3.Location = new Point(98, 181);
-            NombretextBox3.Margin = new Padding(3, 2, 3, 2);
-            NombretextBox3.Multiline = true;
-            NombretextBox3.Name = "NombretextBox3";
-            NombretextBox3.Size = new Size(398, 92);
-            NombretextBox3.TabIndex = 42;
+            DescripcionDetalladaDelTratamientotextBox3.Location = new Point(98, 181);
+            DescripcionDetalladaDelTratamientotextBox3.Margin = new Padding(3, 2, 3, 2);
+            DescripcionDetalladaDelTratamientotextBox3.Multiline = true;
+            DescripcionDetalladaDelTratamientotextBox3.Name = "DescripcionDetalladaDelTratamientotextBox3";
+            DescripcionDetalladaDelTratamientotextBox3.Size = new Size(398, 92);
+            DescripcionDetalladaDelTratamientotextBox3.TabIndex = 42;
             // 
             // NombreTratamientoLabel
             // 
@@ -205,13 +205,13 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1034, 490);
-            Controls.Add(NombretextBox);
+            Controls.Add(NombreDelTratamientotextBox);
             Controls.Add(BusquedapictureBox);
-            Controls.Add(NombretextBox5);
+            Controls.Add(BusquedatextBox5);
             Controls.Add(Editarbutton);
             Controls.Add(TratamientodataGridView);
             Controls.Add(DesDetaTratalabel);
-            Controls.Add(NombretextBox3);
+            Controls.Add(DescripcionDetalladaDelTratamientotextBox3);
             Controls.Add(NombreTratamientoLabel);
             Controls.Add(Tratamientospanel);
             Margin = new Padding(3, 2, 3, 2);
@@ -231,13 +231,13 @@
 
         #endregion
 
-        private TextBox NombretextBox;
+        private TextBox NombreDelTratamientotextBox;
         private PictureBox BusquedapictureBox;
-        private TextBox NombretextBox5;
+        private TextBox BusquedatextBox5;
         private Button Editarbutton;
         private DataGridView TratamientodataGridView;
         private Label DesDetaTratalabel;
-        private TextBox NombretextBox3;
+        private TextBox DescripcionDetalladaDelTratamientotextBox3;
         private Label NombreTratamientoLabel;
         private Panel Tratamientospanel;
         private PictureBox EliminarpictureBox;

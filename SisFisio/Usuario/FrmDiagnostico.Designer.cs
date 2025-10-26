@@ -33,7 +33,7 @@
             PacientecomboBox = new ComboBox();
             dataGridView1 = new DataGridView();
             TipoDiagnosticolabel = new Label();
-            textBoxNombre2 = new TextBox();
+            RadiografiatextBox2 = new TextBox();
             NombrePacienteLabel = new Label();
             Diagnosticopanel = new Panel();
             EliminarpictureBox = new PictureBox();
@@ -56,7 +56,7 @@
             NombreDeLaLesionlabel = new Label();
             Radiografialabel = new Label();
             Descripciónlabel = new Label();
-            NombretextBox3 = new TextBox();
+            DescripciontextBox3 = new TextBox();
             EscalaDolorlabel = new Label();
             LeveradioButton = new RadioButton();
             ModeradoradioButton = new RadioButton();
@@ -65,10 +65,10 @@
             MotivoCitacomboBox = new ComboBox();
             CuerpoHumanolabel = new Label();
             dataGridView3 = new DataGridView();
-            NombretextBox4 = new TextBox();
-            NombretextBox = new TextBox();
+            NumDiagnosticotextBox4 = new TextBox();
+            SeriestextBox = new TextBox();
             SinDolorradioButton = new RadioButton();
-            NombretextBox5 = new TextBox();
+            RepeticionestextBox5 = new TextBox();
             CategoriacomboBox = new ComboBox();
             NombreDelEjerciciolabel = new Label();
             NombreDelEjerciciocomboBox = new ComboBox();
@@ -124,14 +124,14 @@
             TipoDiagnosticolabel.Text = "Tipo de Diagnostico";
             TipoDiagnosticolabel.TextAlign = ContentAlignment.TopCenter;
             // 
-            // textBoxNombre2
+            // RadiografiatextBox2
             // 
-            textBoxNombre2.Location = new Point(32, 217);
-            textBoxNombre2.Margin = new Padding(3, 2, 3, 2);
-            textBoxNombre2.Multiline = true;
-            textBoxNombre2.Name = "textBoxNombre2";
-            textBoxNombre2.Size = new Size(207, 93);
-            textBoxNombre2.TabIndex = 68;
+            RadiografiatextBox2.Location = new Point(32, 217);
+            RadiografiatextBox2.Margin = new Padding(3, 2, 3, 2);
+            RadiografiatextBox2.Multiline = true;
+            RadiografiatextBox2.Name = "RadiografiatextBox2";
+            RadiografiatextBox2.Size = new Size(207, 93);
+            RadiografiatextBox2.TabIndex = 68;
             // 
             // NombrePacienteLabel
             // 
@@ -358,14 +358,14 @@
             Descripciónlabel.Text = "Descripcion";
             Descripciónlabel.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // NombretextBox3
+            // DescripciontextBox3
             // 
-            NombretextBox3.Location = new Point(254, 224);
-            NombretextBox3.Margin = new Padding(3, 2, 3, 2);
-            NombretextBox3.Multiline = true;
-            NombretextBox3.Name = "NombretextBox3";
-            NombretextBox3.Size = new Size(375, 53);
-            NombretextBox3.TabIndex = 103;
+            DescripciontextBox3.Location = new Point(254, 224);
+            DescripciontextBox3.Margin = new Padding(3, 2, 3, 2);
+            DescripciontextBox3.Multiline = true;
+            DescripciontextBox3.Name = "DescripciontextBox3";
+            DescripciontextBox3.Size = new Size(375, 53);
+            DescripciontextBox3.TabIndex = 103;
             // 
             // EscalaDolorlabel
             // 
@@ -454,23 +454,23 @@
             dataGridView3.Size = new Size(291, 125);
             dataGridView3.TabIndex = 113;
             // 
-            // NombretextBox4
+            // NumDiagnosticotextBox4
             // 
-            NombretextBox4.Location = new Point(173, 94);
-            NombretextBox4.Margin = new Padding(3, 2, 3, 2);
-            NombretextBox4.Multiline = true;
-            NombretextBox4.Name = "NombretextBox4";
-            NombretextBox4.Size = new Size(142, 26);
-            NombretextBox4.TabIndex = 120;
+            NumDiagnosticotextBox4.Location = new Point(173, 94);
+            NumDiagnosticotextBox4.Margin = new Padding(3, 2, 3, 2);
+            NumDiagnosticotextBox4.Multiline = true;
+            NumDiagnosticotextBox4.Name = "NumDiagnosticotextBox4";
+            NumDiagnosticotextBox4.Size = new Size(142, 26);
+            NumDiagnosticotextBox4.TabIndex = 120;
             // 
-            // NombretextBox
+            // SeriestextBox
             // 
-            NombretextBox.Location = new Point(108, 421);
-            NombretextBox.Margin = new Padding(3, 2, 3, 2);
-            NombretextBox.Multiline = true;
-            NombretextBox.Name = "NombretextBox";
-            NombretextBox.Size = new Size(121, 20);
-            NombretextBox.TabIndex = 78;
+            SeriestextBox.Location = new Point(108, 421);
+            SeriestextBox.Margin = new Padding(3, 2, 3, 2);
+            SeriestextBox.Multiline = true;
+            SeriestextBox.Name = "SeriestextBox";
+            SeriestextBox.Size = new Size(121, 20);
+            SeriestextBox.TabIndex = 78;
             // 
             // SinDolorradioButton
             // 
@@ -484,15 +484,15 @@
             SinDolorradioButton.Text = "Sin Dolor";
             SinDolorradioButton.UseVisualStyleBackColor = true;
             // 
-            // NombretextBox5
+            // RepeticionestextBox5
             // 
-            NombretextBox5.Location = new Point(121, 452);
-            NombretextBox5.Margin = new Padding(3, 2, 3, 2);
-            NombretextBox5.Multiline = true;
-            NombretextBox5.Name = "NombretextBox5";
-            NombretextBox5.Size = new Size(121, 20);
-            NombretextBox5.TabIndex = 121;
-            NombretextBox5.TextChanged += textBox5_TextChanged;
+            RepeticionestextBox5.Location = new Point(121, 452);
+            RepeticionestextBox5.Margin = new Padding(3, 2, 3, 2);
+            RepeticionestextBox5.Multiline = true;
+            RepeticionestextBox5.Name = "RepeticionestextBox5";
+            RepeticionestextBox5.Size = new Size(121, 20);
+            RepeticionestextBox5.TabIndex = 121;
+            RepeticionestextBox5.TextChanged += textBox5_TextChanged;
             // 
             // CategoriacomboBox
             // 
@@ -569,8 +569,8 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1053, 498);
             Controls.Add(ElaborarInformesbutton);
-            Controls.Add(NombretextBox5);
-            Controls.Add(NombretextBox4);
+            Controls.Add(RepeticionestextBox5);
+            Controls.Add(NumDiagnosticotextBox4);
             Controls.Add(Repeticioneslabel);
             Controls.Add(Serieslabel);
             Controls.Add(NombreDelEjerciciocomboBox);
@@ -586,7 +586,7 @@
             Controls.Add(LeveradioButton);
             Controls.Add(SinDolorradioButton);
             Controls.Add(EscalaDolorlabel);
-            Controls.Add(NombretextBox3);
+            Controls.Add(DescripciontextBox3);
             Controls.Add(Descripciónlabel);
             Controls.Add(Radiografialabel);
             Controls.Add(NombreDeLaLesioncomboBox);
@@ -603,11 +603,11 @@
             Controls.Add(NombreFisioterapialabel);
             Controls.Add(MotivoCitalabel);
             Controls.Add(NumDiagnosticolabel);
-            Controls.Add(NombretextBox);
+            Controls.Add(SeriestextBox);
             Controls.Add(PacientecomboBox);
             Controls.Add(dataGridView1);
             Controls.Add(TipoDiagnosticolabel);
-            Controls.Add(textBoxNombre2);
+            Controls.Add(RadiografiatextBox2);
             Controls.Add(NombrePacienteLabel);
             Controls.Add(Diagnosticopanel);
             Margin = new Padding(3, 2, 3, 2);
@@ -631,7 +631,7 @@
         private ComboBox PacientecomboBox;
         private DataGridView dataGridView1;
         private Label TipoDiagnosticolabel;
-        private TextBox textBoxNombre2;
+        private TextBox RadiografiatextBox2;
         private Label NombrePacienteLabel;
         private Panel Diagnosticopanel;
         private PictureBox EliminarpictureBox;
@@ -654,7 +654,7 @@
         private Label NombreDeLaLesionlabel;
         private Label Radiografialabel;
         private Label Descripciónlabel;
-        private TextBox NombretextBox3;
+        private TextBox DescripciontextBox3;
         private Label EscalaDolorlabel;
         private RadioButton LeveradioButton;
         private RadioButton ModeradoradioButton;
@@ -663,10 +663,10 @@
         private ComboBox MotivoCitacomboBox;
         private Label CuerpoHumanolabel;
         private DataGridView dataGridView3;
-        private TextBox NombretextBox4;
-        private TextBox NombretextBox;
+        private TextBox NumDiagnosticotextBox4;
+        private TextBox SeriestextBox;
         private RadioButton SinDolorradioButton;
-        private TextBox NombretextBox5;
+        private TextBox RepeticionestextBox5;
         private ComboBox CategoriacomboBox;
         private Label NombreDelEjerciciolabel;
         private ComboBox NombreDelEjerciciocomboBox;
