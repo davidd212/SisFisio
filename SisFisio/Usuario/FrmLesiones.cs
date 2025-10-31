@@ -12,12 +12,18 @@ namespace SisFisio.Usuario
 {
     public partial class FrmLesiones : Form
     {
+
         public FrmLesiones()
         {
             InitializeComponent();
         }
 
         private void FrmLesiones_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void DgPacientes_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }

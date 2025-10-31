@@ -29,45 +29,45 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmTipoLesiones));
-            textBox1 = new TextBox();
-            pictureBox1 = new PictureBox();
+            TxtTipo = new TextBox();
+            Buscar = new PictureBox();
             textBox5 = new TextBox();
             button1 = new Button();
-            dataGridView1 = new DataGridView();
+            Dtbusqueda = new DataGridView();
             Nombre = new Label();
             panel1 = new Panel();
-            pictureBox5 = new PictureBox();
-            pictureBox4 = new PictureBox();
-            pictureBox3 = new PictureBox();
+            Borrar = new PictureBox();
+            Limpiarr = new PictureBox();
+            Guardar = new PictureBox();
             pictureBox2 = new PictureBox();
             label1 = new Label();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)Buscar).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)Dtbusqueda).BeginInit();
             panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)Borrar).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)Limpiarr).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)Guardar).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
             // 
-            // textBox1
+            // TxtTipo
             // 
-            textBox1.Location = new Point(168, 260);
-            textBox1.Multiline = true;
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(287, 37);
-            textBox1.TabIndex = 48;
+            TxtTipo.Location = new Point(168, 260);
+            TxtTipo.Multiline = true;
+            TxtTipo.Name = "TxtTipo";
+            TxtTipo.Size = new Size(287, 37);
+            TxtTipo.TabIndex = 48;
             // 
-            // pictureBox1
+            // Buscar
             // 
-            pictureBox1.BackColor = Color.FromArgb(0, 192, 192);
-            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(965, 114);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(53, 27);
-            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox1.TabIndex = 47;
-            pictureBox1.TabStop = false;
+            Buscar.BackColor = Color.FromArgb(0, 192, 192);
+            Buscar.Image = (Image)resources.GetObject("Buscar.Image");
+            Buscar.Location = new Point(965, 114);
+            Buscar.Name = "Buscar";
+            Buscar.Size = new Size(53, 27);
+            Buscar.SizeMode = PictureBoxSizeMode.Zoom;
+            Buscar.TabIndex = 47;
+            Buscar.TabStop = false;
             // 
             // textBox5
             // 
@@ -85,15 +85,16 @@
             button1.TabIndex = 45;
             button1.Text = "Editar";
             button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
-            // dataGridView1
+            // Dtbusqueda
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(621, 160);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(467, 188);
-            dataGridView1.TabIndex = 44;
+            Dtbusqueda.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            Dtbusqueda.Location = new Point(621, 160);
+            Dtbusqueda.Name = "Dtbusqueda";
+            Dtbusqueda.RowHeadersWidth = 51;
+            Dtbusqueda.Size = new Size(467, 188);
+            Dtbusqueda.TabIndex = 44;
             // 
             // Nombre
             // 
@@ -108,9 +109,9 @@
             // panel1
             // 
             panel1.BackColor = Color.Navy;
-            panel1.Controls.Add(pictureBox5);
-            panel1.Controls.Add(pictureBox4);
-            panel1.Controls.Add(pictureBox3);
+            panel1.Controls.Add(Borrar);
+            panel1.Controls.Add(Limpiarr);
+            panel1.Controls.Add(Guardar);
             panel1.Controls.Add(pictureBox2);
             panel1.Controls.Add(label1);
             panel1.Location = new Point(1, 0);
@@ -118,35 +119,38 @@
             panel1.Size = new Size(1180, 79);
             panel1.TabIndex = 40;
             // 
-            // pictureBox5
+            // Borrar
             // 
-            pictureBox5.Image = (Image)resources.GetObject("pictureBox5.Image");
-            pictureBox5.Location = new Point(952, 23);
-            pictureBox5.Name = "pictureBox5";
-            pictureBox5.Size = new Size(48, 42);
-            pictureBox5.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox5.TabIndex = 4;
-            pictureBox5.TabStop = false;
+            Borrar.Image = (Image)resources.GetObject("Borrar.Image");
+            Borrar.Location = new Point(952, 23);
+            Borrar.Name = "Borrar";
+            Borrar.Size = new Size(48, 42);
+            Borrar.SizeMode = PictureBoxSizeMode.Zoom;
+            Borrar.TabIndex = 4;
+            Borrar.TabStop = false;
+            Borrar.Click += Borrar_Click;
             // 
-            // pictureBox4
+            // Limpiarr
             // 
-            pictureBox4.Image = (Image)resources.GetObject("pictureBox4.Image");
-            pictureBox4.Location = new Point(1015, 23);
-            pictureBox4.Name = "pictureBox4";
-            pictureBox4.Size = new Size(48, 42);
-            pictureBox4.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox4.TabIndex = 3;
-            pictureBox4.TabStop = false;
+            Limpiarr.Image = (Image)resources.GetObject("Limpiarr.Image");
+            Limpiarr.Location = new Point(1015, 23);
+            Limpiarr.Name = "Limpiarr";
+            Limpiarr.Size = new Size(48, 42);
+            Limpiarr.SizeMode = PictureBoxSizeMode.Zoom;
+            Limpiarr.TabIndex = 3;
+            Limpiarr.TabStop = false;
+            Limpiarr.Click += Limpiarr_Click;
             // 
-            // pictureBox3
+            // Guardar
             // 
-            pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
-            pictureBox3.Location = new Point(898, 27);
-            pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(48, 38);
-            pictureBox3.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox3.TabIndex = 2;
-            pictureBox3.TabStop = false;
+            Guardar.Image = (Image)resources.GetObject("Guardar.Image");
+            Guardar.Location = new Point(898, 27);
+            Guardar.Name = "Guardar";
+            Guardar.Size = new Size(48, 38);
+            Guardar.SizeMode = PictureBoxSizeMode.Zoom;
+            Guardar.TabIndex = 2;
+            Guardar.TabStop = false;
+            Guardar.Click += Guardar_Click;
             // 
             // pictureBox2
             // 
@@ -174,22 +178,23 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1182, 653);
-            Controls.Add(textBox1);
-            Controls.Add(pictureBox1);
+            Controls.Add(TxtTipo);
+            Controls.Add(Buscar);
             Controls.Add(textBox5);
             Controls.Add(button1);
-            Controls.Add(dataGridView1);
+            Controls.Add(Dtbusqueda);
             Controls.Add(Nombre);
             Controls.Add(panel1);
             Name = "FrmTipoLesiones";
             Text = "FrmTipoLesiones";
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            Load += FrmTipoLesiones_Load;
+            ((System.ComponentModel.ISupportInitialize)Buscar).EndInit();
+            ((System.ComponentModel.ISupportInitialize)Dtbusqueda).EndInit();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
+            ((System.ComponentModel.ISupportInitialize)Borrar).EndInit();
+            ((System.ComponentModel.ISupportInitialize)Limpiarr).EndInit();
+            ((System.ComponentModel.ISupportInitialize)Guardar).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -197,16 +202,16 @@
 
         #endregion
 
-        private TextBox textBox1;
-        private PictureBox pictureBox1;
+        private TextBox TxtTipo;
+        private PictureBox Buscar;
         private TextBox textBox5;
         private Button button1;
-        private DataGridView dataGridView1;
+        private DataGridView Dtbusqueda;
         private Label Nombre;
         private Panel panel1;
-        private PictureBox pictureBox5;
-        private PictureBox pictureBox4;
-        private PictureBox pictureBox3;
+        private PictureBox Borrar;
+        private PictureBox Limpiarr;
+        private PictureBox Guardar;
         private PictureBox pictureBox2;
         private Label label1;
     }

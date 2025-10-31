@@ -29,45 +29,46 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCatEjercicios));
-            textBox1 = new TextBox();
-            pictureBox1 = new PictureBox();
+            TxtNombre = new TextBox();
+            TxtBuscar = new PictureBox();
             textBox5 = new TextBox();
             button1 = new Button();
-            dataGridView1 = new DataGridView();
+            DtCatEjercicio = new DataGridView();
             Nombre = new Label();
             panel1 = new Panel();
-            pictureBox5 = new PictureBox();
-            pictureBox4 = new PictureBox();
-            pictureBox3 = new PictureBox();
+            Eliminar = new PictureBox();
+            Limpiar = new PictureBox();
+            Guardar = new PictureBox();
             pictureBox2 = new PictureBox();
             label1 = new Label();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)TxtBuscar).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)DtCatEjercicio).BeginInit();
             panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)Eliminar).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)Limpiar).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)Guardar).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
             // 
-            // textBox1
+            // TxtNombre
             // 
-            textBox1.Location = new Point(192, 255);
-            textBox1.Multiline = true;
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(287, 42);
-            textBox1.TabIndex = 48;
+            TxtNombre.Location = new Point(192, 255);
+            TxtNombre.Multiline = true;
+            TxtNombre.Name = "TxtNombre";
+            TxtNombre.Size = new Size(287, 42);
+            TxtNombre.TabIndex = 48;
             // 
-            // pictureBox1
+            // TxtBuscar
             // 
-            pictureBox1.BackColor = Color.FromArgb(0, 192, 192);
-            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(956, 131);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(53, 27);
-            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox1.TabIndex = 47;
-            pictureBox1.TabStop = false;
+            TxtBuscar.BackColor = Color.FromArgb(0, 192, 192);
+            TxtBuscar.Image = (Image)resources.GetObject("TxtBuscar.Image");
+            TxtBuscar.Location = new Point(956, 131);
+            TxtBuscar.Name = "TxtBuscar";
+            TxtBuscar.Size = new Size(53, 27);
+            TxtBuscar.SizeMode = PictureBoxSizeMode.Zoom;
+            TxtBuscar.TabIndex = 47;
+            TxtBuscar.TabStop = false;
+            TxtBuscar.Click += pictureBox1_Click;
             // 
             // textBox5
             // 
@@ -85,15 +86,18 @@
             button1.TabIndex = 45;
             button1.Text = "Editar";
             button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
-            // dataGridView1
+            // DtCatEjercicio
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(612, 177);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(467, 188);
-            dataGridView1.TabIndex = 44;
+            DtCatEjercicio.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            DtCatEjercicio.Location = new Point(612, 177);
+            DtCatEjercicio.Name = "DtCatEjercicio";
+            DtCatEjercicio.RowHeadersWidth = 51;
+            DtCatEjercicio.Size = new Size(467, 188);
+            DtCatEjercicio.TabIndex = 44;
+            DtCatEjercicio.CellClick += DtCatEjercicio_CellClick;
+            DtCatEjercicio.CellContentClick += DtCatEjercicio_CellContentClick;
             // 
             // Nombre
             // 
@@ -108,9 +112,9 @@
             // panel1
             // 
             panel1.BackColor = Color.Navy;
-            panel1.Controls.Add(pictureBox5);
-            panel1.Controls.Add(pictureBox4);
-            panel1.Controls.Add(pictureBox3);
+            panel1.Controls.Add(Eliminar);
+            panel1.Controls.Add(Limpiar);
+            panel1.Controls.Add(Guardar);
             panel1.Controls.Add(pictureBox2);
             panel1.Controls.Add(label1);
             panel1.Location = new Point(1, 1);
@@ -118,35 +122,38 @@
             panel1.Size = new Size(1180, 79);
             panel1.TabIndex = 40;
             // 
-            // pictureBox5
+            // Eliminar
             // 
-            pictureBox5.Image = (Image)resources.GetObject("pictureBox5.Image");
-            pictureBox5.Location = new Point(910, 23);
-            pictureBox5.Name = "pictureBox5";
-            pictureBox5.Size = new Size(48, 42);
-            pictureBox5.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox5.TabIndex = 4;
-            pictureBox5.TabStop = false;
+            Eliminar.Image = (Image)resources.GetObject("Eliminar.Image");
+            Eliminar.Location = new Point(910, 23);
+            Eliminar.Name = "Eliminar";
+            Eliminar.Size = new Size(48, 42);
+            Eliminar.SizeMode = PictureBoxSizeMode.Zoom;
+            Eliminar.TabIndex = 4;
+            Eliminar.TabStop = false;
+            Eliminar.Click += Eliminar_Click;
             // 
-            // pictureBox4
+            // Limpiar
             // 
-            pictureBox4.Image = (Image)resources.GetObject("pictureBox4.Image");
-            pictureBox4.Location = new Point(988, 23);
-            pictureBox4.Name = "pictureBox4";
-            pictureBox4.Size = new Size(48, 42);
-            pictureBox4.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox4.TabIndex = 3;
-            pictureBox4.TabStop = false;
+            Limpiar.Image = (Image)resources.GetObject("Limpiar.Image");
+            Limpiar.Location = new Point(988, 23);
+            Limpiar.Name = "Limpiar";
+            Limpiar.Size = new Size(48, 42);
+            Limpiar.SizeMode = PictureBoxSizeMode.Zoom;
+            Limpiar.TabIndex = 3;
+            Limpiar.TabStop = false;
+            Limpiar.Click += Limpiar_Click;
             // 
-            // pictureBox3
+            // Guardar
             // 
-            pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
-            pictureBox3.Location = new Point(839, 23);
-            pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(48, 38);
-            pictureBox3.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox3.TabIndex = 2;
-            pictureBox3.TabStop = false;
+            Guardar.Image = (Image)resources.GetObject("Guardar.Image");
+            Guardar.Location = new Point(839, 23);
+            Guardar.Name = "Guardar";
+            Guardar.Size = new Size(48, 38);
+            Guardar.SizeMode = PictureBoxSizeMode.Zoom;
+            Guardar.TabIndex = 2;
+            Guardar.TabStop = false;
+            Guardar.Click += pictureBox3_Click;
             // 
             // pictureBox2
             // 
@@ -174,23 +181,23 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1182, 653);
-            Controls.Add(textBox1);
-            Controls.Add(pictureBox1);
+            Controls.Add(TxtNombre);
+            Controls.Add(TxtBuscar);
             Controls.Add(textBox5);
             Controls.Add(button1);
-            Controls.Add(dataGridView1);
+            Controls.Add(DtCatEjercicio);
             Controls.Add(Nombre);
             Controls.Add(panel1);
             Name = "FrmCatEjercicios";
             Text = "FrmCatEjercicios";
             Load += FrmCatEjercicios_Load;
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)TxtBuscar).EndInit();
+            ((System.ComponentModel.ISupportInitialize)DtCatEjercicio).EndInit();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
+            ((System.ComponentModel.ISupportInitialize)Eliminar).EndInit();
+            ((System.ComponentModel.ISupportInitialize)Limpiar).EndInit();
+            ((System.ComponentModel.ISupportInitialize)Guardar).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -198,16 +205,16 @@
 
         #endregion
 
-        private TextBox textBox1;
-        private PictureBox pictureBox1;
+        private TextBox TxtNombre;
+        private PictureBox TxtBuscar;
         private TextBox textBox5;
         private Button button1;
-        private DataGridView dataGridView1;
+        private DataGridView DtCatEjercicio;
         private Label Nombre;
         private Panel panel1;
-        private PictureBox pictureBox5;
-        private PictureBox pictureBox4;
-        private PictureBox pictureBox3;
+        private PictureBox Eliminar;
+        private PictureBox Limpiar;
+        private PictureBox Guardar;
         private PictureBox pictureBox2;
         private Label label1;
     }

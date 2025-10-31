@@ -34,7 +34,7 @@
             pictureBox1 = new PictureBox();
             textBox5 = new TextBox();
             button1 = new Button();
-            dataGridView1 = new DataGridView();
+            DgPacientes = new DataGridView();
             label3 = new Label();
             textBox3 = new TextBox();
             label2 = new Label();
@@ -56,7 +56,7 @@
             dataGridView2 = new DataGridView();
             AGREGAR = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)DgPacientes).BeginInit();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
@@ -112,14 +112,15 @@
             button1.Text = "Editar";
             button1.UseVisualStyleBackColor = false;
             // 
-            // dataGridView1
+            // DgPacientes
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(703, 173);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(467, 188);
-            dataGridView1.TabIndex = 49;
+            DgPacientes.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            DgPacientes.Location = new Point(703, 173);
+            DgPacientes.Name = "DgPacientes";
+            DgPacientes.RowHeadersWidth = 51;
+            DgPacientes.Size = new Size(467, 188);
+            DgPacientes.TabIndex = 49;
+            DgPacientes.CellContentClick += DgPacientes_CellContentClick;
             // 
             // label3
             // 
@@ -331,7 +332,7 @@
             Controls.Add(pictureBox1);
             Controls.Add(textBox5);
             Controls.Add(button1);
-            Controls.Add(dataGridView1);
+            Controls.Add(DgPacientes);
             Controls.Add(label3);
             Controls.Add(textBox3);
             Controls.Add(label2);
@@ -342,7 +343,7 @@
             Text = "FrmLesiones";
             Load += FrmLesiones_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)DgPacientes).EndInit();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
@@ -361,7 +362,7 @@
         private PictureBox pictureBox1;
         private TextBox textBox5;
         private Button button1;
-        private DataGridView dataGridView1;
+        private DataGridView DgPacientes;
         private Label label3;
         private TextBox textBox3;
         private Label label2;

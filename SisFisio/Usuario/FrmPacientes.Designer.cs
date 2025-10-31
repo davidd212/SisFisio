@@ -30,41 +30,41 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPacientes));
             panel1 = new Panel();
-            pictureBox5 = new PictureBox();
+            eliminar = new PictureBox();
             pictureBox4 = new PictureBox();
             pictureBox3 = new PictureBox();
             pictureBox2 = new PictureBox();
             label1 = new Label();
-            textBox1 = new TextBox();
+            TxtNombre = new TextBox();
             Nombre = new Label();
             label2 = new Label();
-            textBox2 = new TextBox();
+            TxtApellidoPa = new TextBox();
             label3 = new Label();
-            textBox3 = new TextBox();
+            TxtTelefono = new TextBox();
             label4 = new Label();
-            textBox4 = new TextBox();
+            TxtApellidoMa = new TextBox();
             label5 = new Label();
             label6 = new Label();
-            radioButton1 = new RadioButton();
-            radioButton2 = new RadioButton();
-            dateTimePicker1 = new DateTimePicker();
-            dataGridView1 = new DataGridView();
+            RbMasculino = new RadioButton();
+            RbFemenino = new RadioButton();
+            DtFecha = new DateTimePicker();
+            DtPacientes = new DataGridView();
             button1 = new Button();
             textBox5 = new TextBox();
             pictureBox1 = new PictureBox();
             panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)eliminar).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)DtPacientes).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // panel1
             // 
             panel1.BackColor = Color.Navy;
-            panel1.Controls.Add(pictureBox5);
+            panel1.Controls.Add(eliminar);
             panel1.Controls.Add(pictureBox4);
             panel1.Controls.Add(pictureBox3);
             panel1.Controls.Add(pictureBox2);
@@ -74,15 +74,16 @@
             panel1.Size = new Size(1180, 79);
             panel1.TabIndex = 0;
             // 
-            // pictureBox5
+            // eliminar
             // 
-            pictureBox5.Image = (Image)resources.GetObject("pictureBox5.Image");
-            pictureBox5.Location = new Point(952, 23);
-            pictureBox5.Name = "pictureBox5";
-            pictureBox5.Size = new Size(48, 42);
-            pictureBox5.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox5.TabIndex = 4;
-            pictureBox5.TabStop = false;
+            eliminar.Image = (Image)resources.GetObject("eliminar.Image");
+            eliminar.Location = new Point(952, 23);
+            eliminar.Name = "eliminar";
+            eliminar.Size = new Size(48, 42);
+            eliminar.SizeMode = PictureBoxSizeMode.Zoom;
+            eliminar.TabIndex = 4;
+            eliminar.TabStop = false;
+            eliminar.Click += eliminar_Click;
             // 
             // pictureBox4
             // 
@@ -93,6 +94,7 @@
             pictureBox4.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox4.TabIndex = 3;
             pictureBox4.TabStop = false;
+            pictureBox4.Click += pictureBox4_Click;
             // 
             // pictureBox3
             // 
@@ -103,6 +105,7 @@
             pictureBox3.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox3.TabIndex = 2;
             pictureBox3.TabStop = false;
+            pictureBox3.Click += pictureBox3_Click;
             // 
             // pictureBox2
             // 
@@ -125,13 +128,13 @@
             label1.TabIndex = 0;
             label1.Text = "PACIENTES";
             // 
-            // textBox1
+            // TxtNombre
             // 
-            textBox1.Location = new Point(86, 161);
-            textBox1.Multiline = true;
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(212, 34);
-            textBox1.TabIndex = 1;
+            TxtNombre.Location = new Point(86, 161);
+            TxtNombre.Multiline = true;
+            TxtNombre.Name = "TxtNombre";
+            TxtNombre.Size = new Size(212, 34);
+            TxtNombre.TabIndex = 1;
             // 
             // Nombre
             // 
@@ -151,13 +154,13 @@
             label2.TabIndex = 4;
             label2.Text = "Apellido Paterno";
             // 
-            // textBox2
+            // TxtApellidoPa
             // 
-            textBox2.Location = new Point(86, 253);
-            textBox2.Multiline = true;
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(212, 34);
-            textBox2.TabIndex = 3;
+            TxtApellidoPa.Location = new Point(86, 253);
+            TxtApellidoPa.Multiline = true;
+            TxtApellidoPa.Name = "TxtApellidoPa";
+            TxtApellidoPa.Size = new Size(212, 34);
+            TxtApellidoPa.TabIndex = 3;
             // 
             // label3
             // 
@@ -168,13 +171,13 @@
             label3.TabIndex = 6;
             label3.Text = "Telefono";
             // 
-            // textBox3
+            // TxtTelefono
             // 
-            textBox3.Location = new Point(86, 342);
-            textBox3.Multiline = true;
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(212, 34);
-            textBox3.TabIndex = 5;
+            TxtTelefono.Location = new Point(86, 342);
+            TxtTelefono.Multiline = true;
+            TxtTelefono.Name = "TxtTelefono";
+            TxtTelefono.Size = new Size(212, 34);
+            TxtTelefono.TabIndex = 5;
             // 
             // label4
             // 
@@ -185,13 +188,13 @@
             label4.TabIndex = 8;
             label4.Text = "Apellido Materno";
             // 
-            // textBox4
+            // TxtApellidoMa
             // 
-            textBox4.Location = new Point(319, 253);
-            textBox4.Multiline = true;
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(212, 34);
-            textBox4.TabIndex = 7;
+            TxtApellidoMa.Location = new Point(319, 253);
+            TxtApellidoMa.Multiline = true;
+            TxtApellidoMa.Name = "TxtApellidoMa";
+            TxtApellidoMa.Size = new Size(212, 34);
+            TxtApellidoMa.TabIndex = 7;
             // 
             // label5
             // 
@@ -211,53 +214,56 @@
             label6.TabIndex = 11;
             label6.Text = "Genero";
             // 
-            // radioButton1
+            // RbMasculino
             // 
-            radioButton1.AutoSize = true;
-            radioButton1.Location = new Point(121, 440);
-            radioButton1.Name = "radioButton1";
-            radioButton1.Size = new Size(97, 24);
-            radioButton1.TabIndex = 12;
-            radioButton1.TabStop = true;
-            radioButton1.Text = "Masculino";
-            radioButton1.UseVisualStyleBackColor = true;
+            RbMasculino.AutoSize = true;
+            RbMasculino.Location = new Point(121, 440);
+            RbMasculino.Name = "RbMasculino";
+            RbMasculino.Size = new Size(97, 24);
+            RbMasculino.TabIndex = 12;
+            RbMasculino.TabStop = true;
+            RbMasculino.Text = "Masculino";
+            RbMasculino.UseVisualStyleBackColor = true;
             // 
-            // radioButton2
+            // RbFemenino
             // 
-            radioButton2.AutoSize = true;
-            radioButton2.Location = new Point(121, 470);
-            radioButton2.Name = "radioButton2";
-            radioButton2.Size = new Size(95, 24);
-            radioButton2.TabIndex = 13;
-            radioButton2.TabStop = true;
-            radioButton2.Text = "Femenino";
-            radioButton2.UseVisualStyleBackColor = true;
+            RbFemenino.AutoSize = true;
+            RbFemenino.Location = new Point(121, 470);
+            RbFemenino.Name = "RbFemenino";
+            RbFemenino.Size = new Size(95, 24);
+            RbFemenino.TabIndex = 13;
+            RbFemenino.TabStop = true;
+            RbFemenino.Text = "Femenino";
+            RbFemenino.UseVisualStyleBackColor = true;
             // 
-            // dateTimePicker1
+            // DtFecha
             // 
-            dateTimePicker1.Location = new Point(314, 340);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(217, 27);
-            dateTimePicker1.TabIndex = 14;
+            DtFecha.Location = new Point(314, 340);
+            DtFecha.Name = "DtFecha";
+            DtFecha.Size = new Size(217, 27);
+            DtFecha.TabIndex = 14;
             // 
-            // dataGridView1
+            // DtPacientes
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(653, 176);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(467, 188);
-            dataGridView1.TabIndex = 15;
+            DtPacientes.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            DtPacientes.Location = new Point(653, 176);
+            DtPacientes.Name = "DtPacientes";
+            DtPacientes.RowHeadersWidth = 51;
+            DtPacientes.Size = new Size(467, 188);
+            DtPacientes.TabIndex = 15;
+            DtPacientes.CellClick += dataGridView1_CellContentClick;
+            DtPacientes.CellContentClick += dataGridView1_CellContentClick;
             // 
             // button1
             // 
             button1.BackColor = SystemColors.ActiveCaption;
-            button1.Location = new Point(653, 396);
+            button1.Location = new Point(653, 399);
             button1.Name = "button1";
             button1.Size = new Size(94, 29);
             button1.TabIndex = 16;
             button1.Text = "Editar";
             button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
             // textBox5
             // 
@@ -265,6 +271,7 @@
             textBox5.Name = "textBox5";
             textBox5.Size = new Size(211, 27);
             textBox5.TabIndex = 17;
+            textBox5.TextChanged += textBox5_TextChanged;
             // 
             // pictureBox1
             // 
@@ -286,30 +293,30 @@
             Controls.Add(pictureBox1);
             Controls.Add(textBox5);
             Controls.Add(button1);
-            Controls.Add(dataGridView1);
-            Controls.Add(dateTimePicker1);
-            Controls.Add(radioButton2);
-            Controls.Add(radioButton1);
+            Controls.Add(DtPacientes);
+            Controls.Add(DtFecha);
+            Controls.Add(RbFemenino);
+            Controls.Add(RbMasculino);
             Controls.Add(label6);
             Controls.Add(label5);
             Controls.Add(label4);
-            Controls.Add(textBox4);
+            Controls.Add(TxtApellidoMa);
             Controls.Add(label3);
-            Controls.Add(textBox3);
+            Controls.Add(TxtTelefono);
             Controls.Add(label2);
-            Controls.Add(textBox2);
+            Controls.Add(TxtApellidoPa);
             Controls.Add(Nombre);
-            Controls.Add(textBox1);
+            Controls.Add(TxtNombre);
             Controls.Add(panel1);
             Name = "FrmPacientes";
             Load += FrmPacientes_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
+            ((System.ComponentModel.ISupportInitialize)eliminar).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)DtPacientes).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -319,26 +326,26 @@
 
         private Panel panel1;
         private Label label1;
-        private TextBox textBox1;
+        private TextBox TxtNombre;
         private Label Nombre;
         private Label label2;
-        private TextBox textBox2;
+        private TextBox TxtApellidoPa;
         private Label label3;
-        private TextBox textBox3;
+        private TextBox TxtTelefono;
         private Label label4;
-        private TextBox textBox4;
+        private TextBox TxtApellidoMa;
         private Label label5;
         private Label label6;
-        private RadioButton radioButton1;
-        private RadioButton radioButton2;
-        private DateTimePicker dateTimePicker1;
-        private DataGridView dataGridView1;
+        private RadioButton RbMasculino;
+        private RadioButton RbFemenino;
+        private DateTimePicker DtFecha;
+        private DataGridView DtPacientes;
         private Button button1;
         private TextBox textBox5;
         private PictureBox pictureBox1;
         private PictureBox pictureBox2;
         private PictureBox pictureBox3;
-        private PictureBox pictureBox5;
+        private PictureBox eliminar;
         private PictureBox pictureBox4;
     }
 }
