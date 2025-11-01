@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SisFisio.Fornularios;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace SisFisio.Fornularios
+namespace SisFisio.Usuario
 {
     public partial class FrmMenu : Form
     {
@@ -17,19 +18,46 @@ namespace SisFisio.Fornularios
             InitializeComponent();
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void button2_Click(object sender, EventArgs e)
         {
+            FrmEmpleado x = new FrmEmpleado();
+            x.Show();
+        }
 
+        private void button3_Click(object sender, EventArgs e)
+        {
+            FrmPacientes x = new FrmPacientes();
+            x.Show();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            FrmConsultorio x = new FrmConsultorio();
+            x.Show();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            FrmCatEjercicios x = new FrmCatEjercicios();
+            x.Show();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            FrmTratamientos x = new FrmTratamientos();
+            x.Show();
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            FrmLesiones x = new FrmLesiones();
+            x.Show();
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            FrmCitas x = new FrmCitas();
+            x.Show();
         }
 
         private void button10_Click(object sender, EventArgs e)
@@ -37,9 +65,10 @@ namespace SisFisio.Fornularios
 
         }
 
-        private void toolStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        private void button11_Click(object sender, EventArgs e)
         {
-
+            FrmDiagnostico x = new FrmDiagnostico();
+            x.Show();
         }
     }
 }

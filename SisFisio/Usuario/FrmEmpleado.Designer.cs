@@ -32,7 +32,7 @@
             pictureBox1 = new PictureBox();
             textBox5 = new TextBox();
             button1 = new Button();
-            DtPacientes = new DataGridView();
+            DtEmpleados = new DataGridView();
             RbPrestador = new RadioButton();
             RbFisio = new RadioButton();
             label6 = new Label();
@@ -63,7 +63,7 @@
             TxtTelefono = new TextBox();
             groupBox1 = new GroupBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)DtPacientes).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)DtEmpleados).BeginInit();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)eliminar).BeginInit();
             ((System.ComponentModel.ISupportInitialize)Limpiar).BeginInit();
@@ -82,6 +82,7 @@
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 36;
             pictureBox1.TabStop = false;
+            pictureBox1.Click += pictureBox1_Click;
             // 
             // textBox5
             // 
@@ -93,21 +94,22 @@
             // button1
             // 
             button1.BackColor = SystemColors.ActiveCaption;
-            button1.Location = new Point(805, 385);
+            button1.Location = new Point(752, 405);
             button1.Name = "button1";
             button1.Size = new Size(94, 29);
             button1.TabIndex = 34;
             button1.Text = "Editar";
             button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
-            // DtPacientes
+            // DtEmpleados
             // 
-            DtPacientes.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            DtPacientes.Location = new Point(752, 162);
-            DtPacientes.Name = "DtPacientes";
-            DtPacientes.RowHeadersWidth = 51;
-            DtPacientes.Size = new Size(418, 217);
-            DtPacientes.TabIndex = 33;
+            DtEmpleados.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            DtEmpleados.Location = new Point(752, 162);
+            DtEmpleados.Name = "DtEmpleados";
+            DtEmpleados.RowHeadersWidth = 51;
+            DtEmpleados.Size = new Size(418, 217);
+            DtEmpleados.TabIndex = 33;
             // 
             // RbPrestador
             // 
@@ -241,6 +243,7 @@
             Limpiar.SizeMode = PictureBoxSizeMode.Zoom;
             Limpiar.TabIndex = 3;
             Limpiar.TabStop = false;
+            Limpiar.Click += Limpiar_Click;
             // 
             // Guardar
             // 
@@ -405,7 +408,7 @@
             Controls.Add(pictureBox1);
             Controls.Add(textBox5);
             Controls.Add(button1);
-            Controls.Add(DtPacientes);
+            Controls.Add(DtEmpleados);
             Controls.Add(label6);
             Controls.Add(label4);
             Controls.Add(TxtApellidoPa);
@@ -420,7 +423,7 @@
             Text = "FrmEmpleado";
             Load += FrmEmpleado_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)DtPacientes).EndInit();
+            ((System.ComponentModel.ISupportInitialize)DtEmpleados).EndInit();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)eliminar).EndInit();
@@ -438,7 +441,7 @@
         private PictureBox pictureBox1;
         private TextBox textBox5;
         private Button button1;
-        private DataGridView DtPacientes;
+        private DataGridView DtEmpleados;
         private RadioButton RbPrestador;
         private RadioButton RbFisio;
         private Label label6;
