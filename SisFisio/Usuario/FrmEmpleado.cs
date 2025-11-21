@@ -122,7 +122,7 @@ namespace SisFisio.Usuario
                     emp.Telefono_Emp = TxtTelefono.Text;
                     emp.CedulaProfesional = TxtCedula.Text;
                     emp.Especialidad = TxtEspecialidades.Text;
-                    emp.Estatus_Emp = Rbinactiva.Checked? "Activo" : "Inactivo";
+                    emp.Estatus_Emp = Rbinactiva.Checked ? "Activo" : "Inactivo";
 
                     string resultado = emp.Modificar();
                     MessageBox.Show(resultado);
@@ -144,6 +144,16 @@ namespace SisFisio.Usuario
             {
                 TxtNombre.Text = DtEmpleados.CurrentRow.Cells["Nombre_Emp"].Value?.ToString();
             }
+        }
+
+        private void DtEmpleados_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void textBox5_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

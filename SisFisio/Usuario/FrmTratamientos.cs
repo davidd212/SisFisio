@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace SisFisio.Usuario
 {
-    public partial class FrmTratamientos: Form
+    public partial class FrmTratamientos : Form
     {
         public FrmTratamientos()
         {
             InitializeComponent();
+        }
+
+        private void FrmTratamientos_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

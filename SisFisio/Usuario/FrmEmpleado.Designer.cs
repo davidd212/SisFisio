@@ -90,6 +90,7 @@
             textBox5.Name = "textBox5";
             textBox5.Size = new Size(211, 27);
             textBox5.TabIndex = 35;
+            textBox5.TextChanged += textBox5_TextChanged;
             // 
             // button1
             // 
@@ -110,6 +111,7 @@
             DtEmpleados.RowHeadersWidth = 51;
             DtEmpleados.Size = new Size(418, 217);
             DtEmpleados.TabIndex = 33;
+            DtEmpleados.CellContentClick += DtEmpleados_CellContentClick;
             // 
             // RbPrestador
             // 

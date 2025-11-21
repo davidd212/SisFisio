@@ -1,4 +1,5 @@
 ﻿using SisFisio.Fornularios;
+using SisFisio.Negocio;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -17,13 +18,20 @@ namespace SisFisio.Usuario
         {
             InitializeComponent();
         }
+        
+
 
         private void button2_Click(object sender, EventArgs e)
         {
             FrmEmpleado x = new FrmEmpleado();
             x.Show();
         }
-
+        void CargarCitasMenu()
+        {
+            Cita cita = new Cita();
+            DtCita.DataSource = cita.ConsultarTodos();
+            
+        }
         private void button3_Click(object sender, EventArgs e)
         {
             FrmPacientes x = new FrmPacientes();
@@ -69,6 +77,39 @@ namespace SisFisio.Usuario
         {
             FrmDiagnostico x = new FrmDiagnostico();
             x.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+
+        }
+
+        private void FrmMenu_Load(object sender, EventArgs e)
+        {
+            CargarCitasMenu();
+            DtCita.AllowUserToAddRows = false;
+            DtCita.RowHeadersVisible = false;
+
+            DtCita.AllowUserToAddRows = false;
+            DtCita.RowHeadersVisible = false;
+
+            
+            DtCita.BackgroundColor = this.BackColor;
+            DtCita.BackgroundColor = this.BackColor;
+
+
+
         }
     }
 }

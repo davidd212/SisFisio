@@ -204,6 +204,7 @@
             Controls.Add(panel1);
             Name = "FrmTratamientos";
             Text = "FrmTratamientos";
+            Load += FrmTratamientos_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             panel1.ResumeLayout(false);

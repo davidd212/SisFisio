@@ -38,7 +38,7 @@
             Hola = new Panel();
             label1 = new Label();
             dataGridView2 = new DataGridView();
-            dataGridView1 = new DataGridView();
+            DtCita = new DataGridView();
             panel1 = new Panel();
             button11 = new Button();
             button10 = new Button();
@@ -55,7 +55,7 @@
             panel2.SuspendLayout();
             Hola.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)DtCita).BeginInit();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -63,7 +63,7 @@
             // 
             pictureBox2.BackColor = Color.FromArgb(0, 192, 192);
             pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(1089, 136);
+            pictureBox2.Location = new Point(1060, 136);
             pictureBox2.Name = "pictureBox2";
             pictureBox2.Size = new Size(53, 27);
             pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
@@ -72,7 +72,7 @@
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(887, 136);
+            textBox1.Location = new Point(858, 136);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(205, 27);
             textBox1.TabIndex = 48;
@@ -81,16 +81,17 @@
             // 
             pictureBox1.BackColor = Color.FromArgb(0, 192, 192);
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(622, 135);
+            pictureBox1.Location = new Point(578, 136);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(53, 27);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 47;
             pictureBox1.TabStop = false;
+            pictureBox1.Click += pictureBox1_Click;
             // 
             // textBox5
             // 
-            textBox5.Location = new Point(420, 135);
+            textBox5.Location = new Point(376, 136);
             textBox5.Name = "textBox5";
             textBox5.Size = new Size(205, 27);
             textBox5.TabIndex = 46;
@@ -142,14 +143,16 @@
             dataGridView2.Size = new Size(415, 193);
             dataGridView2.TabIndex = 43;
             // 
-            // dataGridView1
+            // DtCita
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(296, 226);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(415, 193);
-            dataGridView1.TabIndex = 42;
+            DtCita.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            DtCita.Location = new Point(296, 226);
+            DtCita.Name = "DtCita";
+            DtCita.ReadOnly = true;
+            DtCita.RowHeadersWidth = 51;
+            DtCita.Size = new Size(415, 193);
+            DtCita.TabIndex = 42;
+            DtCita.CellContentClick += dataGridView1_CellContentClick;
             // 
             // panel1
             // 
@@ -174,11 +177,11 @@
             // 
             button11.FlatAppearance.BorderSize = 0;
             button11.FlatStyle = FlatStyle.Flat;
-            button11.Location = new Point(74, 465);
+            button11.Location = new Point(76, 456);
             button11.Name = "button11";
             button11.Size = new Size(123, 29);
             button11.TabIndex = 50;
-            button11.Text = "Diagnostico";
+            button11.Text = "DIAGNOSTICO";
             button11.UseVisualStyleBackColor = true;
             button11.Click += button11_Click;
             // 
@@ -186,11 +189,11 @@
             // 
             button10.FlatAppearance.BorderSize = 0;
             button10.FlatStyle = FlatStyle.Flat;
-            button10.Location = new Point(85, 417);
+            button10.Location = new Point(90, 408);
             button10.Name = "button10";
             button10.Size = new Size(94, 29);
             button10.TabIndex = 49;
-            button10.Text = "Agenda";
+            button10.Text = "AGENDA";
             button10.UseVisualStyleBackColor = true;
             button10.Click += button10_Click;
             // 
@@ -198,11 +201,11 @@
             // 
             button9.FlatAppearance.BorderSize = 0;
             button9.FlatStyle = FlatStyle.Flat;
-            button9.Location = new Point(83, 369);
+            button9.Location = new Point(90, 360);
             button9.Name = "button9";
             button9.Size = new Size(94, 29);
             button9.TabIndex = 48;
-            button9.Text = "Cita";
+            button9.Text = "CITA";
             button9.UseVisualStyleBackColor = true;
             button9.Click += button9_Click;
             // 
@@ -210,11 +213,11 @@
             // 
             button7.FlatAppearance.BorderSize = 0;
             button7.FlatStyle = FlatStyle.Flat;
-            button7.Location = new Point(83, 324);
+            button7.Location = new Point(90, 315);
             button7.Name = "button7";
             button7.Size = new Size(94, 29);
             button7.TabIndex = 47;
-            button7.Text = "Lesiones";
+            button7.Text = "LESIONES";
             button7.UseVisualStyleBackColor = true;
             button7.Click += button7_Click;
             // 
@@ -222,11 +225,11 @@
             // 
             button6.FlatAppearance.BorderSize = 0;
             button6.FlatStyle = FlatStyle.Flat;
-            button6.Location = new Point(74, 277);
+            button6.Location = new Point(76, 268);
             button6.Name = "button6";
             button6.Size = new Size(123, 29);
             button6.TabIndex = 46;
-            button6.Text = "Tratamientos";
+            button6.Text = "TRATAMIENTOS";
             button6.UseVisualStyleBackColor = true;
             button6.Click += button6_Click;
             // 
@@ -234,11 +237,11 @@
             // 
             button5.FlatAppearance.BorderSize = 0;
             button5.FlatStyle = FlatStyle.Flat;
-            button5.Location = new Point(83, 233);
+            button5.Location = new Point(90, 224);
             button5.Name = "button5";
             button5.Size = new Size(94, 29);
             button5.TabIndex = 45;
-            button5.Text = "Ejercicios";
+            button5.Text = "EJERCICIOS";
             button5.UseVisualStyleBackColor = true;
             button5.Click += button5_Click;
             // 
@@ -246,11 +249,11 @@
             // 
             button4.FlatAppearance.BorderSize = 0;
             button4.FlatStyle = FlatStyle.Flat;
-            button4.Location = new Point(74, 186);
+            button4.Location = new Point(81, 177);
             button4.Name = "button4";
-            button4.Size = new Size(113, 29);
+            button4.Size = new Size(118, 29);
             button4.TabIndex = 44;
-            button4.Text = "Consultorio";
+            button4.Text = "CONSULTORIO";
             button4.UseVisualStyleBackColor = true;
             button4.Click += button4_Click;
             // 
@@ -258,11 +261,11 @@
             // 
             button3.FlatAppearance.BorderSize = 0;
             button3.FlatStyle = FlatStyle.Flat;
-            button3.Location = new Point(76, 139);
+            button3.Location = new Point(86, 130);
             button3.Name = "button3";
             button3.Size = new Size(103, 29);
             button3.TabIndex = 43;
-            button3.Text = "Pacientes";
+            button3.Text = "PACIENTES";
             button3.UseVisualStyleBackColor = true;
             button3.Click += button3_Click;
             // 
@@ -270,11 +273,11 @@
             // 
             button2.FlatAppearance.BorderSize = 0;
             button2.FlatStyle = FlatStyle.Flat;
-            button2.Location = new Point(83, 95);
+            button2.Location = new Point(86, 86);
             button2.Name = "button2";
             button2.Size = new Size(103, 29);
             button2.TabIndex = 42;
-            button2.Text = "Empleado";
+            button2.Text = "EMPLEADOS";
             button2.UseVisualStyleBackColor = true;
             button2.Click += button2_Click;
             // 
@@ -283,12 +286,13 @@
             button1.FlatAppearance.BorderColor = Color.FromArgb(128, 255, 255);
             button1.FlatAppearance.BorderSize = 0;
             button1.FlatStyle = FlatStyle.Flat;
-            button1.Location = new Point(83, 50);
+            button1.Location = new Point(99, 41);
             button1.Name = "button1";
             button1.Size = new Size(85, 29);
             button1.TabIndex = 41;
-            button1.Text = "inicio";
+            button1.Text = "INICIO";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // FrmMenu
             // 
@@ -302,10 +306,11 @@
             Controls.Add(panel2);
             Controls.Add(Hola);
             Controls.Add(dataGridView2);
-            Controls.Add(dataGridView1);
+            Controls.Add(DtCita);
             Controls.Add(panel1);
             Name = "FrmMenu";
             Text = "FrmMenu";
+            Load += FrmMenu_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             panel2.ResumeLayout(false);
@@ -313,7 +318,7 @@
             Hola.ResumeLayout(false);
             Hola.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView2).EndInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)DtCita).EndInit();
             panel1.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
@@ -330,7 +335,7 @@
         private Panel Hola;
         private Label label1;
         private DataGridView dataGridView2;
-        private DataGridView dataGridView1;
+        private DataGridView DtCita;
         private Panel panel1;
         private Button button11;
         private Button button10;
