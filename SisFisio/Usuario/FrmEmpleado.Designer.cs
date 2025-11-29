@@ -62,6 +62,11 @@
             label11 = new Label();
             TxtTelefono = new TextBox();
             groupBox1 = new GroupBox();
+            lblAvisoNumero = new Label();
+            ctnombre = new Label();
+            ctClave = new Label();
+            ctcedula = new Label();
+            ctEspecialidades = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)DtEmpleados).BeginInit();
             panel1.SuspendLayout();
@@ -123,6 +128,7 @@
             RbPrestador.TabStop = true;
             RbPrestador.Text = "Prestador de Servicio";
             RbPrestador.UseVisualStyleBackColor = true;
+            RbPrestador.CheckedChanged += RbPrestador_CheckedChanged;
             // 
             // RbFisio
             // 
@@ -160,6 +166,7 @@
             TxtApellidoPa.Name = "TxtApellidoPa";
             TxtApellidoPa.Size = new Size(212, 34);
             TxtApellidoPa.TabIndex = 26;
+            TxtApellidoPa.KeyPress += TxtNombre_KeyPress;
             // 
             // label3
             // 
@@ -177,6 +184,7 @@
             TxtCedula.Name = "TxtCedula";
             TxtCedula.Size = new Size(212, 34);
             TxtCedula.TabIndex = 24;
+            TxtCedula.KeyPress += TxtCedula_KeyPress;
             // 
             // label2
             // 
@@ -194,6 +202,7 @@
             TxtNombre.Name = "TxtNombre";
             TxtNombre.Size = new Size(212, 34);
             TxtNombre.TabIndex = 22;
+            TxtNombre.KeyPress += TxtNombre_KeyPress;
             // 
             // Nombre
             // 
@@ -211,6 +220,9 @@
             TxtNumero.Name = "TxtNumero";
             TxtNumero.Size = new Size(212, 34);
             TxtNumero.TabIndex = 20;
+            TxtNumero.TextChanged += TxtNumero_TextChanged;
+            TxtNumero.KeyPress += TxtNumero_KeyPress;
+            TxtNumero.KeyUp += TxtNumero_KeyUp;
             // 
             // panel1
             // 
@@ -275,9 +287,9 @@
             label1.ForeColor = Color.Transparent;
             label1.Location = new Point(34, 23);
             label1.Name = "label1";
-            label1.Size = new Size(141, 38);
+            label1.Size = new Size(157, 38);
             label1.TabIndex = 0;
-            label1.Text = "PACIENTES";
+            label1.Text = "EMPLEADOS";
             // 
             // label7
             // 
@@ -295,6 +307,7 @@
             TxtApellidoMa.Name = "TxtApellidoMa";
             TxtApellidoMa.Size = new Size(212, 34);
             TxtApellidoMa.TabIndex = 37;
+            TxtApellidoMa.KeyPress += TxtNombre_KeyPress;
             // 
             // RbActiva
             // 
@@ -344,6 +357,7 @@
             TxtEspecialidades.Name = "TxtEspecialidades";
             TxtEspecialidades.Size = new Size(212, 34);
             TxtEspecialidades.TabIndex = 42;
+            TxtEspecialidades.KeyPress += TxtEspecialidades_KeyPress;
             // 
             // TxtClave
             // 
@@ -378,6 +392,7 @@
             TxtTelefono.Name = "TxtTelefono";
             TxtTelefono.Size = new Size(212, 34);
             TxtTelefono.TabIndex = 46;
+            TxtTelefono.KeyPress += TxtClave_KeyPress;
             // 
             // groupBox1
             // 
@@ -390,11 +405,56 @@
             groupBox1.TabStop = false;
             groupBox1.Enter += groupBox1_Enter;
             // 
+            // lblAvisoNumero
+            // 
+            lblAvisoNumero.AutoSize = true;
+            lblAvisoNumero.Location = new Point(153, 159);
+            lblAvisoNumero.Name = "lblAvisoNumero";
+            lblAvisoNumero.Size = new Size(0, 20);
+            lblAvisoNumero.TabIndex = 49;
+            // 
+            // ctnombre
+            // 
+            ctnombre.AutoSize = true;
+            ctnombre.Location = new Point(103, 249);
+            ctnombre.Name = "ctnombre";
+            ctnombre.Size = new Size(0, 20);
+            ctnombre.TabIndex = 50;
+            // 
+            // ctClave
+            // 
+            ctClave.AutoSize = true;
+            ctClave.Location = new Point(451, 349);
+            ctClave.Name = "ctClave";
+            ctClave.Size = new Size(0, 20);
+            ctClave.TabIndex = 51;
+            // 
+            // ctcedula
+            // 
+            ctcedula.AutoSize = true;
+            ctcedula.Location = new Point(415, 473);
+            ctcedula.Name = "ctcedula";
+            ctcedula.Size = new Size(0, 20);
+            ctcedula.TabIndex = 52;
+            // 
+            // ctEspecialidades
+            // 
+            ctEspecialidades.AutoSize = true;
+            ctEspecialidades.Location = new Point(415, 518);
+            ctEspecialidades.Name = "ctEspecialidades";
+            ctEspecialidades.Size = new Size(0, 20);
+            ctEspecialidades.TabIndex = 53;
+            // 
             // FrmEmpleado
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1182, 653);
+            Controls.Add(ctEspecialidades);
+            Controls.Add(ctcedula);
+            Controls.Add(ctClave);
+            Controls.Add(ctnombre);
+            Controls.Add(lblAvisoNumero);
             Controls.Add(groupBox1);
             Controls.Add(label11);
             Controls.Add(TxtTelefono);
@@ -473,5 +533,10 @@
         private Label label11;
         private TextBox TxtTelefono;
         private GroupBox groupBox1;
+        private Label lblAvisoNumero;
+        private Label ctnombre;
+        private Label ctClave;
+        private Label ctcedula;
+        private Label ctEspecialidades;
     }
 }

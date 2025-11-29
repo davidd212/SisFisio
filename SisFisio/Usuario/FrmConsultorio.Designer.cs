@@ -64,6 +64,7 @@
             Buscar.SizeMode = PictureBoxSizeMode.Zoom;
             Buscar.TabIndex = 36;
             Buscar.TabStop = false;
+            Buscar.Click += Buscar_Click;
             // 
             // textBox5
             // 
@@ -90,6 +91,7 @@
             Dtbusqueda.RowHeadersWidth = 51;
             Dtbusqueda.Size = new Size(467, 188);
             Dtbusqueda.TabIndex = 33;
+            Dtbusqueda.CellContentClick += Dtbusqueda_CellContentClick;
             // 
             // label3
             // 

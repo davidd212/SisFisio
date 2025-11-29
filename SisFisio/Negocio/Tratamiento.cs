@@ -8,15 +8,16 @@ using System.Threading.Tasks;
 
 namespace SisFisio.Negocio
 {
-   public  class TipoLesiones
+    public class Tratamiento
     {
-        public int id_TipoLes;
-        public string Nom_TipoLes;
+        public int id;
+        public string Nombre;
+        public string Descripcion;
 
         ConexionSQL x = new ConexionSQL();
         SqlConnection con = new SqlConnection();
 
-        public TipoLesiones()
+        public Tratamiento()
         {
             con.ConnectionString = x.Conexion;
         }
@@ -27,15 +28,16 @@ namespace SisFisio.Negocio
             try
             {
                 con.Open();
-                SqlCommand cmd = new SqlCommand("spTipoLesiones", con);
+                SqlCommand cmd = new SqlCommand("spTratamiento", con);
                 cmd.CommandType = CommandType.StoredProcedure;
 
-                cmd.Parameters.AddWithValue("@op", 2); // Insertar
-                cmd.Parameters.AddWithValue("@id_TipoLes", DBNull.Value); // autogenerado
-                cmd.Parameters.AddWithValue("@Nom_TipoLes", Nom_TipoLes);
+                cmd.Parameters.AddWithValue("@op", 2);
+                cmd.Parameters.AddWithValue("@id_Trata", DBNull.Value);
+                cmd.Parameters.AddWithValue("@Nombre_Trata", Nombre);
+                cmd.Parameters.AddWithValue("@Descrip_Trata", Descripcion);
 
                 cmd.ExecuteNonQuery();
-                msj = "TIPO DE LESIÓN GUARDADO CON ÉXITO";
+                msj = "TRATAMIENTO GUARDADA CON ÉXITO";
             }
             catch (Exception ex)
             {
@@ -47,26 +49,26 @@ namespace SisFisio.Negocio
             }
             return msj;
         }
-
         public string Modificar()
         {
             string msj = "";
             try
             {
                 con.Open();
-                SqlCommand cmd = new SqlCommand("spTipoLesiones", con);
+                SqlCommand cmd = new SqlCommand("spTratamiento", con);
                 cmd.CommandType = CommandType.StoredProcedure;
 
-                cmd.Parameters.AddWithValue("@op", 3); // Modificar
-                cmd.Parameters.AddWithValue("@id_TipoLes", id_TipoLes);
-                cmd.Parameters.AddWithValue("@Nom_TipoLes", Nom_TipoLes);
+                cmd.Parameters.AddWithValue("@op", 3);
+                cmd.Parameters.AddWithValue("@id_Trata", id);
+                cmd.Parameters.AddWithValue("@Nombre_Trata", Nombre);
+                cmd.Parameters.AddWithValue("@Descrip_Trata", Descripcion);
 
                 cmd.ExecuteNonQuery();
-                msj = "TIPO DE LESIÓN MODIFICADO CON ÉXITO";
+                msj = "TRATAMIENTO MODIFICADO CON ÉXITO";
             }
             catch (Exception ex)
             {
-                msj = "ERROR AL MODIFICAR: " + ex.Message;
+                msj = "ERROR AL GUARDAR: " + ex.Message;
             }
             finally
             {
@@ -81,19 +83,20 @@ namespace SisFisio.Negocio
             try
             {
                 con.Open();
-                SqlCommand cmd = new SqlCommand("spTipoLesiones", con);
+                SqlCommand cmd = new SqlCommand("spTratamiento", con);
                 cmd.CommandType = CommandType.StoredProcedure;
 
                 cmd.Parameters.AddWithValue("@op", 4);
-                cmd.Parameters.AddWithValue("@id_TipoLes", id_TipoLes);
-                cmd.Parameters.AddWithValue("@Nom_TipoLes", DBNull.Value);
+                cmd.Parameters.AddWithValue("@id_Trata", id);
+                cmd.Parameters.AddWithValue("@Nombre_Trata", Nombre);
+                cmd.Parameters.AddWithValue("@Descrip_Trata", Descripcion);
 
                 cmd.ExecuteNonQuery();
-                msj = "TIPO DE LESIÓN ELIMINADO CON ÉXITO";
+                msj = "TRATAMIENTO ELIMANADO CON ÉXITO";
             }
             catch (Exception ex)
             {
-                msj = "ERROR AL ELIMINAR: " + ex.Message;
+                msj = "ERROR AL GUARDAR: " + ex.Message;
             }
             finally
             {
@@ -101,19 +104,19 @@ namespace SisFisio.Negocio
             }
             return msj;
         }
-
         public DataTable ConsultarTodos()
         {
             DataTable dt = new DataTable();
             try
             {
                 con.Open();
-                SqlCommand cmd = new SqlCommand("spTipoLesiones", con);
+                SqlCommand cmd = new SqlCommand("spTratamiento ", con);
                 cmd.CommandType = CommandType.StoredProcedure;
 
-                cmd.Parameters.AddWithValue("@op", 1); // Consultar todos
-                cmd.Parameters.AddWithValue("@id_TipoLes", DBNull.Value);
-                cmd.Parameters.AddWithValue("@Nom_TipoLes", DBNull.Value);
+                cmd.Parameters.AddWithValue("@op", 1);
+                cmd.Parameters.AddWithValue("@id_Trata", DBNull.Value);
+                cmd.Parameters.AddWithValue("@Nombre_Trata", Nombre);
+                cmd.Parameters.AddWithValue("@Descrip_Trata", Descripcion);
 
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
                 da.Fill(dt);
@@ -128,5 +131,10 @@ namespace SisFisio.Negocio
             }
             return dt;
         }
+
+
     }
+
+
+
 }

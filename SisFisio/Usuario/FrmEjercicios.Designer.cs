@@ -89,8 +89,9 @@
             // dataGridView1
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(651, 176);
+            dataGridView1.Location = new Point(651, 177);
             dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowHeadersVisible = false;
             dataGridView1.RowHeadersWidth = 51;
             dataGridView1.Size = new Size(467, 188);
             dataGridView1.TabIndex = 33;
@@ -272,6 +273,7 @@
             Controls.Add(panel1);
             Name = "FrmEjercicios";
             Text = "FrmEjercicios";
+            Load += FrmEjercicios_Load_1;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             panel1.ResumeLayout(false);

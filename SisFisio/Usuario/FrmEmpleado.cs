@@ -37,6 +37,7 @@ namespace SisFisio.Usuario
         private void FrmEmpleado_Load(object sender, EventArgs e)
         {
             CargarDataGrid();
+            RbActiva.Checked = true;
         }
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
@@ -154,6 +155,109 @@ namespace SisFisio.Usuario
         private void textBox5_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void RbPrestador_CheckedChanged(object sender, EventArgs e)
+        {
+            if (RbPrestador.Checked)
+            {
+                TxtCedula.Enabled = false;
+                TxtEspecialidades.Enabled = false;
+            }
+            else
+            {
+                TxtCedula.Enabled = true;
+                TxtEspecialidades.Enabled = true;
+            }
+
+
+        }
+
+        private void TxtNumero_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TxtNumero_KeyUp(object sender, KeyEventArgs e)
+        {
+
+        }
+
+        private void TxtNumero_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+                lblAvisoNumero.Text = "Solo se permiten caracteres numericos.";
+                lblAvisoNumero.ForeColor = Color.Red;
+                lblAvisoNumero.Visible = true;
+
+            }
+            else
+            {
+                lblAvisoNumero.Visible = false;
+            }
+        }
+
+        private void TxtNombre_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar) && e.KeyChar != ' ')
+            {
+                e.Handled = true;
+                ctnombre.Text = "Solo se permiten caracteres alfabeticos.";
+                ctnombre.ForeColor = Color.Red;
+                ctnombre.Visible = true;
+            }
+            else
+            {
+                ctnombre.Visible = false;
+            }
+        }
+
+        private void TxtClave_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+                ctClave.Text = "Solo se permiten caracteres numericos.";
+                ctClave.ForeColor = Color.Red;
+                ctClave.Visible = true;
+
+            }
+            else
+            {
+                ctClave.Visible = false;
+            }
+        }
+
+        private void TxtCedula_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+                ctcedula.Text = "Solo se permiten caracteres numericos.";
+                ctcedula.ForeColor = Color.Red;
+                ctcedula.Visible = true;
+            }
+            else
+            {
+                ctcedula.Visible = false;
+            }
+        }
+
+        private void TxtEspecialidades_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar) && e.KeyChar != ' ')
+            {
+                
+                ctEspecialidades.Text = "Solo se permiten caracteres alfabeticos.";
+                ctEspecialidades.ForeColor = Color.Red;
+                ctEspecialidades.Visible = true;
+            }
+            else
+            {
+                ctEspecialidades.Visible = false;
+            }
         }
     }
 }

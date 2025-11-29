@@ -83,5 +83,15 @@ namespace SisFisio.Fornularios
         {
             Limpiar();
         }
+
+        private void Buscar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Dtbusqueda_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

@@ -29,36 +29,36 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmTratamientos));
-            textBox1 = new TextBox();
+            TxtNombre = new TextBox();
             pictureBox1 = new PictureBox();
             textBox5 = new TextBox();
             button1 = new Button();
-            dataGridView1 = new DataGridView();
+            DgTratamiento = new DataGridView();
             label3 = new Label();
-            textBox3 = new TextBox();
+            TxtDescripcion = new TextBox();
             Nombre = new Label();
             panel1 = new Panel();
-            pictureBox5 = new PictureBox();
+            Eliminar = new PictureBox();
             pictureBox4 = new PictureBox();
-            pictureBox3 = new PictureBox();
+            Guardar = new PictureBox();
             pictureBox2 = new PictureBox();
             label1 = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)DgTratamiento).BeginInit();
             panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)Eliminar).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)Guardar).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
             // 
-            // textBox1
+            // TxtNombre
             // 
-            textBox1.Location = new Point(279, 157);
-            textBox1.Multiline = true;
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(287, 37);
-            textBox1.TabIndex = 48;
+            TxtNombre.Location = new Point(279, 157);
+            TxtNombre.Multiline = true;
+            TxtNombre.Name = "TxtNombre";
+            TxtNombre.Size = new Size(287, 37);
+            TxtNombre.TabIndex = 48;
             // 
             // pictureBox1
             // 
@@ -70,6 +70,7 @@
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 47;
             pictureBox1.TabStop = false;
+            pictureBox1.Click += pictureBox1_Click;
             // 
             // textBox5
             // 
@@ -87,15 +88,16 @@
             button1.TabIndex = 45;
             button1.Text = "Editar";
             button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
-            // dataGridView1
+            // DgTratamiento
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(674, 160);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(467, 188);
-            dataGridView1.TabIndex = 44;
+            DgTratamiento.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            DgTratamiento.Location = new Point(674, 160);
+            DgTratamiento.Name = "DgTratamiento";
+            DgTratamiento.RowHeadersWidth = 51;
+            DgTratamiento.Size = new Size(467, 188);
+            DgTratamiento.TabIndex = 44;
             // 
             // label3
             // 
@@ -107,13 +109,13 @@
             label3.Text = "Descripcion detallada del Tratamiento";
             label3.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // textBox3
+            // TxtDescripcion
             // 
-            textBox3.Location = new Point(112, 241);
-            textBox3.Multiline = true;
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(454, 121);
-            textBox3.TabIndex = 42;
+            TxtDescripcion.Location = new Point(112, 241);
+            TxtDescripcion.Multiline = true;
+            TxtDescripcion.Name = "TxtDescripcion";
+            TxtDescripcion.Size = new Size(454, 121);
+            TxtDescripcion.TabIndex = 42;
             // 
             // Nombre
             // 
@@ -127,9 +129,9 @@
             // panel1
             // 
             panel1.BackColor = Color.Navy;
-            panel1.Controls.Add(pictureBox5);
+            panel1.Controls.Add(Eliminar);
             panel1.Controls.Add(pictureBox4);
-            panel1.Controls.Add(pictureBox3);
+            panel1.Controls.Add(Guardar);
             panel1.Controls.Add(pictureBox2);
             panel1.Controls.Add(label1);
             panel1.Location = new Point(2, 1);
@@ -137,15 +139,16 @@
             panel1.Size = new Size(1180, 79);
             panel1.TabIndex = 40;
             // 
-            // pictureBox5
+            // Eliminar
             // 
-            pictureBox5.Image = (Image)resources.GetObject("pictureBox5.Image");
-            pictureBox5.Location = new Point(952, 23);
-            pictureBox5.Name = "pictureBox5";
-            pictureBox5.Size = new Size(48, 42);
-            pictureBox5.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox5.TabIndex = 4;
-            pictureBox5.TabStop = false;
+            Eliminar.Image = (Image)resources.GetObject("Eliminar.Image");
+            Eliminar.Location = new Point(952, 23);
+            Eliminar.Name = "Eliminar";
+            Eliminar.Size = new Size(48, 42);
+            Eliminar.SizeMode = PictureBoxSizeMode.Zoom;
+            Eliminar.TabIndex = 4;
+            Eliminar.TabStop = false;
+            Eliminar.Click += Eliminar_Click;
             // 
             // pictureBox4
             // 
@@ -156,16 +159,18 @@
             pictureBox4.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox4.TabIndex = 3;
             pictureBox4.TabStop = false;
+            pictureBox4.Click += pictureBox4_Click;
             // 
-            // pictureBox3
+            // Guardar
             // 
-            pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
-            pictureBox3.Location = new Point(898, 27);
-            pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(48, 38);
-            pictureBox3.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox3.TabIndex = 2;
-            pictureBox3.TabStop = false;
+            Guardar.Image = (Image)resources.GetObject("Guardar.Image");
+            Guardar.Location = new Point(898, 27);
+            Guardar.Name = "Guardar";
+            Guardar.Size = new Size(48, 38);
+            Guardar.SizeMode = PictureBoxSizeMode.Zoom;
+            Guardar.TabIndex = 2;
+            Guardar.TabStop = false;
+            Guardar.Click += Guardar_Click;
             // 
             // pictureBox2
             // 
@@ -193,25 +198,25 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1182, 653);
-            Controls.Add(textBox1);
+            Controls.Add(TxtNombre);
             Controls.Add(pictureBox1);
             Controls.Add(textBox5);
             Controls.Add(button1);
-            Controls.Add(dataGridView1);
+            Controls.Add(DgTratamiento);
             Controls.Add(label3);
-            Controls.Add(textBox3);
+            Controls.Add(TxtDescripcion);
             Controls.Add(Nombre);
             Controls.Add(panel1);
             Name = "FrmTratamientos";
             Text = "FrmTratamientos";
             Load += FrmTratamientos_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)DgTratamiento).EndInit();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
+            ((System.ComponentModel.ISupportInitialize)Eliminar).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
+            ((System.ComponentModel.ISupportInitialize)Guardar).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -219,18 +224,18 @@
 
         #endregion
 
-        private TextBox textBox1;
+        private TextBox TxtNombre;
         private PictureBox pictureBox1;
         private TextBox textBox5;
         private Button button1;
-        private DataGridView dataGridView1;
+        private DataGridView DgTratamiento;
         private Label label3;
-        private TextBox textBox3;
+        private TextBox TxtDescripcion;
         private Label Nombre;
         private Panel panel1;
-        private PictureBox pictureBox5;
+        private PictureBox Eliminar;
         private PictureBox pictureBox4;
-        private PictureBox pictureBox3;
+        private PictureBox Guardar;
         private PictureBox pictureBox2;
         private Label label1;
     }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SisFisio.Negocio;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -28,6 +29,15 @@ namespace SisFisio.Fornularios
         private void FrmCatEjercicios_Load(object sender, EventArgs e)
         {
             CargarDataGrid();
+            DtCatEjercicio.AllowUserToAddRows = false;
+            DtCatEjercicio.RowHeadersVisible = false;
+
+            DtCatEjercicio.AllowUserToAddRows = false;
+            DtCatEjercicio.RowHeadersVisible = false;
+
+
+            DtCatEjercicio.BackgroundColor = this.BackColor;
+            DtCatEjercicio.BackgroundColor = this.BackColor;
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)

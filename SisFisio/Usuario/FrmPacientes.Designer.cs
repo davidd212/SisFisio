@@ -52,6 +52,7 @@
             button1 = new Button();
             textBox5 = new TextBox();
             pictureBox1 = new PictureBox();
+            btnombre = new Label();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)eliminar).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
@@ -135,6 +136,7 @@
             TxtNombre.Name = "TxtNombre";
             TxtNombre.Size = new Size(212, 34);
             TxtNombre.TabIndex = 1;
+            TxtNombre.KeyPress += TxtNombre_KeyPress;
             // 
             // Nombre
             // 
@@ -248,6 +250,7 @@
             DtPacientes.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             DtPacientes.Location = new Point(653, 176);
             DtPacientes.Name = "DtPacientes";
+            DtPacientes.RowHeadersVisible = false;
             DtPacientes.RowHeadersWidth = 51;
             DtPacientes.Size = new Size(467, 188);
             DtPacientes.TabIndex = 15;
@@ -285,11 +288,20 @@
             pictureBox1.TabStop = false;
             pictureBox1.Click += pictureBox1_Click;
             // 
+            // btnombre
+            // 
+            btnombre.AutoSize = true;
+            btnombre.Location = new Point(153, 198);
+            btnombre.Name = "btnombre";
+            btnombre.Size = new Size(0, 20);
+            btnombre.TabIndex = 19;
+            // 
             // FrmPacientes
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1182, 653);
+            Controls.Add(btnombre);
             Controls.Add(pictureBox1);
             Controls.Add(textBox5);
             Controls.Add(button1);
@@ -347,5 +359,6 @@
         private PictureBox pictureBox3;
         private PictureBox eliminar;
         private PictureBox pictureBox4;
+        private Label btnombre;
     }
 }
