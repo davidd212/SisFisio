@@ -82,6 +82,7 @@
             modificar.TabIndex = 34;
             modificar.Text = "Editar";
             modificar.UseVisualStyleBackColor = false;
+            modificar.Click += modificar_Click;
             // 
             // Dtbusqueda
             // 
@@ -91,6 +92,7 @@
             Dtbusqueda.RowHeadersWidth = 51;
             Dtbusqueda.Size = new Size(467, 188);
             Dtbusqueda.TabIndex = 33;
+            Dtbusqueda.CellClick += Dtbusqueda_CellClick;
             Dtbusqueda.CellContentClick += Dtbusqueda_CellContentClick;
             // 
             // label3
@@ -194,6 +196,7 @@
             TxtNombre.Name = "TxtNombre";
             TxtNombre.Size = new Size(287, 37);
             TxtNombre.TabIndex = 37;
+            TxtNombre.KeyPress += TxtNombre_KeyPress;
             // 
             // label2
             // 
@@ -212,6 +215,7 @@
             TxtTelefono.Name = "TxtTelefono";
             TxtTelefono.Size = new Size(196, 37);
             TxtTelefono.TabIndex = 39;
+            TxtTelefono.KeyPress += TxtTelefono_KeyPress;
             // 
             // FrmConsultorio
             // 

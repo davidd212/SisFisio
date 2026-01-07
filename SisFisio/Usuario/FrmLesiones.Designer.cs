@@ -30,15 +30,15 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmLesiones));
             button3 = new Button();
-            comboBox1 = new ComboBox();
+            CbLesion = new ComboBox();
             pictureBox1 = new PictureBox();
             textBox5 = new TextBox();
             button1 = new Button();
-            DgPacientes = new DataGridView();
+            DgLesiones = new DataGridView();
             label3 = new Label();
-            textBox3 = new TextBox();
+            TxtDescripcion = new TextBox();
             label2 = new Label();
-            textBox2 = new TextBox();
+            TxtGrado = new TextBox();
             Nombre = new Label();
             panel1 = new Panel();
             pictureBox5 = new PictureBox();
@@ -47,22 +47,23 @@
             pictureBox2 = new PictureBox();
             label1 = new Label();
             label5 = new Label();
-            textBox1 = new TextBox();
-            comboBox2 = new ComboBox();
+            TxtNombre = new TextBox();
+            cbcategoria = new ComboBox();
             label4 = new Label();
-            comboBox3 = new ComboBox();
+            cbejercicio = new ComboBox();
             label6 = new Label();
             label7 = new Label();
-            dataGridView2 = new DataGridView();
+            DgEjercico = new DataGridView();
             AGREGAR = new Button();
+            button2 = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)DgPacientes).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)DgLesiones).BeginInit();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)DgEjercico).BeginInit();
             SuspendLayout();
             // 
             // button3
@@ -75,14 +76,15 @@
             button3.TabIndex = 56;
             button3.Text = "Administrar Categorias";
             button3.UseVisualStyleBackColor = false;
+            button3.Click += button3_Click;
             // 
-            // comboBox1
+            // CbLesion
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(34, 135);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(212, 28);
-            comboBox1.TabIndex = 53;
+            CbLesion.FormattingEnabled = true;
+            CbLesion.Location = new Point(34, 135);
+            CbLesion.Name = "CbLesion";
+            CbLesion.Size = new Size(212, 28);
+            CbLesion.TabIndex = 53;
             // 
             // pictureBox1
             // 
@@ -111,16 +113,18 @@
             button1.TabIndex = 50;
             button1.Text = "Editar";
             button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
-            // DgPacientes
+            // DgLesiones
             // 
-            DgPacientes.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            DgPacientes.Location = new Point(703, 173);
-            DgPacientes.Name = "DgPacientes";
-            DgPacientes.RowHeadersWidth = 51;
-            DgPacientes.Size = new Size(467, 188);
-            DgPacientes.TabIndex = 49;
-            DgPacientes.CellContentClick += DgPacientes_CellContentClick;
+            DgLesiones.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            DgLesiones.Location = new Point(703, 173);
+            DgLesiones.Name = "DgLesiones";
+            DgLesiones.RowHeadersWidth = 51;
+            DgLesiones.Size = new Size(467, 188);
+            DgLesiones.TabIndex = 49;
+            DgLesiones.CellClick += DgPacientes_CellClick;
+            DgLesiones.CellContentClick += DgPacientes_CellContentClick;
             // 
             // label3
             // 
@@ -129,15 +133,15 @@
             label3.Name = "label3";
             label3.Size = new Size(635, 25);
             label3.TabIndex = 47;
-            label3.Text = "Descripcion del Ejercicio";
+            label3.Text = "Descripcion breve de ejercicio";
             // 
-            // textBox3
+            // TxtDescripcion
             // 
-            textBox3.Location = new Point(34, 306);
-            textBox3.Multiline = true;
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(635, 89);
-            textBox3.TabIndex = 46;
+            TxtDescripcion.Location = new Point(34, 306);
+            TxtDescripcion.Multiline = true;
+            TxtDescripcion.Name = "TxtDescripcion";
+            TxtDescripcion.Size = new Size(635, 89);
+            TxtDescripcion.TabIndex = 46;
             // 
             // label2
             // 
@@ -149,13 +153,14 @@
             label2.Text = "Grado";
             label2.TextAlign = ContentAlignment.TopCenter;
             // 
-            // textBox2
+            // TxtGrado
             // 
-            textBox2.Location = new Point(252, 209);
-            textBox2.Multiline = true;
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(212, 34);
-            textBox2.TabIndex = 44;
+            TxtGrado.Location = new Point(252, 209);
+            TxtGrado.Multiline = true;
+            TxtGrado.Name = "TxtGrado";
+            TxtGrado.Size = new Size(212, 34);
+            TxtGrado.TabIndex = 44;
+            TxtGrado.KeyPress += textBox2_KeyPress;
             // 
             // Nombre
             // 
@@ -189,6 +194,7 @@
             pictureBox5.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox5.TabIndex = 4;
             pictureBox5.TabStop = false;
+            pictureBox5.Click += pictureBox5_Click;
             // 
             // pictureBox4
             // 
@@ -199,6 +205,7 @@
             pictureBox4.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox4.TabIndex = 3;
             pictureBox4.TabStop = false;
+            pictureBox4.Click += pictureBox4_Click;
             // 
             // pictureBox3
             // 
@@ -209,6 +216,7 @@
             pictureBox3.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox3.TabIndex = 2;
             pictureBox3.TabStop = false;
+            pictureBox3.Click += pictureBox3_Click;
             // 
             // pictureBox2
             // 
@@ -238,23 +246,25 @@
             label5.Name = "label5";
             label5.Size = new Size(212, 25);
             label5.TabIndex = 58;
-            label5.Text = "Nombre del ejercicio";
+            label5.Text = "Nombre de la Lesion";
             // 
-            // textBox1
+            // TxtNombre
             // 
-            textBox1.Location = new Point(468, 149);
-            textBox1.Multiline = true;
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(212, 34);
-            textBox1.TabIndex = 57;
+            TxtNombre.Location = new Point(469, 149);
+            TxtNombre.Multiline = true;
+            TxtNombre.Name = "TxtNombre";
+            TxtNombre.Size = new Size(212, 34);
+            TxtNombre.TabIndex = 57;
+            TxtNombre.KeyPress += textBox1_KeyPress;
             // 
-            // comboBox2
+            // cbcategoria
             // 
-            comboBox2.FormattingEnabled = true;
-            comboBox2.Location = new Point(34, 467);
-            comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(212, 28);
-            comboBox2.TabIndex = 60;
+            cbcategoria.FormattingEnabled = true;
+            cbcategoria.Location = new Point(34, 467);
+            cbcategoria.Name = "cbcategoria";
+            cbcategoria.Size = new Size(212, 28);
+            cbcategoria.TabIndex = 60;
+            cbcategoria.SelectedIndexChanged += comboBox2_SelectedIndexChanged;
             // 
             // label4
             // 
@@ -263,25 +273,26 @@
             label4.Name = "label4";
             label4.Size = new Size(212, 25);
             label4.TabIndex = 59;
-            label4.Text = "Tipo de Lesion";
+            label4.Text = "Categoria";
             label4.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // comboBox3
+            // cbejercicio
             // 
-            comboBox3.FormattingEnabled = true;
-            comboBox3.Location = new Point(314, 467);
-            comboBox3.Name = "comboBox3";
-            comboBox3.Size = new Size(212, 28);
-            comboBox3.TabIndex = 62;
+            cbejercicio.FormattingEnabled = true;
+            cbejercicio.Location = new Point(312, 467);
+            cbejercicio.Name = "cbejercicio";
+            cbejercicio.Size = new Size(212, 28);
+            cbejercicio.TabIndex = 62;
+            cbejercicio.SelectedIndexChanged += comboBox3_SelectedIndexChanged;
             // 
             // label6
             // 
             label6.BackColor = SystemColors.ActiveCaption;
-            label6.Location = new Point(314, 439);
+            label6.Location = new Point(312, 439);
             label6.Name = "label6";
             label6.Size = new Size(212, 25);
             label6.TabIndex = 61;
-            label6.Text = "Tipo de Lesion";
+            label6.Text = "Nombre Ejercicio";
             label6.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // label7
@@ -294,63 +305,78 @@
             label7.TabIndex = 63;
             label7.Text = "Ejercicios a asignar";
             // 
-            // dataGridView2
+            // DgEjercico
             // 
-            dataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView2.Location = new Point(15, 501);
-            dataGridView2.Name = "dataGridView2";
-            dataGridView2.RowHeadersWidth = 51;
-            dataGridView2.Size = new Size(635, 140);
-            dataGridView2.TabIndex = 64;
+            DgEjercico.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            DgEjercico.Location = new Point(15, 501);
+            DgEjercico.Name = "DgEjercico";
+            DgEjercico.RowHeadersWidth = 51;
+            DgEjercico.Size = new Size(635, 140);
+            DgEjercico.TabIndex = 64;
+            DgEjercico.CellContentClick += dataGridView2_CellContentClick;
             // 
             // AGREGAR
             // 
             AGREGAR.BackColor = Color.Green;
-            AGREGAR.Location = new Point(556, 466);
+            AGREGAR.ForeColor = SystemColors.Control;
+            AGREGAR.Location = new Point(554, 466);
             AGREGAR.Name = "AGREGAR";
             AGREGAR.Size = new Size(94, 29);
             AGREGAR.TabIndex = 65;
             AGREGAR.Text = "AGREGAR";
             AGREGAR.UseVisualStyleBackColor = false;
+            AGREGAR.Click += AGREGAR_Click;
+            // 
+            // button2
+            // 
+            button2.BackColor = Color.Navy;
+            button2.ForeColor = SystemColors.ButtonHighlight;
+            button2.Location = new Point(667, 586);
+            button2.Name = "button2";
+            button2.Size = new Size(143, 29);
+            button2.TabIndex = 66;
+            button2.Text = "Elaborar Informe";
+            button2.UseVisualStyleBackColor = false;
             // 
             // FrmLesiones
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1182, 653);
+            Controls.Add(button2);
             Controls.Add(AGREGAR);
-            Controls.Add(dataGridView2);
+            Controls.Add(DgEjercico);
             Controls.Add(label7);
-            Controls.Add(comboBox3);
+            Controls.Add(cbejercicio);
             Controls.Add(label6);
-            Controls.Add(comboBox2);
+            Controls.Add(cbcategoria);
             Controls.Add(label4);
             Controls.Add(label5);
-            Controls.Add(textBox1);
+            Controls.Add(TxtNombre);
             Controls.Add(button3);
-            Controls.Add(comboBox1);
+            Controls.Add(CbLesion);
             Controls.Add(pictureBox1);
             Controls.Add(textBox5);
             Controls.Add(button1);
-            Controls.Add(DgPacientes);
+            Controls.Add(DgLesiones);
             Controls.Add(label3);
-            Controls.Add(textBox3);
+            Controls.Add(TxtDescripcion);
             Controls.Add(label2);
-            Controls.Add(textBox2);
+            Controls.Add(TxtGrado);
             Controls.Add(Nombre);
             Controls.Add(panel1);
             Name = "FrmLesiones";
             Text = "FrmLesiones";
             Load += FrmLesiones_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)DgPacientes).EndInit();
+            ((System.ComponentModel.ISupportInitialize)DgLesiones).EndInit();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)DgEjercico).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -358,15 +384,15 @@
         #endregion
 
         private Button button3;
-        private ComboBox comboBox1;
+        private ComboBox CbLesion;
         private PictureBox pictureBox1;
         private TextBox textBox5;
         private Button button1;
-        private DataGridView DgPacientes;
+        private DataGridView DgLesiones;
         private Label label3;
-        private TextBox textBox3;
+        private TextBox TxtDescripcion;
         private Label label2;
-        private TextBox textBox2;
+        private TextBox TxtGrado;
         private Label Nombre;
         private Panel panel1;
         private PictureBox pictureBox5;
@@ -375,13 +401,14 @@
         private PictureBox pictureBox2;
         private Label label1;
         private Label label5;
-        private TextBox textBox1;
-        private ComboBox comboBox2;
+        private TextBox TxtNombre;
+        private ComboBox cbcategoria;
         private Label label4;
-        private ComboBox comboBox3;
+        private ComboBox cbejercicio;
         private Label label6;
         private Label label7;
-        private DataGridView dataGridView2;
+        private DataGridView DgEjercico;
         private Button AGREGAR;
+        private Button button2;
     }
 }

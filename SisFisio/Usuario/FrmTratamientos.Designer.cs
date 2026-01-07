@@ -43,6 +43,7 @@
             Guardar = new PictureBox();
             pictureBox2 = new PictureBox();
             label1 = new Label();
+            ctnombre = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)DgTratamiento).BeginInit();
             panel1.SuspendLayout();
@@ -59,6 +60,7 @@
             TxtNombre.Name = "TxtNombre";
             TxtNombre.Size = new Size(287, 37);
             TxtNombre.TabIndex = 48;
+            TxtNombre.KeyPress += TxtNombre_KeyPress;
             // 
             // pictureBox1
             // 
@@ -98,6 +100,8 @@
             DgTratamiento.RowHeadersWidth = 51;
             DgTratamiento.Size = new Size(467, 188);
             DgTratamiento.TabIndex = 44;
+            DgTratamiento.CellClick += DgTratamiento_CellClick;
+            DgTratamiento.CellContentClick += DgTratamiento_CellContentClick;
             // 
             // label3
             // 
@@ -116,6 +120,7 @@
             TxtDescripcion.Name = "TxtDescripcion";
             TxtDescripcion.Size = new Size(454, 121);
             TxtDescripcion.TabIndex = 42;
+            TxtDescripcion.KeyPress += TxtDescripcion_KeyPress;
             // 
             // Nombre
             // 
@@ -193,11 +198,20 @@
             label1.TabIndex = 0;
             label1.Text = "TRATAMIENTO";
             // 
+            // ctnombre
+            // 
+            ctnombre.AutoSize = true;
+            ctnombre.Location = new Point(290, 197);
+            ctnombre.Name = "ctnombre";
+            ctnombre.Size = new Size(0, 20);
+            ctnombre.TabIndex = 49;
+            // 
             // FrmTratamientos
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1182, 653);
+            Controls.Add(ctnombre);
             Controls.Add(TxtNombre);
             Controls.Add(pictureBox1);
             Controls.Add(textBox5);
@@ -238,5 +252,6 @@
         private PictureBox Guardar;
         private PictureBox pictureBox2;
         private Label label1;
+        private Label ctnombre;
     }
 }

@@ -127,6 +127,11 @@ namespace SisFisio.Usuario
         {
 
         }
+
+        private void CboPaciente_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 
 }

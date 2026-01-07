@@ -258,6 +258,7 @@
             CboPaciente.Name = "CboPaciente";
             CboPaciente.Size = new Size(255, 28);
             CboPaciente.TabIndex = 38;
+            CboPaciente.SelectedIndexChanged += CboPaciente_SelectedIndexChanged;
             // 
             // CboEmpleado
             // 

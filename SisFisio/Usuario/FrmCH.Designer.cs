@@ -183,6 +183,7 @@
             pictureBox3.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox3.TabIndex = 2;
             pictureBox3.TabStop = false;
+            pictureBox3.Click += pictureBox3_Click;
             // 
             // pictureBox2
             // 
@@ -221,6 +222,7 @@
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new Size(190, 28);
             comboBox1.TabIndex = 58;
+            comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
             // 
             // label5
             // 

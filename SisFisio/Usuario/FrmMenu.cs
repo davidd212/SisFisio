@@ -19,7 +19,7 @@ namespace SisFisio.Usuario
             InitializeComponent();
         }
 
-       
+
 
         private void button2_Click(object sender, EventArgs e)
         {
@@ -28,10 +28,54 @@ namespace SisFisio.Usuario
         }
         void CargarCitasMenu()
         {
-            Cita cita = new Cita();
-            DtCita.DataSource = cita.ConsultarTodos();
-            
+            try
+            {
+                Cita cita = new Cita();
+                DtCita.DataSource = cita.ConsultarTodos();
+                
+                // Configurar propiedades del DataGridView
+                DtCita.AllowUserToAddRows = false;
+                DtCita.RowHeadersVisible = false;
+                DtCita.BackgroundColor = this.BackColor;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al cargar citas: " + ex.Message);
+            }
         }
+
+        void CargarAgendaMenu()
+        {
+            try
+            {
+                Agenda agenda = new Agenda();
+                dataGridView2.DataSource = agenda.ConsultarTodos();
+                
+                // Configurar propiedades del DataGridView
+                dataGridView2.AllowUserToAddRows = false;
+                dataGridView2.RowHeadersVisible = false;
+                dataGridView2.BackgroundColor = this.BackColor;
+                
+                // Ocultar columnas innecesarias si existen
+                if (dataGridView2.Columns.Contains("id_Agenda"))
+                    dataGridView2.Columns["id_Agenda"].Visible = false;
+                if (dataGridView2.Columns.Contains("id_Cita"))
+                    dataGridView2.Columns["id_Cita"].Visible = false;
+                
+                // Configurar encabezados
+                if (dataGridView2.Columns.Contains("Nom_Evento"))
+                    dataGridView2.Columns["Nom_Evento"].HeaderText = "Evento";
+                if (dataGridView2.Columns.Contains("Fecha_Agenda"))
+                    dataGridView2.Columns["Fecha_Agenda"].HeaderText = "Fecha";
+                if (dataGridView2.Columns.Contains("Hora_Agenda"))
+                    dataGridView2.Columns["Hora_Agenda"].HeaderText = "Hora";
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al cargar agenda: " + ex.Message);
+            }
+        }
+
         private void button3_Click(object sender, EventArgs e)
         {
             FrmPacientes x = new FrmPacientes();
@@ -70,7 +114,8 @@ namespace SisFisio.Usuario
 
         private void button10_Click(object sender, EventArgs e)
         {
-
+            FrmAgenda x = new FrmAgenda();
+            x.Show();
         }
 
         private void button11_Click(object sender, EventArgs e)
@@ -81,34 +126,36 @@ namespace SisFisio.Usuario
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            // Botón INICIO - Abre el formulario de Reportes
+            FrmReportes reportes = new FrmReportes();
+            reportes.Show();
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            
+
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-          
+
 
         }
 
         private void FrmMenu_Load(object sender, EventArgs e)
         {
             CargarCitasMenu();
-            DtCita.AllowUserToAddRows = false;
-            DtCita.RowHeadersVisible = false;
+            CargarAgendaMenu();
+        }
 
-            DtCita.AllowUserToAddRows = false;
-            DtCita.RowHeadersVisible = false;
+        private void label3_Click(object sender, EventArgs e)
+        {
+            FrmEjercicios x = new FrmEjercicios();
+            x.Show();
+        }
 
-            
-            DtCita.BackgroundColor = this.BackColor;
-            DtCita.BackgroundColor = this.BackColor;
-
-
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
 
         }
     }

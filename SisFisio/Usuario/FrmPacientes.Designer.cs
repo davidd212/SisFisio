@@ -163,6 +163,7 @@
             TxtApellidoPa.Name = "TxtApellidoPa";
             TxtApellidoPa.Size = new Size(212, 34);
             TxtApellidoPa.TabIndex = 3;
+            TxtApellidoPa.KeyPress += TxtApellidoPa_KeyPress;
             // 
             // label3
             // 
@@ -180,6 +181,7 @@
             TxtTelefono.Name = "TxtTelefono";
             TxtTelefono.Size = new Size(212, 34);
             TxtTelefono.TabIndex = 5;
+            TxtTelefono.KeyPress += TxtTelefono_KeyPress;
             // 
             // label4
             // 
@@ -197,6 +199,8 @@
             TxtApellidoMa.Name = "TxtApellidoMa";
             TxtApellidoMa.Size = new Size(212, 34);
             TxtApellidoMa.TabIndex = 7;
+            TxtApellidoMa.TextChanged += TxtApellidoMa_TextChanged;
+            TxtApellidoMa.KeyPress += TxtApellidoMa_KeyPress;
             // 
             // label5
             // 
@@ -254,7 +258,7 @@
             DtPacientes.RowHeadersWidth = 51;
             DtPacientes.Size = new Size(467, 188);
             DtPacientes.TabIndex = 15;
-            DtPacientes.CellClick += dataGridView1_CellContentClick;
+            DtPacientes.CellClick += DtPacientes_CellClick;
             DtPacientes.CellContentClick += dataGridView1_CellContentClick;
             // 
             // button1

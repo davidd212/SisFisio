@@ -25,6 +25,8 @@ namespace SisFisio.Usuario
         {
             TipoLesiones tipo = new TipoLesiones();
             Dtbusqueda.DataSource = tipo.ConsultarTodos();
+            Dtbusqueda.Columns["id_TipoLes"].Visible = false;
+            Dtbusqueda.Columns["Nom_TipoLes"].HeaderText = "Tipo de Lesión";
         }
 
 
@@ -101,6 +103,22 @@ namespace SisFisio.Usuario
         private void Limpiarr_Click(object sender, EventArgs e)
         {
             limpiar();
+        }
+
+        private void Dtbusqueda_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (Dtbusqueda.CurrentRow != null)
+            {
+                TxtTipo.Text = Dtbusqueda.CurrentRow.Cells["Nom_TipoLes"].Value?.ToString();
+            }
+        }
+
+        private void TxtTipo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar) && e.KeyChar != ' ')
+            {
+                e.Handled = true;
+            }
         }
     }
 }

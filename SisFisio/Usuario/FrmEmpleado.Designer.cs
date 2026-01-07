@@ -116,6 +116,7 @@
             DtEmpleados.RowHeadersWidth = 51;
             DtEmpleados.Size = new Size(418, 217);
             DtEmpleados.TabIndex = 33;
+            DtEmpleados.CellClick += DtEmpleados_CellClick;
             DtEmpleados.CellContentClick += DtEmpleados_CellContentClick;
             // 
             // RbPrestador

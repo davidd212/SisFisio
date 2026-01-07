@@ -8,18 +8,18 @@ using System.Threading.Tasks;
 
 namespace SisFisio.Negocio
 {
-    public class Agenda
+    public class Ejercicio
     {
-        public int id_Agenda;
-        public string Nom_Evento;
-        public DateTime Fecha_Agenda;
-        public DateTime Hora_Agenda;   
-        public int id_Cita;          
+        public int id_Ejercicio;
+        public int id_catEjer;
+        public string Nombre_Ejer;
+        public string Imag_Ejer;
+        public string Descrip_Ejer;
 
         ConexionSQL x = new ConexionSQL();
         SqlConnection con = new SqlConnection();
 
-        public Agenda()
+        public Ejercicio()
         {
             con.ConnectionString = x.Conexion;
         }
@@ -30,22 +30,18 @@ namespace SisFisio.Negocio
             try
             {
                 con.Open();
-                SqlCommand cmd = new SqlCommand("spAgenda", con);
+                SqlCommand cmd = new SqlCommand("spEjercicios", con);
                 cmd.CommandType = CommandType.StoredProcedure;
 
                 cmd.Parameters.AddWithValue("@op", 2); // Insertar
-                cmd.Parameters.AddWithValue("@id_Agenda", DBNull.Value);
-                cmd.Parameters.AddWithValue("@Nom_Evento", Nom_Evento);
-                cmd.Parameters.AddWithValue("@Fecha_Agenda", Fecha_Agenda);
-                cmd.Parameters.AddWithValue("@Hora_Agenda", Hora_Agenda);
-
-                if (id_Cita > 0)
-                    cmd.Parameters.AddWithValue("@id_Cita", id_Cita);
-                else
-                    cmd.Parameters.AddWithValue("@id_Cita", DBNull.Value);
+                cmd.Parameters.AddWithValue("@id_Ejercicio", DBNull.Value);
+                cmd.Parameters.AddWithValue("@id_catEjer", id_catEjer);
+                cmd.Parameters.AddWithValue("@Nombre_Ejer", Nombre_Ejer);
+                cmd.Parameters.AddWithValue("@Imag_Ejer", Imag_Ejer ?? (object)DBNull.Value);
+                cmd.Parameters.AddWithValue("@Descrip_Ejer", Descrip_Ejer ?? (object)DBNull.Value);
 
                 cmd.ExecuteNonQuery();
-                msj = "EVENTO DE AGENDA GUARDADO CON ÉXITO";
+                msj = "EJERCICIO GUARDADO CON ÉXITO";
             }
             catch (Exception ex)
             {
@@ -64,22 +60,18 @@ namespace SisFisio.Negocio
             try
             {
                 con.Open();
-                SqlCommand cmd = new SqlCommand("spAgenda", con);
+                SqlCommand cmd = new SqlCommand("spEjercicios", con);
                 cmd.CommandType = CommandType.StoredProcedure;
 
                 cmd.Parameters.AddWithValue("@op", 3); // Modificar
-                cmd.Parameters.AddWithValue("@id_Agenda", id_Agenda);
-                cmd.Parameters.AddWithValue("@Nom_Evento", Nom_Evento);
-                cmd.Parameters.AddWithValue("@Fecha_Agenda", Fecha_Agenda);
-                cmd.Parameters.AddWithValue("@Hora_Agenda", Hora_Agenda);
-
-                if (id_Cita > 0)
-                    cmd.Parameters.AddWithValue("@id_Cita", id_Cita);
-                else
-                    cmd.Parameters.AddWithValue("@id_Cita", DBNull.Value);
+                cmd.Parameters.AddWithValue("@id_Ejercicio", id_Ejercicio);
+                cmd.Parameters.AddWithValue("@id_catEjer", id_catEjer);
+                cmd.Parameters.AddWithValue("@Nombre_Ejer", Nombre_Ejer);
+                cmd.Parameters.AddWithValue("@Imag_Ejer", Imag_Ejer ?? (object)DBNull.Value);
+                cmd.Parameters.AddWithValue("@Descrip_Ejer", Descrip_Ejer ?? (object)DBNull.Value);
 
                 cmd.ExecuteNonQuery();
-                msj = "EVENTO DE AGENDA MODIFICADO CON ÉXITO";
+                msj = "EJERCICIO MODIFICADO CON ÉXITO";
             }
             catch (Exception ex)
             {
@@ -98,18 +90,18 @@ namespace SisFisio.Negocio
             try
             {
                 con.Open();
-                SqlCommand cmd = new SqlCommand("spAgenda", con);
+                SqlCommand cmd = new SqlCommand("spEjercicios", con);
                 cmd.CommandType = CommandType.StoredProcedure;
 
                 cmd.Parameters.AddWithValue("@op", 4); // Eliminar
-                cmd.Parameters.AddWithValue("@id_Agenda", id_Agenda);
-                cmd.Parameters.AddWithValue("@Nom_Evento", DBNull.Value);
-                cmd.Parameters.AddWithValue("@Fecha_Agenda", DBNull.Value);
-                cmd.Parameters.AddWithValue("@Hora_Agenda", DBNull.Value);
-                cmd.Parameters.AddWithValue("@id_Cita", DBNull.Value);
+                cmd.Parameters.AddWithValue("@id_Ejercicio", id_Ejercicio);
+                cmd.Parameters.AddWithValue("@id_catEjer", DBNull.Value);
+                cmd.Parameters.AddWithValue("@Nombre_Ejer", DBNull.Value);
+                cmd.Parameters.AddWithValue("@Imag_Ejer", DBNull.Value);
+                cmd.Parameters.AddWithValue("@Descrip_Ejer", DBNull.Value);
 
                 cmd.ExecuteNonQuery();
-                msj = "EVENTO DE AGENDA ELIMINADO CON ÉXITO";
+                msj = "EJERCICIO ELIMINADO CON ÉXITO";
             }
             catch (Exception ex)
             {
@@ -128,22 +120,22 @@ namespace SisFisio.Negocio
             try
             {
                 con.Open();
-                SqlCommand cmd = new SqlCommand("spAgenda", con);
+                SqlCommand cmd = new SqlCommand("spEjercicios", con);
                 cmd.CommandType = CommandType.StoredProcedure;
 
                 cmd.Parameters.AddWithValue("@op", 1); // Consultar todos
-                cmd.Parameters.AddWithValue("@id_Agenda", DBNull.Value);
-                cmd.Parameters.AddWithValue("@Nom_Evento", DBNull.Value);
-                cmd.Parameters.AddWithValue("@Fecha_Agenda", DBNull.Value);
-                cmd.Parameters.AddWithValue("@Hora_Agenda", DBNull.Value);
-                cmd.Parameters.AddWithValue("@id_Cita", DBNull.Value);
+                cmd.Parameters.AddWithValue("@id_Ejercicio", DBNull.Value);
+                cmd.Parameters.AddWithValue("@id_catEjer", DBNull.Value);
+                cmd.Parameters.AddWithValue("@Nombre_Ejer", DBNull.Value);
+                cmd.Parameters.AddWithValue("@Imag_Ejer", DBNull.Value);
+                cmd.Parameters.AddWithValue("@Descrip_Ejer", DBNull.Value);
 
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
                 da.Fill(dt);
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error al consultar agenda: " + ex.Message);
+                MessageBox.Show("Error al consultar ejercicios: " + ex.Message);
             }
             finally
             {

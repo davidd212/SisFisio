@@ -14,7 +14,7 @@ namespace SisFisio.Negocio
         public string Folio;
         public string Motivo_Cita;
         public DateTime Fecha_Cita;
-        public string Hora_Cita;      // lo mando como string "HH:mm"
+        public string Hora_Cita;     
         public int id_Pac;
         public int id_Emp;
         public string Estatus_Cita;

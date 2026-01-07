@@ -45,10 +45,12 @@
             pictureBox2 = new PictureBox();
             label1 = new Label();
             textBox6 = new TextBox();
+            picImagen = new PictureBox();
             button2 = new Button();
             button3 = new Button();
             comboBox1 = new ComboBox();
             Nombre = new Label();
+            pictureBox6 = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             panel1.SuspendLayout();
@@ -56,6 +58,8 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)picImagen).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
             SuspendLayout();
             // 
             // pictureBox1
@@ -85,6 +89,7 @@
             button1.TabIndex = 34;
             button1.Text = "Editar";
             button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
             // dataGridView1
             // 
@@ -95,6 +100,7 @@
             dataGridView1.RowHeadersWidth = 51;
             dataGridView1.Size = new Size(467, 188);
             dataGridView1.TabIndex = 33;
+            dataGridView1.CellClick += dataGridView1_CellClick;
             // 
             // label4
             // 
@@ -138,6 +144,7 @@
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(212, 34);
             textBox2.TabIndex = 22;
+            textBox2.KeyPress += textBox2_KeyPress;
             // 
             // panel1
             // 
@@ -161,6 +168,7 @@
             pictureBox5.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox5.TabIndex = 4;
             pictureBox5.TabStop = false;
+            pictureBox5.Click += pictureBox5_Click;
             // 
             // pictureBox4
             // 
@@ -171,6 +179,7 @@
             pictureBox4.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox4.TabIndex = 3;
             pictureBox4.TabStop = false;
+            pictureBox4.Click += pictureBox4_Click;
             // 
             // pictureBox3
             // 
@@ -181,6 +190,7 @@
             pictureBox3.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox3.TabIndex = 2;
             pictureBox3.TabStop = false;
+            pictureBox3.Click += pictureBox3_Click;
             // 
             // pictureBox2
             // 
@@ -205,22 +215,34 @@
             // 
             // textBox6
             // 
-            textBox6.Location = new Point(317, 342);
-            textBox6.Multiline = true;
+            textBox6.Location = new Point(317, 503);
             textBox6.Name = "textBox6";
-            textBox6.Size = new Size(212, 155);
+            textBox6.ReadOnly = true;
+            textBox6.Size = new Size(212, 27);
             textBox6.TabIndex = 39;
+            // 
+            // picImagen
+            // 
+            picImagen.BorderStyle = BorderStyle.FixedSingle;
+            picImagen.Location = new Point(317, 342);
+            picImagen.Name = "picImagen";
+            picImagen.Size = new Size(212, 155);
+            picImagen.SizeMode = PictureBoxSizeMode.Zoom;
+            picImagen.TabIndex = 42;
+            picImagen.TabStop = false;
+            picImagen.Click += picImagen_Click;
             // 
             // button2
             // 
             button2.BackColor = Color.MidnightBlue;
             button2.ForeColor = SystemColors.ButtonHighlight;
-            button2.Location = new Point(339, 503);
+            button2.Location = new Point(317, 536);
             button2.Name = "button2";
-            button2.Size = new Size(155, 44);
+            button2.Size = new Size(155, 35);
             button2.TabIndex = 40;
             button2.Text = "Cargar imagen";
             button2.UseVisualStyleBackColor = false;
+            button2.Click += button2_Click;
             // 
             // button3
             // 
@@ -232,6 +254,7 @@
             button3.TabIndex = 41;
             button3.Text = "Administrar Categorias";
             button3.UseVisualStyleBackColor = false;
+            button3.Click += button3_Click;
             // 
             // comboBox1
             // 
@@ -240,6 +263,7 @@
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new Size(212, 28);
             comboBox1.TabIndex = 37;
+            comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
             // 
             // Nombre
             // 
@@ -251,11 +275,21 @@
             Nombre.Text = "Categoria";
             Nombre.TextAlign = ContentAlignment.MiddleCenter;
             // 
+            // pictureBox6
+            // 
+            pictureBox6.Location = new Point(486, 210);
+            pictureBox6.Name = "pictureBox6";
+            pictureBox6.Size = new Size(125, 62);
+            pictureBox6.TabIndex = 43;
+            pictureBox6.TabStop = false;
+            // 
             // FrmEjercicios
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1182, 653);
+            Controls.Add(pictureBox6);
+            Controls.Add(picImagen);
             Controls.Add(button3);
             Controls.Add(button2);
             Controls.Add(textBox6);
@@ -282,6 +316,8 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)picImagen).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -304,9 +340,11 @@
         private PictureBox pictureBox2;
         private Label label1;
         private TextBox textBox6;
+        private PictureBox picImagen;
         private Button button2;
         private Button button3;
         private ComboBox comboBox1;
         private Label Nombre;
+        private PictureBox pictureBox6;
     }
 }

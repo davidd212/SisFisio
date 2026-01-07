@@ -21,6 +21,19 @@ namespace SisFisio.Usuario
         {
             Negocio.Empleado cat = new Negocio.Empleado();
             DtEmpleados.DataSource = cat.ConsultarTodos();
+            DtEmpleados.Columns["id_Emp"].Visible = false;
+            DtEmpleados.Columns["Num_Emp"].HeaderText = "Número de Empleado";
+            DtEmpleados.Columns["Nombre_Emp"].HeaderText = "Nombre Empleado";
+            DtEmpleados.Columns["ApellidoP_Emp"].HeaderText = "Apellido Paterno";
+            DtEmpleados.Columns["ApellidoM_Emp"].HeaderText = "Apellido Materno";
+            DtEmpleados.Columns["Tipo_Empl"].HeaderText = "Tipo de Empleado";
+            DtEmpleados.Columns["Clave"].HeaderText = "Clave";
+            DtEmpleados.Columns["Telefono_Emp"].HeaderText = "Teléfono";
+            DtEmpleados.Columns["CedulaProfesional"].HeaderText = "Cédula Profesional";
+            DtEmpleados.Columns["Especialidad"].HeaderText = "Especialidad";
+            DtEmpleados.Columns["Estatus_Emp"].HeaderText = "Estatus";
+
+
         }
         void limpiar()
         {
@@ -150,6 +163,32 @@ namespace SisFisio.Usuario
         private void DtEmpleados_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        // Evento CellClick para cargar datos al seleccionar un registro
+        private void DtEmpleados_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0 && DtEmpleados.CurrentRow != null)
+            {
+                TxtNumero.Text = DtEmpleados.CurrentRow.Cells["Num_Emp"].Value?.ToString() ?? "";
+                TxtNombre.Text = DtEmpleados.CurrentRow.Cells["Nombre_Emp"].Value?.ToString() ?? "";
+                TxtApellidoPa.Text = DtEmpleados.CurrentRow.Cells["ApellidoP_Emp"].Value?.ToString() ?? "";
+                TxtApellidoMa.Text = DtEmpleados.CurrentRow.Cells["ApellidoM_Emp"].Value?.ToString() ?? "";
+                TxtClave.Text = DtEmpleados.CurrentRow.Cells["Clave"].Value?.ToString() ?? "";
+                TxtTelefono.Text = DtEmpleados.CurrentRow.Cells["Telefono_Emp"].Value?.ToString() ?? "";
+                TxtCedula.Text = DtEmpleados.CurrentRow.Cells["CedulaProfesional"].Value?.ToString() ?? "";
+                TxtEspecialidades.Text = DtEmpleados.CurrentRow.Cells["Especialidad"].Value?.ToString() ?? "";
+
+                // Seleccionar tipo de empleado
+                string tipoEmpleado = DtEmpleados.CurrentRow.Cells["Tipo_Empl"].Value?.ToString() ?? "";
+                RbFisio.Checked = tipoEmpleado == "Fisioterapeuta";
+                RbPrestador.Checked = tipoEmpleado == "Prestador de Servicio";
+
+                // Seleccionar estatus
+                string estatus = DtEmpleados.CurrentRow.Cells["Estatus_Emp"].Value?.ToString() ?? "";
+                RbActiva.Checked = estatus == "Activo";
+                Rbinactiva.Checked = estatus == "Inactivo";
+            }
         }
 
         private void textBox5_TextChanged(object sender, EventArgs e)

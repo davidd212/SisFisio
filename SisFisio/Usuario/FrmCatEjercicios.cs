@@ -21,6 +21,8 @@ namespace SisFisio.Fornularios
         {
             Negocio.CatEjercicio cat = new Negocio.CatEjercicio();
             DtCatEjercicio.DataSource = cat.ConsultarTodos();
+            DtCatEjercicio.Columns["id_CatEjer"].Visible = false;
+            DtCatEjercicio.Columns["Nombre_CatEjer"].HeaderText = "Nombre Ejercicio";
         }
         void limpiar()
         {
@@ -32,11 +34,6 @@ namespace SisFisio.Fornularios
             DtCatEjercicio.AllowUserToAddRows = false;
             DtCatEjercicio.RowHeadersVisible = false;
 
-            DtCatEjercicio.AllowUserToAddRows = false;
-            DtCatEjercicio.RowHeadersVisible = false;
-
-
-            DtCatEjercicio.BackgroundColor = this.BackColor;
             DtCatEjercicio.BackgroundColor = this.BackColor;
         }
 
@@ -128,6 +125,14 @@ namespace SisFisio.Fornularios
         private void DtCatEjercicio_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void TxtNombre_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar) && e.KeyChar != ' ')
+            {
+                e.Handled = true;
+            }
         }
     }
 }

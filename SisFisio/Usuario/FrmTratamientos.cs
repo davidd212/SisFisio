@@ -21,6 +21,10 @@ namespace SisFisio.Usuario
         {
             Negocio.Tratamiento cat = new Negocio.Tratamiento();
             DgTratamiento.DataSource = cat.ConsultarTodos();
+            DgTratamiento.Columns["id_trata"].Visible = false;
+            DgTratamiento.Columns["Nombre_trata"].HeaderText = "Nombre Tratamiento";
+            DgTratamiento.Columns["Descrip_Trata"].HeaderText = "Descripción de Tratamiento";
+
         }
         void limpiar()
         {
@@ -109,6 +113,45 @@ namespace SisFisio.Usuario
             catch (Exception ex)
             {
                 MessageBox.Show("Error al modificar: " + ex.Message);
+            }
+        }
+
+        private void TxtNombre_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar) && e.KeyChar != ' ')
+            {
+                e.Handled = true;
+                ctnombre.Text = "Solo se permiten caracteres alfabeticos.";
+                ctnombre.ForeColor = Color.Red;
+                ctnombre.Visible = true;
+            }
+            else
+            {
+                ctnombre.Visible = false;
+            }
+        }
+
+        private void TxtDescripcion_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Permite letras, números, espacios y caracteres de control
+            if (!char.IsLetterOrDigit(e.KeyChar) && !char.IsControl(e.KeyChar) && e.KeyChar != ' ')
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void DgTratamiento_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        // Evento CellClick para cargar datos al seleccionar un registro
+        private void DgTratamiento_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0 && DgTratamiento.CurrentRow != null)
+            {
+                TxtNombre.Text = DgTratamiento.CurrentRow.Cells["Nombre_trata"].Value?.ToString() ?? "";
+                TxtDescripcion.Text = DgTratamiento.CurrentRow.Cells["Descrip_Trata"].Value?.ToString() ?? "";
             }
         }
     }

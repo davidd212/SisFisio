@@ -29,9 +29,23 @@ namespace SisFisio.Fornularios
             RbFemenino.Checked = false;
         }
 
+        void CargarDataGrid()
+        {
+            Negocio.Pacientes paciente = new Negocio.Pacientes();
+            DataTable resultado = paciente.ConsultarTodos();
+            DtPacientes.DataSource = resultado;
+            DtPacientes.Columns["id_Pac"].Visible = false;
+            DtPacientes.Columns["Nombre_Pac"].HeaderText = "Nombre Paciente";
+            DtPacientes.Columns["ApellidoP_Pac"].HeaderText = "Apellido Paterno";
+            DtPacientes.Columns["ApellidoM_Pac"].HeaderText = "Apellido Materno";
+            DtPacientes.Columns["Telefono_Pac"].HeaderText = "Teléfono";
+            DtPacientes.Columns["Fecha_Nacimiento"].HeaderText = "Fecha de Nacimiento";
+            DtPacientes.Columns["Genero"].HeaderText = "Género";
+        }
+
         private void FrmPacientes_Load(object sender, EventArgs e)
         {
-
+            CargarDataGrid();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -52,12 +66,6 @@ namespace SisFisio.Fornularios
                 RbMasculino.Checked = genero == "Masculino";
                 RbFemenino.Checked = genero == "Femenino";
             }
-
-
-
-
-
-
         }
 
         private void toolStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
@@ -69,10 +77,10 @@ namespace SisFisio.Fornularios
         {
             try
             {
-                // Crear objeto
+
                 Negocio.Pacientes paciente = new Negocio.Pacientes();
 
-                // Asignar propiedades
+
                 paciente.Nombre_Pac = TxtNombre.Text;
                 paciente.ApellidoP_Pac = TxtApellidoPa.Text;
                 paciente.ApellidoM_Pac = TxtApellidoMa.Text;
@@ -80,17 +88,17 @@ namespace SisFisio.Fornularios
                 paciente.Fecha_Nacimiento = DtFecha.Value;
                 paciente.Genero = RbMasculino.Checked ? "Masculino" : "Femenino";
 
-                DtPacientes.DataSource = paciente.ConsultarTodos();
-                // Guardar
+
                 string resultado = paciente.Guardar();
 
                 MessageBox.Show(resultado);
+                limpiar();
+                CargarDataGrid();
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
-            limpiar();
         }
 
         private void eliminar_Click(object sender, EventArgs e)
@@ -104,52 +112,50 @@ namespace SisFisio.Fornularios
                 string resultado = paciente.Eliminar();
                 MessageBox.Show(resultado);
 
-                // Recargar el DataGridView
-                DtPacientes.DataSource = paciente.ConsultarTodos();
+                limpiar();
+                CargarDataGrid();
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Error al eliminar: " + ex.Message);
             }
-
-
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
-            Negocio.Pacientes paciente = new Negocio.Pacientes();
-            DataTable resultado = paciente.ConsultarTodos();
-            DtPacientes.DataSource = resultado;
-            int idSeleccionado = Convert.ToInt32(DtPacientes.CurrentRow.Cells["id_Pac"].Value);
 
         }
 
         private void textBox5_TextChanged(object sender, EventArgs e)
         {
 
-
-            Negocio.Pacientes paciente = new Negocio.Pacientes();
-            DataTable resultado = paciente.ConsultarTodos();
-            DtPacientes.DataSource = resultado;
-
-
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Negocio.Pacientes paciente = new Negocio.Pacientes();
-            paciente.id_Pac = Convert.ToInt32(DtPacientes.CurrentRow.Cells["id_Pac"].Value);
-            paciente.Nombre_Pac = TxtNombre.Text;
-            paciente.ApellidoP_Pac = TxtApellidoPa.Text;
-            paciente.ApellidoM_Pac = TxtApellidoMa.Text;
-            paciente.Telefono_Pac = TxtTelefono.Text;
-            paciente.Fecha_Nacimiento = DtFecha.Value;
-            paciente.Genero = RbMasculino.Checked ? "Masculino" : "Femenino";
+            try
+            {
+                if (DtPacientes.CurrentRow != null)
+                {
+                    Negocio.Pacientes paciente = new Negocio.Pacientes();
+                    paciente.id_Pac = Convert.ToInt32(DtPacientes.CurrentRow.Cells["id_Pac"].Value);
+                    paciente.Nombre_Pac = TxtNombre.Text;
+                    paciente.ApellidoP_Pac = TxtApellidoPa.Text;
+                    paciente.ApellidoM_Pac = TxtApellidoMa.Text;
+                    paciente.Telefono_Pac = TxtTelefono.Text;
+                    paciente.Fecha_Nacimiento = DtFecha.Value;
+                    paciente.Genero = RbMasculino.Checked ? "Masculino" : "Femenino";
 
-            string resultado = paciente.Modificar();
-            MessageBox.Show(resultado);
-            DtPacientes.DataSource = paciente.ConsultarTodos();
+                    string resultado = paciente.Modificar();
+                    MessageBox.Show(resultado);
+                    limpiar();
+                    CargarDataGrid();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al modificar: " + ex.Message);
+            }
         }
 
         private void pictureBox4_Click(object sender, EventArgs e)
@@ -162,7 +168,7 @@ namespace SisFisio.Fornularios
             if (!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar) && e.KeyChar != ' ')
             {
                 e.Handled = true;
-                btnombre.Text="No se permiten caracteres numericos";
+                btnombre.Text = "Solo se permiten caracteres alfabeticos.";
                 btnombre.ForeColor = Color.Red;
                 btnombre.Visible = true;
 
@@ -171,6 +177,56 @@ namespace SisFisio.Fornularios
             {
                 btnombre.Visible = false;
             }
+        }
+
+        private void TxtApellidoPa_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar) && e.KeyChar != ' ')
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void TxtApellidoMa_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar) && e.KeyChar != ' ')
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void TxtTelefono_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        // Evento CellClick para cargar datos al seleccionar un registro
+        private void DtPacientes_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0 && DtPacientes.CurrentRow != null)
+            {
+                TxtNombre.Text = DtPacientes.CurrentRow.Cells["Nombre_Pac"].Value?.ToString() ?? "";
+                TxtApellidoPa.Text = DtPacientes.CurrentRow.Cells["ApellidoP_Pac"].Value?.ToString() ?? "";
+                TxtApellidoMa.Text = DtPacientes.CurrentRow.Cells["ApellidoM_Pac"].Value?.ToString() ?? "";
+                TxtTelefono.Text = DtPacientes.CurrentRow.Cells["Telefono_Pac"].Value?.ToString() ?? "";
+
+                if (DateTime.TryParse(DtPacientes.CurrentRow.Cells["Fecha_Nacimiento"].Value?.ToString(), out DateTime fecha))
+                {
+                    DtFecha.Value = fecha;
+                }
+
+                string genero = DtPacientes.CurrentRow.Cells["Genero"].Value?.ToString() ?? "";
+                RbMasculino.Checked = genero == "Masculino";
+                RbFemenino.Checked = genero == "Femenino";
+            }
+        }
+
+        private void TxtApellidoMa_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
